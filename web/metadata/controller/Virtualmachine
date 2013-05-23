@@ -1,0 +1,445 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Virtualmachine",
+        "stores": [
+            "Virtualmachine",
+            "Storage"
+        ]
+    },
+    "id": "ExtBox1-ext-gen67192",
+    "designerId": "5575ae5e-5e20-434a-9ec5-60f4ae08b4ed",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Virtual Machine', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Virtual Machines. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getVirtualmachineStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#deletevm"
+            },
+            "designerId": "c0382796-ebf4-4962-8887-fd03049ba815"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#vmlistgrid"
+            },
+            "designerId": "1071e8b8-c9b1-4951-b9d2-37991d8e703c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick1",
+                "fn": "onButtonClick1",
+                "implHandler": [
+                    "var win = button.up('window'),",
+                    "    form = win.down('form');",
+                    "",
+                    "if (this.save(form)) {",
+                    "    win.close();",
+                    "}",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "vmadd button[action=save]"
+            },
+            "designerId": "972bfe7f-bdc1-4161-9783-100288605061"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "this.switchVmEdit(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.View",
+                "designer|controlQuery": "#vmlistgrid"
+            },
+            "designerId": "272bc2f8-8c96-4eff-bf7f-186bb908cf6b"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "        currentVmId = 0;"
+                ]
+            },
+            "designerId": "367ab681-99ec-4ed1-8f61-0f1678d2af7b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmedit",
+                "ref": "vmedit",
+                "selector": "vmedit"
+            },
+            "designerId": "cc322639-eb5e-40ae-bf41-3e2a762f081a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick2",
+                "fn": "onButtonClick2",
+                "implHandler": [
+                    "var form = button.up('form');",
+                    "",
+                    "",
+                    "this.save(form);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "vmedit button[action=save]"
+            },
+            "designerId": "a0cae26e-0b65-4c18-bd38-8e395287537e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "save",
+                "fn": "save",
+                "designer|params": [
+                    "form"
+                ],
+                "implHandler": [
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getVirtualmachineStore();",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord()",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {       ",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    return 1;",
+                    "} else {",
+                    "    return 0;",
+                    "}",
+                    ""
+                ]
+            },
+            "designerId": "f796e990-1afa-48fe-92bc-f43d451afd5a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmstart",
+                "fn": "vmstart",
+                "implHandler": [
+                    "this.vmaction('start');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmstart"
+            },
+            "designerId": "49ca54ad-22fd-466b-9da8-ebb6027da283"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmshutdown",
+                "fn": "vmshutdown",
+                "implHandler": [
+                    "this.vmaction('shutdown');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmshutdown"
+            },
+            "designerId": "606006df-bcae-4bb8-8e98-bf6ddee07de3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmreset",
+                "fn": "vmreset",
+                "implHandler": [
+                    "this.vmaction('reset');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmreset"
+            },
+            "designerId": "7a5ea0b3-3e68-45ff-9dfa-d58e37eb7315"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmaction",
+                "fn": "vmaction",
+                "designer|params": [
+                    "action"
+                ],
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: '/api/vms/' + currentVm.get('id') + '/' + action",
+                    "});"
+                ]
+            },
+            "designerId": "8c3f476b-dc93-467c-ab84-51498e4c0381"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vmdestroy",
+                "fn": "vmdestroy",
+                "implHandler": [
+                    "this.vmaction('destroy');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmdestroy"
+            },
+            "designerId": "adb12d6d-9122-471f-add0-c2eb99105826"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vnc",
+                "fn": "vnc",
+                "implHandler": [
+                    "",
+                    "var window = Ext.widget('vmvnc');",
+                    "var component = window.down('component');",
+                    "",
+                    "window.height = Ext.getBody().getViewSize().height*0.8;",
+                    "window.width = Ext.getBody().getViewSize().width*0.8;",
+                    "",
+                    "component.autoEl.src = '/vnc/' + currentVm.get('id');",
+                    "window.show();",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmeditvnc"
+            },
+            "designerId": "e5f86660-781b-406f-9da7-830c12f0ec53"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelShow",
+                "fn": "onTabpanelShow",
+                "implHandler": [
+                    "console.log(abstractcomponent);",
+                    "",
+                    "abstractcomponent.removeAll();",
+                    "",
+                    "abstractcomponent.add({",
+                    "    xtype: 'component',",
+                    "    autoEl: {",
+                    "        tag: 'iframe',",
+                    "        src: '',",
+                    "        style: 'border:0px;'",
+                    "    },",
+                    "    id: 'vnciframe'",
+                    "});",
+                    "",
+                    "var iframe = abstractcomponent.down('#vnciframe');",
+                    "",
+                    "iframe.autoEl.src = '/vnc/' + currentVm.get('id');",
+                    "",
+                    ""
+                ],
+                "name": "show",
+                "scope": "me",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "#vnctab"
+            },
+            "designerId": "8ec33776-608a-43e4-b94b-4ec951d1fe89"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "pathField",
+                "ref": "pathField",
+                "selector": "#pathField"
+            },
+            "designerId": "c847a6ea-b5f1-457a-b3d0-df07ddc7aa6c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getId",
+                "fn": "getId",
+                "implHandler": [
+                    "return currentVm.get('id');"
+                ]
+            },
+            "designerId": "71032c37-fb5b-43f1-be27-6c32bcf20628"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getVm",
+                "fn": "getVm",
+                "implHandler": [
+                    "return currentVm;"
+                ]
+            },
+            "designerId": "22ebecf8-6e55-4d85-93bc-d097f25794a2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "switchVmEdit",
+                "fn": "switchVmEdit",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "this.getController('Navigation').switchContent('vmedit');",
+                    "currentVm = record;",
+                    "",
+                    "",
+                    "",
+                    "view = this.getVmedit().down('form');",
+                    "view.loadRecord(record);",
+                    "",
+                    "this.getVmedit().setTitle('Virtual Machine - ' + currentVm.get('name'));",
+                    ""
+                ]
+            },
+            "designerId": "f6cfa82c-259c-4d35-af90-65981e0acf59"
+        }
+    ]
+}

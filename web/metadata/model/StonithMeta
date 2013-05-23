@@ -1,0 +1,54 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StonithMeta"
+    },
+    "id": "ExtBox1-ext-gen4370",
+    "designerId": "535d2c55-15b1-4a37-9008-e064b383a3da",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field99",
+                "name": "stonith"
+            },
+            "designerId": "769e8b21-18b1-455a-8d55-c47a61504617"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field100",
+                "name": "params"
+            },
+            "designerId": "efa67606-1a6f-4560-a15b-da033fe39cd0"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field101",
+                "name": "description"
+            },
+            "designerId": "e26de42e-7262-480a-a241-d90cbf1f6681"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "disk.menu.Drbd",
+        "designer|userAlias": "diskmenudrbd",
+        "width": 120
+    },
+    "id": "ExtBox1-ext-gen75564",
+    "designerId": "df0bb9cb-fa14-465b-b700-71e756a0befa",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMenuItem9",
+                "text": "remove DRBD"
+            },
+            "designerId": "c08f16f5-ca7d-46b7-b9ee-7d1c9928f72e"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMenuItem10",
+                "text": "Set Primary"
+            },
+            "designerId": "32443959-4593-4f32-965b-74ba8f8fc461"
+        }
+    ]
+}

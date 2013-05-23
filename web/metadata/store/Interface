@@ -1,0 +1,64 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Interface",
+        "autoSync": true,
+        "storeId": "MyJsonStore7",
+        "model": "Interface"
+    },
+    "id": "ExtBox1-ext-gen40217",
+    "designerId": "463cf8d8-8852-407c-92f9-e2ace2e12b4b",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy9",
+                "url": "/api/vms/1/interfaces"
+            },
+            "designerId": "be372ba8-d3ed-4016-a63e-44c898f8e98f",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader10"
+                    },
+                    "designerId": "1f02a0fa-3f07-4095-9fae-bcc5307ccd0c"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setVirtualmachineId",
+                "fn": "setVirtualmachineId",
+                "designer|params": [
+                    "vm"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/vms/' + vm + '/interfaces';"
+                ]
+            },
+            "designerId": "846fa380-c19a-440c-bcdb-beddccff0ffd"
+        }
+    ]
+}

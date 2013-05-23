@@ -1,0 +1,68 @@
+
+
+jan_zevirt:
+    resource: Jan\ZevirtBundle\Controller\UserController
+    type:     rest
+    prefix: /api
+    defaults : {_format:json}
+
+    
+jan_zevirt1:
+    resource: Jan\ZevirtBundle\Controller\RestController
+    type:     rest
+    prefix: /api
+    defaults : {_format:json}
+    
+
+
+jan_zevirt3:
+    resource: Jan\ZevirtBundle\Controller\ClusterController
+    type:     rest
+    prefix: /api
+    defaults : {_format:json}    
+
+jan_zevirt4:
+    resource: Jan\ZevirtBundle\Controller\NodeController
+    type:     rest
+    prefix: /api
+    defaults : {_format:json}   
+
+ 
+    
+default:
+    resource: Jan\ZevirtBundle\Controller\DefaultController
+    type:     annotation
+    prefix: /
+default2:
+    resource: Jan\ZevirtBundle\Controller\GroupController
+    type:     annotation
+    prefix: /
+default3:
+    resource: Jan\ZevirtBundle\Controller\LoginController
+    type:     annotation
+    prefix: /
+
+      
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
+
+acme_hello:
+    type: rest
+    resource: "@JanZevirtBundle/Resources/config/routes.yml"
+    prefix: /api    
+    defaults : {_format:json}        
+    
+JMSJobQueueBundle:
+    resource: "@JMSJobQueueBundle/Controller/"
+    type: annotation
+    prefix: /jobs2
+    
+    
+login_check:
+    pattern:   /login_check
+    
+logout:
+    pattern:   /logout
+    

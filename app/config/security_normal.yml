@@ -1,0 +1,17 @@
+security:
+    providers:
+            fos_userbundle:
+                id: fos_user.user_provider.username_email
+    firewalls:
+        main:
+            pattern:    ^/
+            form_login:
+                login_path:     ^/$
+                use_forward:    false
+                check_path:     /login_check
+                failure_path:   /login_failed
+                always_use_default_target_path: true
+                default_target_path:            /login_ok          
+            logout:       true
+            anonymous:    true 
+ 

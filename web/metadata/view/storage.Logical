@@ -1,0 +1,97 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
+        "designer|userClassName": "storage.Logical",
+        "designer|userAlias": "storagelogical",
+        "autoShow": true,
+        "border": false,
+        "height": 150,
+        "width": 348,
+        "layout": "fit",
+        "title": "Storage LVM"
+    },
+    "configAlternates": {
+        "buttons": "array"
+    },
+    "id": "ExtBox1-ext-gen26664",
+    "designerId": "4eea6c76-1f34-4a36-a934-6de81e362ffd",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm9",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "821fa997-7c71-4dfc-b82d-3a74a8f3c022",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField7",
+                        "name": "name",
+                        "fieldLabel": "Name"
+                    },
+                    "designerId": "4611a942-4aa5-46d2-9807-2a71a08d5d5e"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField14",
+                        "name": "volumeGroup",
+                        "fieldLabel": "Volume Group"
+                    },
+                    "designerId": "8079601f-018a-4c3b-b19d-e190280422b4"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyHiddenField1",
+                        "name": "entity",
+                        "value": [
+                            "StorageLogical"
+                        ],
+                        "fieldLabel": "Label"
+                    },
+                    "designerId": "759ab2ba-e398-4dea-a924-e02077797a78"
+                }
+            ]
+        }
+    ]
+}

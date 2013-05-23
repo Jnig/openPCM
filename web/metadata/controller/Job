@@ -1,0 +1,185 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Job",
+        "stores": [
+            "Job",
+            "JobOutput"
+        ]
+    },
+    "id": "ExtBox1-ext-gen77522",
+    "designerId": "501ffb02-1613-4ba0-9d54-43fd4084ac21",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#jobgrid"
+            },
+            "designerId": "16d398b4-6fb5-4ddf-83c5-a2cd2b86f5f5"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLaunch",
+                "fn": "onLaunch",
+                "implHandler": [
+                    "var t = this;",
+                    "jobQuery = 0; //jobStore load is limited to one simulatenous load with jobquery variable",
+                    "/*",
+                    "var interval = setInterval(function() {",
+                    "if (jobQuery == 0) {",
+                    "jobQuery = 1;",
+                    "var store = t.getJobStore();",
+                    "store.load(function(r, options, success) {",
+                    "jobQuery = 0;",
+                    "});",
+                    "}",
+                    "}, 2000);*/"
+                ]
+            },
+            "designerId": "fedf720c-27d5-428a-86a1-b72e0ad2b87f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('jobdetail');",
+                    "var t = this; // for scope in interval function",
+                    "t.getJobOutputStore().setJobId(record.get('id'));",
+                    "",
+                    "detailQuery = 0;",
+                    "",
+                    "refreshIntervalId = setInterval(function() {",
+                    "    if (detailQuery== 0) {",
+                    "        detailQuery = 1;    ",
+                    "        var store = t.getJobOutputStore();",
+                    "        store.load(function(r, options, success) {",
+                    "            t.getTextarea().update('<pre>'+r[0].get('output')+'</pre>');",
+                    "",
+                    "            if (r[0].get('state') != 'running' && r[0].get('state') != 'pending') {",
+                    "                clearInterval(refreshIntervalId);",
+                    "            }",
+                    "            detailQuery = 0;",
+                    "        }",
+                    "",
+                    "        );",
+                    "    }",
+                    "}, 1000);",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#jobgrid"
+            },
+            "designerId": "54a93d51-a86b-4610-8646-b60e3a346e00"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "textarea",
+                "ref": "textarea",
+                "selector": "#jobdetailtext"
+            },
+            "designerId": "054b8c32-fe88-4d95-b767-213c61b969bd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onWindowDestroy",
+                "fn": "onWindowDestroy",
+                "implHandler": [
+                    "if (typeof refreshIntervalId !== 'undefined') {",
+                    "",
+                    "    clearInterval(refreshIntervalId);",
+                    "}"
+                ],
+                "name": "destroy",
+                "scope": "me",
+                "designer|targetType": "job.Detail",
+                "designer|controlQuery": "window"
+            },
+            "designerId": "c7553c21-85bf-482a-b427-a571fe0958ef"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onUserjobsClick",
+                "fn": "onUserjobsClick",
+                "implHandler": [
+                    "userJobs = true;",
+                    "",
+                    "this.getJobStore().filter('userId', this.getController('User').getUserId());"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#userJobs"
+            },
+            "designerId": "93e8a682-bc47-44dd-95f1-9569fb1ee8a1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSystemjobsClick",
+                "fn": "onSystemjobsClick",
+                "implHandler": [
+                    "userJobs = false;",
+                    "this.getJobStore().clearFilter();",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#systemJobs"
+            },
+            "designerId": "aee42d47-7c19-4fe8-8b99-3a72031b4e8a"
+        }
+    ]
+}

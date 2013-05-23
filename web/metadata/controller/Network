@@ -1,0 +1,123 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Network",
+        "stores": [
+            "Network"
+        ]
+    },
+    "id": "ExtBox1-ext-gen12418",
+    "designerId": "4373652d-b49d-4cb6-b0d3-1f29001d1aa4",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getNetworkStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    button.up('window').close();",
+                    "} "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "networkadd button[action=save]"
+            },
+            "designerId": "27fefb10-8ad6-478b-863d-c9632a428a04"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#networklistgrid"
+            },
+            "designerId": "ca182a3f-1d31-42de-a6c1-0b550e36576e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('networkadd');",
+                    "var form = window.down('form');",
+                    "",
+                    "form.loadRecord(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "network.List",
+                "designer|controlQuery": "#networklistgrid"
+            },
+            "designerId": "425020ba-9f62-4000-8162-4f0eb29529b0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickDelete",
+                "fn": "onButtonClickDelete",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Network', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Networks. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getNetworkStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#networklistdelete"
+            },
+            "designerId": "e635fcc1-58a4-4afd-99d3-c43b785afc48"
+        }
+    ]
+}

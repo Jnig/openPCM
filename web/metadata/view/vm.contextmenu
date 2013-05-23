@@ -1,0 +1,55 @@
+{
+    "type": "menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "vm.contextmenu",
+        "width": 120
+    },
+    "id": "ExtBox1-ext-gen67829",
+    "designerId": "d277e939-6fd2-495f-9680-892be96dc363",
+    "cn": [
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMenuItem",
+                "text": "Menu Item"
+            },
+            "designerId": "fab21306-1558-46a9-8751-b7b138ed9b34"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMenuItem1",
+                "text": "Menu Item"
+            },
+            "designerId": "c9a8ba29-4c3b-4c4b-a9cd-f5a59aac7e70"
+        },
+        {
+            "type": "menuitem",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyMenuItem2",
+                "text": "Menu Item"
+            },
+            "designerId": "16b833c9-d552-4f04-aaa9-4de03c316d11"
+        }
+    ]
+}

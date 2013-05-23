@@ -1,0 +1,101 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Navigation",
+        "stores": [
+            "Navigation",
+            "Virtualmachine"
+        ]
+    },
+    "id": "ExtBox1-ext-gen16669",
+    "designerId": "adce50fe-2f8a-467f-b69b-56c1785db4b5",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "switchContent",
+                "fn": "switchContent",
+                "designer|params": [
+                    "name"
+                ],
+                "implHandler": [
+                    "var viewport = this.getViewport();",
+                    "var usersGrid = Ext.widget(name, {region: 'center', id: 'center'});",
+                    "",
+                    "",
+                    "viewport.remove('center');",
+                    "viewport.add(usersGrid);",
+                    "viewport.doLayout();"
+                ]
+            },
+            "designerId": "d5df663e-8513-476d-98eb-b700c90a0f51"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTreeviewItemClick",
+                "fn": "onTreeviewItemClick",
+                "implHandler": [
+                    "if (record.get('action') != '') {",
+                    "    if (record.get('action') == 'vmedit') {        ",
+                    "        var record2 = this.getVirtualmachineStore().findRecord('id', record.get('vmId'));",
+                    "        this.getController('Virtualmachine').switchVmEdit(record2);",
+                    "    } else {",
+                    "        this.switchContent(record.get('action'));",
+                    "    }",
+                    "}"
+                ],
+                "name": "itemclick",
+                "scope": "me",
+                "designer|targetType": "Ext.tree.View",
+                "designer|controlQuery": "#Navigation"
+            },
+            "designerId": "57990c44-ca0b-436a-9b48-62999a59c39f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "viewport",
+                "ref": "viewport",
+                "selector": "viewport"
+            },
+            "designerId": "ed34b8b1-c033-4fe8-9ee2-925f21484208"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLaunch",
+                "fn": "onLaunch",
+                "implHandler": [
+                    "this.switchContent('vmlist');"
+                ]
+            },
+            "designerId": "cb8fa65c-dec6-46e4-ba18-945fcd68087b"
+        }
+    ]
+}

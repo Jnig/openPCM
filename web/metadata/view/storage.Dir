@@ -1,0 +1,104 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "button": null,
+        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
+        "designer|userClassName": "storage.Dir",
+        "designer|userAlias": "storagedir",
+        "autoShow": true,
+        "border": false,
+        "height": 141,
+        "width": 332,
+        "layout": "fit",
+        "title": "Storage Directory"
+    },
+    "configAlternates": {
+        "button": "array",
+        "buttons": "array"
+    },
+    "id": "ExtBox1-ext-gen23284",
+    "designerId": "3b79bfed-78f0-4917-821b-802186eaa117",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "button",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm5",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "f6db9cc6-3f03-42c3-8fb3-4debbda6c5e6",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField3",
+                        "name": "name",
+                        "fieldLabel": "Name"
+                    },
+                    "designerId": "5de11344-0de8-4c74-948d-fa7ee7e47cfd"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField8",
+                        "name": "path",
+                        "fieldLabel": "Path"
+                    },
+                    "designerId": "35218db6-6cec-44e0-ae82-c8d5b9590285"
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyHiddenField",
+                        "name": "entity",
+                        "value": [
+                            "StorageDir"
+                        ],
+                        "fieldLabel": "Label"
+                    },
+                    "designerId": "4bdc5196-d2c7-4f13-825c-f0fab09664d2"
+                }
+            ]
+        }
+    ]
+}

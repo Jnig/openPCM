@@ -1,0 +1,71 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Node",
+        "autoLoad": false,
+        "autoSync": true,
+        "storeId": "MyJsonStore2",
+        "model": "Node"
+    },
+    "id": "ExtBox1-ext-gen19271",
+    "designerId": "244f55ac-d211-4b77-a2b8-acf85a91c400",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy3",
+                "url": "/api/nodes"
+            },
+            "designerId": "4185d7f1-9943-475c-b589-351999a45fe4",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader3"
+                    },
+                    "designerId": "ebaf35af-6e1b-436c-83bc-8c8622df35a1"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadDrbdNodes",
+                "fn": "loadDrbdNodes",
+                "designer|params": [
+                    "vmId"
+                ],
+                "implHandler": [
+                    "var old = this.getProxy().url;",
+                    "",
+                    "this.getProxy().url = '/api/nodes/' + vmId + '/drbd';",
+                    "",
+                    "this.load();",
+                    "",
+                    "this.getProxy().url = old;"
+                ]
+            },
+            "designerId": "c9df0e71-2663-4125-ba09-0d3f87a0d697"
+        }
+    ]
+}

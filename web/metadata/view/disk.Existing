@@ -1,0 +1,185 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "]"
+        ],
+        "designer|userClassName": "disk.Existing",
+        "designer|userAlias": "diskexisting",
+        "autoShow": true,
+        "border": false,
+        "height": 200,
+        "padding": null,
+        "width": 444,
+        "layout": "fit",
+        "bodyPadding": null,
+        "title": "My Window"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen17304",
+    "designerId": "57927935-023a-4a41-bbd6-a6c0a52473f9",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm10",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "7efe6ead-05fb-47fe-80a7-5918e8469126",
+            "cn": [
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox6",
+                        "name": "diskType",
+                        "fieldLabel": "Disk Type",
+                        "displayField": "name",
+                        "store": "disk.Type",
+                        "valueField": "name"
+                    },
+                    "designerId": "f5a2e38d-272b-4ce1-8ed5-b287e4d3d50a"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox7",
+                        "name": "driverType",
+                        "fieldLabel": "Driver Type",
+                        "displayField": "name",
+                        "store": "disk.driver.Type",
+                        "valueField": "name"
+                    },
+                    "designerId": "b39cb8fb-7453-4e96-b7f7-6a52b3d4e757"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox14",
+                        "name": "diskDevice",
+                        "fieldLabel": "Disk Device",
+                        "displayField": "name",
+                        "store": "disk.Device",
+                        "valueField": "name"
+                    },
+                    "designerId": "d20f584c-9259-4b7b-b8f9-399b2e4dfa3f"
+                },
+                {
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "stretch",
+                        "designer|userClassName": "MyContainer",
+                        "layout": "hbox"
+                    },
+                    "designerId": "ec40bff8-2083-435c-ac24-0a31691e8cdd",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField21",
+                                "id": "pathField",
+                                "width": 300,
+                                "name": "path",
+                                "fieldLabel": "Path"
+                            },
+                            "designerId": "00722788-bb26-473a-81b3-f198061aacea"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton13",
+                                "designer|displayName": "",
+                                "id": "exploreropen",
+                                "style": [
+                                    "margin-left:10px;"
+                                ],
+                                "text": "File Explorer"
+                            },
+                            "designerId": "3bd711ea-c60f-4a2a-9ec4-e366c5a43333"
+                        }
+                    ]
+                },
+                {
+                    "type": "hiddenfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyHiddenField5",
+                        "name": "action",
+                        "value": [
+                            "'other'"
+                        ],
+                        "fieldLabel": "Label"
+                    },
+                    "designerId": "d5b4ff1b-d014-499f-88ea-e8eed23cdb02"
+                }
+            ]
+        }
+    ]
+}

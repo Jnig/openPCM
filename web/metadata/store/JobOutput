@@ -1,0 +1,63 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "JobOutput",
+        "designer|userAlias": "",
+        "storeId": "JobOutput",
+        "model": "jobOutput"
+    },
+    "id": "ExtBox1-ext-gen6143",
+    "designerId": "7b1fba77-c844-42c4-8e71-cd57cd9a0ea8",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy5"
+            },
+            "designerId": "5e80e68e-383a-4f3d-abfc-4791d6be9bca",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader7"
+                    },
+                    "designerId": "ac6c1cc5-8751-4f60-81a3-ea0c99240a1b"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setJobId",
+                "fn": "setJobId",
+                "designer|params": [
+                    "jobId"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/jobs/' + jobId + '/output';"
+                ]
+            },
+            "designerId": "69a7174d-dbea-4173-9f4c-3d536141c784"
+        }
+    ]
+}

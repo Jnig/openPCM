@@ -1,0 +1,25 @@
+vms:
+    type:     rest
+    resource: Jan\ZevirtBundle\Controller\VirtualMachineController
+
+interfaces:
+    type:     rest
+    parent:   vms
+    resource: Jan\ZevirtBundle\Controller\InterfaceController
+    
+disk:
+    type:     rest
+    parent:   vms
+    resource: Jan\ZevirtBundle\Controller\DiskController
+    
+storages:
+    type:     rest
+    resource: Jan\ZevirtBundle\Controller\StorageController
+    
+network:
+    type:     rest
+    resource: Jan\ZevirtBundle\Controller\NetworkController
+    
+jobs:
+    type:     rest
+    resource: Jan\ZevirtBundle\Controller\JobController

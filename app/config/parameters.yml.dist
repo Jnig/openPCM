@@ -1,0 +1,33 @@
+parameters:
+ 
+    # edit to fit your mysql settings
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_user: root
+    database_password: rootpw
+    database_port: null
+    database_name: openpcm
+    database_path: null   
+
+    hypervisor: kvm #qemu
+    
+    # can be used to enable active directory/ldap login
+    ldap: off #on
+    ldap_host: 192.168.122.173
+    ldap_port: 389
+    ldap_version: 3
+    ldap_username: user@local.example.com
+    ldap_password: userpassword
+    ldap_baseDn: dc=local,dc=example,dc=com
+    ldap_attributeUsername: samaccountname
+    ldap_attributeEmail: samaccountname
+    ldap_attributeSecondname: sn
+    ldap_attributeFirstname: givenname
+    
+
+    mailer_transport: smtp
+    mailer_host: localhost
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: af374e4d28cae1c2611b4edd2af3d17afc708fe3

@@ -1,0 +1,83 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Disk",
+        "autoLoad": false,
+        "autoSync": false,
+        "storeId": "MyJsonStore4",
+        "model": "Disk"
+    },
+    "id": "ExtBox1-ext-gen43501",
+    "designerId": "8cb535ce-b0db-41a9-8f4d-9285fd42236d",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy6"
+            },
+            "designerId": "e6d20875-f91f-48a2-a700-724c33f8e58b",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader8"
+                    },
+                    "designerId": "85defaea-7d6e-42ec-a926-158292f6141a"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setVirtualmachineId",
+                "fn": "setVirtualmachineId",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/vms/' + id + '/disks';"
+                ]
+            },
+            "designerId": "d7013ff9-c4ad-49d9-805c-70535c2b466c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setStorageId",
+                "fn": "setStorageId",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/storages/' + id + '/disks';"
+                ]
+            },
+            "designerId": "f78dfbdf-d9c8-4871-83a0-15937644fe5f"
+        }
+    ]
+}

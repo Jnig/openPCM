@@ -1,0 +1,117 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
+        "designer|userClassName": "interface.Add",
+        "designer|userAlias": "interfaceadd",
+        "autoShow": true,
+        "border": false,
+        "height": 160,
+        "padding": null,
+        "width": 400,
+        "layout": "fit",
+        "bodyPadding": null,
+        "title": "Network Interface"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen34206",
+    "designerId": "47b581bd-b0dd-47a7-a8de-bd6a42f6bfe7",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm14",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "faa1ebc0-451b-455e-8f0b-7abc3b2e0b25",
+            "cn": [
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox10",
+                        "name": "network",
+                        "fieldLabel": "Network",
+                        "displayField": "name",
+                        "store": "Network",
+                        "valueField": "id"
+                    },
+                    "designerId": "05bf15e4-bbf9-4c20-b3c2-7ff5c3eb6c76"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox11",
+                        "name": "modelType",
+                        "fieldLabel": "Model Type",
+                        "displayField": "name",
+                        "store": "interface.modelType",
+                        "valueField": "name"
+                    },
+                    "designerId": "11958f1c-607d-461f-879b-c4c804b60c01"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField26",
+                        "name": "macAddress",
+                        "value": [
+                            "'[auto]'"
+                        ],
+                        "fieldLabel": "MAC Address"
+                    },
+                    "designerId": "9c5fc6ab-ea02-429c-a369-cabc8e2ae318"
+                }
+            ]
+        }
+    ]
+}

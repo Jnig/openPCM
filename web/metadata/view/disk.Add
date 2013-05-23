@@ -1,0 +1,253 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Other Files',",
+            "                    id: 'openDiskExisting'",
+            "                },",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
+        "designer|userClassName": "disk.Add",
+        "designer|userAlias": "diskadd",
+        "autoShow": true,
+        "border": false,
+        "height": 217,
+        "width": 400,
+        "layout": "fit",
+        "bodyPadding": null,
+        "title": "My Window"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen27411",
+    "designerId": "7aef43e5-aec8-4b78-82e2-2aba59d9c484",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm11",
+                "bodyPadding": 5,
+                "title": null
+            },
+            "designerId": "4932e827-5163-4cde-b3e7-4429b265844a",
+            "cn": [
+                {
+                    "type": "radiogroup",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyRadioGroup",
+                        "width": 400,
+                        "fieldLabel": "Use"
+                    },
+                    "designerId": "66e01e05-90bf-45f8-8f36-9a6e98fcda6e",
+                    "cn": [
+                        {
+                            "type": "radiofield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyRadio",
+                                "name": "action",
+                                "fieldLabel": null,
+                                "boxLabel": "Existing Disk",
+                                "checked": true,
+                                "inputValue": "existing"
+                            },
+                            "designerId": "ea72eb58-8a4a-418b-a853-596526e9d1b8",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onRadiofieldChange",
+                                        "fn": "onRadiofieldChange",
+                                        "implHandler": [
+                                            "Ext.getCmp('diskaddsize').show();",
+                                            "Ext.getCmp('diskaddvolume').hide();"
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "86d61b98-009b-4113-8628-f6d9ffa44db0"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "radiofield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyRadio1",
+                                "name": "action",
+                                "fieldLabel": null,
+                                "boxLabel": "Create New Disk",
+                                "inputValue": "create"
+                            },
+                            "designerId": "84372016-63d6-4094-8475-eda97bf58e35",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onRadiofieldChange1",
+                                        "fn": "onRadiofieldChange1",
+                                        "implHandler": [
+                                            "",
+                                            "",
+                                            "Ext.getCmp('diskaddsize').hide();",
+                                            "Ext.getCmp('diskaddvolume').show();",
+                                            ""
+                                        ],
+                                        "name": "change",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "2052d203-61aa-4004-979f-c88eb7719b53"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox8",
+                        "id": "diskaddstorage",
+                        "name": "storage",
+                        "fieldLabel": "Storage",
+                        "displayField": "name",
+                        "store": "Storage",
+                        "valueField": "id"
+                    },
+                    "designerId": "a6b0ba24-3651-4c8e-82b5-790aa643f13f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onDiskaddstorageChange",
+                                "fn": "onDiskaddstorageChange",
+                                "implHandler": [
+                                    "Ext.getCmp('diskaddvolume').reset();"
+                                ],
+                                "name": "change",
+                                "scope": "me"
+                            },
+                            "designerId": "a3b3045a-1105-416b-8225-673e74040725"
+                        }
+                    ]
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField22",
+                        "hidden": true,
+                        "id": "diskaddsize",
+                        "name": "capacity",
+                        "fieldLabel": "Size in GB"
+                    },
+                    "designerId": "8593096f-a635-4800-8977-9b8396d451c5"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox9",
+                        "id": "diskaddvolume",
+                        "name": "volume",
+                        "fieldLabel": "Volume",
+                        "displayField": "path",
+                        "store": "DiskAdd",
+                        "valueField": "id"
+                    },
+                    "designerId": "cff28d5f-c55b-4f55-b013-b21aa938cc09"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox11",
+                        "name": "diskDevice",
+                        "fieldLabel": "Disk Device",
+                        "displayField": "name",
+                        "store": "disk.Device",
+                        "valueField": "name"
+                    },
+                    "designerId": "da4fd67e-50c5-4225-a646-f62e59c808cf"
+                }
+            ]
+        }
+    ]
+}

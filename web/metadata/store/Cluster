@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Cluster",
+        "autoSync": true,
+        "storeId": "MyJsonStore5",
+        "model": "Cluster"
+    },
+    "id": "ExtBox1-ext-gen13328",
+    "designerId": "6bca3d51-d253-47c7-9e00-2720fc4099e7",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy7",
+                "url": "/api/clusters"
+            },
+            "designerId": "b39ddf2f-4dc0-46ef-b8a1-fa2da61cb87d",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader7"
+                    },
+                    "designerId": "82db9b62-629f-4577-98e3-c04bec3a1e26"
+                }
+            ]
+        }
+    ]
+}

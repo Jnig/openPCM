@@ -1,0 +1,196 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Drbd",
+        "stores": [
+            "Disk",
+            "Node",
+            "IpA",
+            "IpB"
+        ]
+    },
+    "id": "ExtBox1-ext-gen79677",
+    "designerId": "c4ea1d95-e6c7-475d-9c26-729485e993a6",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#vmdiskgrid"
+            },
+            "designerId": "58324856-a601-44eb-86bb-bab47241b147"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMenuitemClickEnableDrbd",
+                "fn": "onMenuitemClickEnableDrbd",
+                "implHandler": [
+                    "var window = Ext.widget('diskdrbd');",
+                    "var node = this.getController('Virtualmachine').getVm().get('node');",
+                    "var form = window.down('form');",
+                    "",
+                    "form.getForm().setValues({",
+                    "    nodeA: node",
+                    "});",
+                    "",
+                    "this.getNodeStore().loadDrbdNodes(this.getController('Virtualmachine').getId());",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.menu.Item",
+                "designer|controlQuery": "#enabledrbd"
+            },
+            "designerId": "7b276bdd-b7be-46cc-8aca-06ef763c0cae"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "nodeB",
+                "ref": "nodeB",
+                "selector": "#diskDrbdNodeB"
+            },
+            "designerId": "df513dc5-ad64-4b24-b978-e93beac2dfb5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onComboboxBeforeQueryNodeA",
+                "fn": "onComboboxBeforeQueryNodeA",
+                "implHandler": [
+                    "",
+                    "var nodeA = this.getNodeA().getValue();",
+                    "",
+                    "if (nodeA != null) {",
+                    "    this.getIpAStore().loadByNode(nodeA);",
+                    "}"
+                ],
+                "name": "beforequery",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "#diskDrbdIpA"
+            },
+            "designerId": "6989e3ac-9ee8-4233-98cf-ec12c48d1f68"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "nodeA",
+                "ref": "nodeA",
+                "selector": "#diskDrbdNodeA"
+            },
+            "designerId": "1853dc81-225c-4eab-a21d-9b8b764b930d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onComboboxBeforeQueryNodeB",
+                "fn": "onComboboxBeforeQueryNodeB",
+                "implHandler": [
+                    "var nodeB = this.getNodeB().getValue();",
+                    "",
+                    "if (nodeB != null) {",
+                    "  ",
+                    "    this.getIpBStore().loadByNode(nodeB);",
+                    "}"
+                ],
+                "name": "beforequery",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "#diskDrbdIpB"
+            },
+            "designerId": "61ff3e0f-53d2-4ea8-aa25-ed42d4643857"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickSave",
+                "fn": "onButtonClickSave",
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getDiskStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.suspendAutoSync();",
+                    "        store.add(values);",
+                    "",
+                    "",
+                    "        store.sync({",
+                    "            success: function () {",
+                    "",
+                    "",
+                    "                this.getDiskStore().load();",
+                    "            },",
+                    "            scope: this",
+                    "        });",
+                    "        store.resumeAutoSync();",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    this.getDiskStore().load();",
+                    "    button.up('window').close();",
+                    "} "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "diskdrbd button[action=save]"
+            },
+            "designerId": "703925c8-43c6-4482-a506-c3adc507cfbe"
+        }
+    ]
+}

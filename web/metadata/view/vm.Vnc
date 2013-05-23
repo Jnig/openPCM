@@ -1,0 +1,41 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "vm.Vnc",
+        "designer|userAlias": "vmvnc",
+        "height": null,
+        "width": 1024,
+        "layout": "fit",
+        "title": "VNC",
+        "constrain": true
+    },
+    "id": "ExtBox1-ext-gen4069",
+    "designerId": "f9cc52dd-0fd5-4180-83af-149505423318",
+    "cn": [
+        {
+            "type": "component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyComponent",
+                "autoEl": [
+                    "{",
+                    "tag : \"iframe\",",
+                    "src : \"\",",
+                    "style: \"border:0px;\"",
+                    "}"
+                ],
+                "id": "vnciframe"
+            },
+            "designerId": "77132206-7baf-4e2a-9111-6128db77b5e7"
+        }
+    ]
+}

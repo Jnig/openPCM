@@ -1,0 +1,19 @@
+<volume>
+  <name>vmdisk_48</name>
+  <key>xRSEPC-7dn0-FuC0-pVMo-LIo7-knqh-3pJ3GD</key>
+  <source>
+    <device path='/dev/sda1'>
+      <extent start='11072962560' end='12146704384'/>
+    </device>
+  </source>
+  <capacity>1073741824</capacity>
+  <allocation>1073741824</allocation>
+  <target>
+    <path>/dev/main/vmdisk_48</path>
+    <permissions>
+      <mode>0660</mode>
+      <owner>0</owner>
+      <group>6</group>
+    </permissions>
+  </target>
+</volume> 

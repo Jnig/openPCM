@@ -1,0 +1,373 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Disk",
+        "stores": [
+            "Disk",
+            "Volume",
+            "DiskAdd"
+        ]
+    },
+    "id": "ExtBox1-ext-gen66363",
+    "designerId": "67813e30-db82-46e9-8d02-b5e34f68228f",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "save",
+                "fn": "save",
+                "designer|params": [
+                    "form"
+                ],
+                "implHandler": [
+                    "var values = form.getValues();",
+                    "var store = this.getDiskStore();",
+                    "store.setVirtualmachineId(this.getController('Virtualmachine').getId());",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {       ",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "            this.getDiskStore().sync();  ",
+                    "",
+                    "    return 1;",
+                    "} else {",
+                    "    return 0;",
+                    "}",
+                    ""
+                ]
+            },
+            "designerId": "376ebdd5-d8c2-434e-8122-76e8413b5df6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDiskaddSave",
+                "fn": "onDiskaddSave",
+                "implHandler": [
+                    "var win = button.up('window'),",
+                    "    form = win.down('form');",
+                    "",
+                    "if (this.save(form)) {",
+                    "    win.close();",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "diskadd button[action=save]"
+            },
+            "designerId": "67e9e97b-5d37-4e90-b8a1-537af1dd7df5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "openExistingDisk",
+                "fn": "openExistingDisk",
+                "implHandler": [
+                    "var window = Ext.widget('diskadd');",
+                    "var store = this.getDiskStore();",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#existingDiskLink"
+            },
+            "designerId": "00e7027c-79fd-4b2d-9466-f10512d05bc5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "explorerOpen",
+                "fn": "explorerOpen",
+                "implHandler": [
+                    "var window = Ext.widget('explorer');",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#exploreropen"
+            },
+            "designerId": "ac63c4d3-949b-4264-8713-382e36462430"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTreeviewItemClick",
+                "fn": "onTreeviewItemClick",
+                "implHandler": [
+                    "",
+                    "",
+                    "this.getPathField().setValue(record.raw.path);",
+                    "",
+                    "this.getExplorer().close();"
+                ],
+                "name": "itemclick",
+                "scope": "me",
+                "designer|targetType": "Ext.tree.View",
+                "designer|controlQuery": "explorer treepanel"
+            },
+            "designerId": "d3393d9f-b9f9-4d6d-8a28-765ba144df0b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelBeforeShow",
+                "fn": "onTabpanelBeforeShow",
+                "implHandler": [
+                    "var store = this.getDiskStore();",
+                    "store.setVirtualmachineId(this.getController('Virtualmachine').getId());",
+                    ""
+                ],
+                "name": "beforeshow",
+                "scope": "me",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "#vmdiskgrid"
+            },
+            "designerId": "d5a44342-9ac1-440d-9101-f9331cdfdadc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#vmdiskgrid"
+            },
+            "designerId": "33cb5f1a-93fa-4d98-9649-17a99b726fb4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteDisk",
+                "fn": "deleteDisk",
+                "implHandler": [
+                    "",
+                    "",
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Storage', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Storage. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "            this.getDiskStore().remove(selected);",
+                    "",
+                    "            this.getDiskStore().sync({",
+                    "                success: function(){},",
+                    "                failure: function(){this.getDiskStore().load();},",
+                    "                scope: this",
+                    "            });            ",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#deleteDisk"
+            },
+            "designerId": "cf5f892b-b0c4-45f3-a496-00c62f599e0a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onDiskExistingButtonClick",
+                "fn": "onDiskExistingButtonClick",
+                "implHandler": [
+                    "button.up('window').close();",
+                    "var window = Ext.widget('diskexisting');"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#openDiskExisting"
+            },
+            "designerId": "db7a92f0-7e32-4a8f-8e5d-e67938dcdf6e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "pathField",
+                "ref": "pathField",
+                "selector": "#pathField"
+            },
+            "designerId": "2d2e9220-d128-4470-8438-b3b5a431a314"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "explorer",
+                "ref": "explorer",
+                "selector": "explorer"
+            },
+            "designerId": "8f0e1a8d-7e1c-4491-8d93-3f53fabf732f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickOther",
+                "fn": "onButtonClickOther",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "if (this.save(form)) {",
+                    "    win.close();",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "diskexisting button[action=save]"
+            },
+            "designerId": "97f13fd5-1a5a-47a5-8533-86aa57353e71"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('diskedit');",
+                    "",
+                    "window.down('form').loadRecord(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#vmdiskgrid"
+            },
+            "designerId": "04a4bfc1-9a8e-43eb-b1a2-c8ec199411fb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var win = button.up('window');",
+                    "var form = win.down('form');",
+                    "",
+                    "if (this.save(form)) {",
+                    "    win.close();",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "diskedit button[action=save]"
+            },
+            "designerId": "9227ca67-353d-4490-8161-aacd8b4c6360"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onComboboxSelect",
+                "fn": "onComboboxSelect",
+                "implHandler": [
+                    "",
+                    "var id = records[0].get('id');",
+                    "this.getDiskAddStore().setStorageId(id);"
+                ],
+                "name": "select",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "#diskaddstorage"
+            },
+            "designerId": "4fd7a7df-0110-4ba9-a031-c76cc603ded1"
+        }
+    ]
+}

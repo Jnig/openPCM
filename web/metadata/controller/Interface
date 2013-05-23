@@ -1,0 +1,164 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Interface",
+        "stores": [
+            "Interface"
+        ]
+    },
+    "id": "ExtBox1-ext-gen42804",
+    "designerId": "3abe9e82-e085-4d20-b618-526266868421",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFunction14"
+            },
+            "designerId": "115fdd26-44d4-452b-a850-641e3366303c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelActivate",
+                "fn": "onTabpanelActivate",
+                "implHandler": [
+                    "var store = this.getInterfaceStore();",
+                    "",
+                    "store.setVirtualmachineId(this.getController('Virtualmachine').getId());",
+                    "",
+                    "store.load();",
+                    "",
+                    ""
+                ],
+                "name": "activate",
+                "scope": "me",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "#vmeditinterfacetab"
+            },
+            "designerId": "00455d17-2d0f-4165-afd0-82de53e19692"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickSave",
+                "fn": "onButtonClickSave",
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getInterfaceStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        console.log(values);",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    button.up('window').close();",
+                    "} "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "interfaceadd button[action=save]"
+            },
+            "designerId": "b9619e30-1d47-47bc-a430-3a2088a08404"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('interfaceadd');",
+                    "var form = window.down('form');",
+                    "",
+                    "form.loadRecord(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#vmeditinterfacegrid"
+            },
+            "designerId": "0e448838-f5b6-4cc9-b51d-5083afd6bffc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#vmeditinterfacegrid"
+            },
+            "designerId": "5835d6b5-529a-4fc8-a759-d9d7331ddd49"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickDelete",
+                "fn": "onButtonClickDelete",
+                "implHandler": [
+                    "",
+                    "",
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Interface', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Interface. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getInterfaceStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#vmeditinterfacedelete"
+            },
+            "designerId": "c664d59c-a7d7-407d-b348-3e1ebeb937ba"
+        }
+    ]
+}

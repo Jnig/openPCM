@@ -1,0 +1,67 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Stonith",
+        "storeId": "MyJsonStore12",
+        "model": "Stonith"
+    },
+    "id": "ExtBox1-ext-gen5359",
+    "designerId": "223b2438-17d5-4e4b-bf7c-10df485067cf",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy16"
+            },
+            "designerId": "fe976061-8361-42e5-ad8f-1590c19b8e4f",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader16"
+                    },
+                    "designerId": "b59f1871-e0b0-4c9a-a3c6-6e55ffb8c2f4"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadByNode",
+                "fn": "loadByNode",
+                "designer|params": [
+                    "nodeId"
+                ],
+                "implHandler": [
+                    "",
+                    "this.getProxy().url = '/api/nodes/'+nodeId+'/stoniths';",
+                    "",
+                    "this.load();",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "64f52fbf-21a2-4ac9-870c-01b3976207e2"
+        }
+    ]
+}

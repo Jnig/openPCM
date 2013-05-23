@@ -1,0 +1,331 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Node",
+        "stores": [
+            "Node",
+            "IpA",
+            "Cluster",
+            "Storage",
+            "Network",
+            "Stonith",
+            "StonithMeta"
+        ]
+    },
+    "id": "ExtBox1-ext-gen28682",
+    "designerId": "ea3003f4-c5a5-4443-8369-62c66f8e6c93",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var window = button.up('window');",
+                    "",
+                    "var form = window.down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var store = this.getNodeStore();    ",
+                    "    var record = form.getRecord();",
+                    "",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "        record.set(values);",
+                    "",
+                    "    }",
+                    "    window.close();",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "nodeadd button[action=save]"
+            },
+            "designerId": "30e5eee8-9c17-4839-995d-5c955f937101"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNodeDelete",
+                "fn": "onNodeDelete",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Node', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Nodes. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getNodeStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#nodedelete"
+            },
+            "designerId": "a1202633-a0cf-41e2-93e4-e242442482b7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#nodelistgrid"
+            },
+            "designerId": "8ccf8597-e55c-460a-9cdf-305c69db671e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('nodeadd');",
+                    "",
+                    "window.down('form').loadRecord(record);",
+                    "",
+                    "this.getIpAStore().loadByNode(record.get('id'));",
+                    "",
+                    "",
+                    "this.getStonithStore().loadByNode(record.get('id'));",
+                    "",
+                    "if (record.get('ha')) {",
+                    "    var tab = this.getTab();",
+                    "    tab.enable();",
+                    "}"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "nodelist"
+            },
+            "designerId": "b0a94e20-473f-4711-bfe8-9ee290fccb02"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tab",
+                "ref": "tab",
+                "selector": "#nodeaddhatab"
+            },
+            "designerId": "c6a81c6b-3aee-4ec7-bcb0-f0c5dcb31012"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelAfterRender",
+                "fn": "onGridpanelAfterRender",
+                "implHandler": [
+                    "this.getClusterStore().load();",
+                    "this.getNetworkStore().load();",
+                    "this.getStorageStore().load();"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "nodelist"
+            },
+            "designerId": "ef275afb-d017-4350-8848-45c18bf847e2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onComboboxSelect",
+                "fn": "onComboboxSelect",
+                "implHandler": [
+                    "",
+                    "var node = combo.up('form').getRecord();",
+                    "    ",
+                    "    ",
+                    "",
+                    "",
+                    "this.getStonithMetaStore().setNodeAndStonith(node.get('id'), records[0].get('stonith'));",
+                    "",
+                    "this.getStonithMetaStore().load({scope: this,",
+                    "    callback: function(records, operation, success) {",
+                    "        var parameters = records[0].get('params')",
+                    "        var help = records[0].get('description')",
+                    "        ",
+                    "        this.getStonithParameters().setValue(parameters);",
+                    "        this.getStonithHelp().setValue(help);",
+                    "        }",
+                    "    });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "designer|controlQuery": "#stonith"
+            },
+            "designerId": "bbe9f0e3-1f28-4fec-ba3a-86065967f369"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "stonithParameters",
+                "ref": "stonithParameters",
+                "selector": "#stonithParameters"
+            },
+            "designerId": "3fa0a0e3-9110-44ff-9fed-12831e47420a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "stonithHelp",
+                "ref": "stonithHelp",
+                "selector": "#stonithHelp"
+            },
+            "designerId": "acf7f576-706f-406f-9b78-f2f0d8926713"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonStandbyOffClick",
+                "fn": "onButtonStandbyOffClick",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Standby Node', 'You are about to set  <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> nodes into standy mode. The cluster will migrate resources back to this node. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            Ext.each(selected, function(value) {",
+                    "                this.nodeAction(value.get('id'), 'standby/off');",
+                    "",
+                    "            }, this);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#button-standby-off"
+            },
+            "designerId": "56ab571e-e1d5-4ad9-ac0b-1efb3a75cef0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonStandbyOnClick",
+                "fn": "onButtonStandbyOnClick",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Standby Node', 'You are about to set  <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> nodes into standy mode. The nodes will migrate all their running resources to other nodes. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            Ext.each(selected, function(value) {",
+                    "                this.nodeAction(value.get('id'), 'standby/on');",
+                    "",
+                    "            }, this);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#button-standby-on"
+            },
+            "designerId": "bd5834b4-a6c1-4efb-b846-25411e8374db"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "nodeAction",
+                "fn": "nodeAction",
+                "designer|params": [
+                    "nodeId",
+                    "action"
+                ],
+                "implHandler": [
+                    "Ext.Ajax.request({",
+                    "    url: '/api/nodes/' + nodeId + '/' + action",
+                    "});"
+                ]
+            },
+            "designerId": "4443bf7c-8dad-4415-ac56-813e685efd1d"
+        }
+    ]
+}

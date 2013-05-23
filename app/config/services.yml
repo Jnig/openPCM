@@ -1,0 +1,45 @@
+services:
+  node.service:
+    class: Jan\ZevirtBundle\Service\NodeService
+    arguments: [@service_container, @doctrine.orm.entity_manager]  
+    
+  virtualmachine.service:
+    class: Jan\ZevirtBundle\Service\VirtualmachineService
+    arguments: [@service_container, @doctrine.orm.entity_manager, @node.service]  
+  
+  storage.service:
+    class: Jan\ZevirtBundle\Service\StorageService
+    arguments: [@service_container, @doctrine.orm.entity_manager]
+    
+  drbd.service:
+    class: Jan\ZevirtBundle\Service\DrbdService
+    arguments: [@service_container, @doctrine.orm.entity_manager]
+    
+
+
+    
+    
+  kernel.listener.zevirtexception:
+    class: Jan\ZevirtBundle\EventListener\ExceptionListener
+    tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException, priority: 1000  }    
+  control.service:
+    class: Jan\ZevirtBundle\Service\ControlService
+    arguments: [@service_container, @doctrine.orm.entity_manager]
+    
+  job.service:
+    class: Jan\ZevirtBundle\Service\JobService
+    arguments: [@service_container, @doctrine.orm.entity_manager]
+    
+  disk.service:
+    class: Jan\ZevirtBundle\Service\DiskService
+    arguments: [@service_container, @doctrine.orm.entity_manager]      
+    
+  cluster.service:
+    class: Jan\ZevirtBundle\Service\ClusterService
+    arguments: [@service_container, @doctrine.orm.entity_manager]     
+
+  connection.service:
+    class: Jan\ZevirtBundle\Service\ConnectionService
+    arguments: [@service_container, @doctrine.orm.entity_manager]   
+    

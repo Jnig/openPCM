@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "/js/BoxSelect.js"
+    },
+    "id": "ExtBox1-ext-gen16905",
+    "designerId": "ba83c1e2-7865-48d7-b769-d4bfe94a7f40"
+}

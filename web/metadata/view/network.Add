@@ -1,0 +1,110 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
+        "designer|userClassName": "network.Add",
+        "designer|userAlias": "networkadd",
+        "autoShow": true,
+        "border": false,
+        "height": 166,
+        "width": 400,
+        "layout": "fit",
+        "bodyPadding": null,
+        "title": "My Window"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen19447",
+    "designerId": "f520c0e0-18c5-402b-8b2f-8b7a507a6e71",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm13",
+                "bodyPadding": 10,
+                "title": ""
+            },
+            "designerId": "d26c53de-f71f-49c5-bc43-7765ddbeb672",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField24",
+                        "name": "name",
+                        "fieldLabel": "Network Name"
+                    },
+                    "designerId": "c35c6d06-388a-4225-ba56-90c7037af064"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTextField25",
+                        "name": "bridgeName",
+                        "fieldLabel": "Bridge Name"
+                    },
+                    "designerId": "dc6ec34c-75b9-4036-b438-2fbf0b8ebe36"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox",
+                        "designer|displayName": "name",
+                        "name": "forwardMode",
+                        "fieldLabel": "Forward Mode",
+                        "displayField": "name",
+                        "store": "network.forwardMode",
+                        "valueField": "name"
+                    },
+                    "designerId": "dbe21e19-3c56-44d0-8972-960e62c94cfa"
+                }
+            ]
+        }
+    ]
+}

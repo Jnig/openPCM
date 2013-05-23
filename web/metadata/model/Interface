@@ -1,0 +1,80 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Interface"
+    },
+    "id": "ExtBox1-ext-gen41760",
+    "designerId": "298f369d-cf73-4322-9c97-43d893e48d0b",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field47",
+                "name": "id"
+            },
+            "designerId": "70bc711f-bfd1-483e-b4bf-150c55eba201"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field48",
+                "name": "network"
+            },
+            "designerId": "1caa5eda-b1a8-4c59-9834-da91f0b0b77f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field49",
+                "name": "modelType"
+            },
+            "designerId": "7ec2fc94-a580-47ff-a37e-cb44b0a8c31b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field50",
+                "name": "macAddress"
+            },
+            "designerId": "46e90e52-ba7a-48de-8518-e455b60d0177"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field51",
+                "name": "name"
+            },
+            "designerId": "f02720c1-4620-427b-8412-cb3791fe1d44"
+        }
+    ]
+}

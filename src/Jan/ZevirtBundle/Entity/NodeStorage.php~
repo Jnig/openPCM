@@ -1,0 +1,42 @@
+<?php
+
+namespace Jan\ZevirtBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class NodeStorage
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Node",inversedBy="storages",cascade={"persist"})
+     * @ORM\JoinColumn(name="node_id", referencedColumnName="id", nullable=false)
+     */
+    private $node;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Storage",inversedBy="nodes",cascade={"persist"})
+     * @ORM\JoinColumn(name="storage_id", referencedColumnName="id", nullable=false)
+     */
+    private $storage;
+
+    /**
+     * 
+     *
+     * @ORM\Column(type="string", length=255)
+     */
+    private $state;
+}

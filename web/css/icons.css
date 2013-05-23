@@ -1,0 +1,66 @@
+.icon-vnc {
+    background-image: url("/icons/silk/application_osx_terminal.png") !important;
+    width:20px;
+    height:20px;    
+}
+
+.icon-vm {
+    background-image: url("/icons/silk/server.png") !important;
+}
+
+.icon-cluster {
+    background-image: url("/icons/fugue/servers-network.png") !important; 
+}
+
+.icon-node {
+    background-image: url("/icons/fugue/server.png") !important;     
+}
+
+.icon-user {
+    background-image: url("/icons/silk/user.png") !important;
+}
+
+.icon-drive {
+    background-image: url("/icons/silk/drive.png") !important;
+}
+
+.icon-network {
+    background-image: url("/icons/misc/network_ip.png") !important;
+}
+
+.icon-add {
+    background-image: url("/icons/silk/add.png") !important;
+}
+
+.icon-delete {
+    background-image: url("/icons/silk/delete.png") !important;
+}
+
+.icon-folder {
+    background-image: url("/icons/silk/folder.png") !important;
+}
+
+.icon-finished {
+     background-image: url("/icons/silk/accept.png") !important;   
+}
+
+.icon-failed {
+     background-image: url("/icons/silk/cancel.png") !important;   
+}
+
+.pull-right {
+    float:right;
+    text-align: right;
+}
+
+.icon-standby {
+     background-image: url("/icons/fugue/clock.png") !important;  
+}
+
+.icon-standby-on {
+     background-image: url("/icons/fugue/clock--plus.png") !important;  
+}
+
+.icon-standby-off {
+     background-image: url("/icons/fugue/clock--minus.png") !important;  
+}

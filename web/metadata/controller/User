@@ -1,0 +1,201 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "User",
+        "stores": [
+            "User",
+            "Profile"
+        ]
+    },
+    "id": "ExtBox1-ext-gen21904",
+    "designerId": "462fdb6d-9a90-48a8-a546-38f3131e17dc",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#userlistgrid"
+            },
+            "designerId": "c7859d63-8764-468c-826c-bd0d5c528b29"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getUserStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    button.up('window').close();",
+                    "} "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "useradd button[action=save]"
+            },
+            "designerId": "ceebfd16-b42e-4571-ad26-f3509f676579"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickDelete",
+                "fn": "onButtonClickDelete",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove User', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Users. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getUserStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#userlistdelete"
+            },
+            "designerId": "8d161d90-8e97-4dab-ae2c-a0c6c762309d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "",
+                    "var window = Ext.widget('useradd');",
+                    "var form = window.down('form');",
+                    "",
+                    "this.getUserfield().minLength = 0;",
+                    "this.getUserfield().allowBlank = true;",
+                    "",
+                    "form.loadRecord(record);",
+                    "",
+                    ""
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#userlistgrid"
+            },
+            "designerId": "5260170a-ae4f-4dcd-bdd1-56074e1968ec"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "userfield",
+                "ref": "userfield",
+                "selector": "#useraddpassword"
+            },
+            "designerId": "417a6d2f-1010-41fa-9939-e1a3ab0d83ad"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLaunch",
+                "fn": "onLaunch",
+                "implHandler": [
+                    "var t = this; // for scope in interval function",
+                    "",
+                    "this.getProfileStore().load(function(r, options, success) {",
+                    "",
+                    "    t.getLabel().setText('Logged in as '+ r[0].get('firstName')+ ' ' +r[0].get('secondName'));",
+                    "    ",
+                    "",
+                    "    userId = r[0].get('id');",
+                    "",
+                    "});",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "2cd2cab9-d970-4505-9db8-0b87ee432356"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "label",
+                "ref": "label",
+                "selector": "#profiletext"
+            },
+            "designerId": "db313d97-c6bb-4a84-a73d-a1f34bafa3ab"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getUserId",
+                "fn": "getUserId",
+                "implHandler": [
+                    "return userId;"
+                ]
+            },
+            "designerId": "a56cf026-e493-4726-80f1-e6ab27aad7b8"
+        }
+    ]
+}

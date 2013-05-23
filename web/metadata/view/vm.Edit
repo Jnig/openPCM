@@ -1,0 +1,889 @@
+{
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "vm.Edit",
+        "designer|userAlias": "vmedit",
+        "border": null,
+        "height": 437,
+        "width": null,
+        "title": "Virtualmachine",
+        "activeTab": 0
+    },
+    "id": "ExtBox1-ext-gen83177",
+    "designerId": "eba1c6a0-16e6-41aa-b749-6d4534d84261",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "buttons": null,
+                "designer|userClassName": "MyPanel2",
+                "designer|displayName": null,
+                "border": false,
+                "height": 100,
+                "padding": "",
+                "width": null,
+                "layout": "anchor",
+                "title": "Settings"
+            },
+            "configAlternates": {
+                "buttons": "object"
+            },
+            "designerId": "0db3129d-5e6f-4475-8a7c-9b0968bf08d9",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "buttons",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "TabConfig",
+                        "designer|displayName": "",
+                        "border": null
+                    },
+                    "designerId": "2e55bf57-a9d8-42dc-9641-9040c8d46965"
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar1",
+                        "border": null
+                    },
+                    "designerId": "a9deac1c-ec0d-499c-9536-4e1857ee42d6",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton2",
+                                "id": "vmstart",
+                                "text": "Start"
+                            },
+                            "designerId": "1659a6bf-abc7-4bb7-82de-919a7bca4776"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton3",
+                                "id": "vmshutdown",
+                                "text": "Shutdown"
+                            },
+                            "designerId": "9d4bfd6d-4d26-4c54-ad8b-a4488105a865"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton5",
+                                "id": "vmreset",
+                                "text": "Reset"
+                            },
+                            "designerId": "9d664d45-1a06-4348-ae72-9ef3c43e2bdb"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton10",
+                                "id": "vmdestroy",
+                                "text": "Hard Shutdown"
+                            },
+                            "designerId": "84b4e76a-63ad-49bf-88fa-2071fc673777"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton12",
+                                "id": "vmeditvnc",
+                                "iconCls": "icon-vnc",
+                                "text": "Console"
+                            },
+                            "designerId": "7d1b60cc-2d14-45f6-ac05-5f25643ad32f"
+                        }
+                    ]
+                },
+                {
+                    "type": "form",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "buttons": [
+                            "[",
+                            "                {",
+                            "                    text: 'Save',",
+                            "                    action: 'save'",
+                            "                }",
+                            "            ]"
+                        ],
+                        "designer|userClassName": "MyForm15",
+                        "border": false,
+                        "height": 136,
+                        "margin": 10,
+                        "width": 262,
+                        "bodyPadding": 0,
+                        "title": ""
+                    },
+                    "configAlternates": {
+                        "buttons": "object"
+                    },
+                    "designerId": "838dfa7b-223d-4856-b958-f32b0a3c123e",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "buttons",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyContainer2"
+                            },
+                            "designerId": "9abb13d5-9ee1-464d-86c3-ab38cd33788b",
+                            "cn": [
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField",
+                                        "name": "name",
+                                        "fieldLabel": "Name"
+                                    },
+                                    "designerId": "55b9d807-823a-439a-959b-7f939ae90368"
+                                },
+                                {
+                                    "type": "numberfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField",
+                                        "width": null,
+                                        "name": "vcpu",
+                                        "fieldLabel": "CPU",
+                                        "allowBlank": false,
+                                        "maxValue": 16,
+                                        "minValue": 1
+                                    },
+                                    "designerId": "92131876-341b-4272-a6cc-8b9c85ba5358"
+                                },
+                                {
+                                    "type": "numberfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField1",
+                                        "width": null,
+                                        "name": "memory",
+                                        "fieldLabel": "Memory in MB",
+                                        "allowBlank": false
+                                    },
+                                    "designerId": "fdd7a531-9077-40dd-8c6c-a1337f33d314"
+                                },
+                                {
+                                    "type": "combobox",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyComboBox23",
+                                        "height": null,
+                                        "width": null,
+                                        "name": "bootDev",
+                                        "fieldLabel": "Boot Device",
+                                        "displayField": "name",
+                                        "store": "vm.bootDev",
+                                        "valueField": "name"
+                                    },
+                                    "designerId": "151c40d7-6a50-4280-a967-b57d398b75d0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "gridpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "vm.edit.disk.List",
+                "designer|userAlias": "mygridpanel3",
+                "id": "vmdiskgrid",
+                "title": "Disks",
+                "store": "Disk"
+            },
+            "designerId": "833eece3-98e2-459d-a479-9e0cde9b237b",
+            "cn": [
+                {
+                    "type": "gridview",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridView3"
+                    },
+                    "designerId": "3f338d8e-c35f-44b9-8172-66816d79bedc"
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar3"
+                    },
+                    "designerId": "7d4683b8-3004-4285-aa97-7da939349b94",
+                    "cn": [
+                        {
+                            "type": "splitbutton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MySplitButton1",
+                                "designer|displayName": "",
+                                "id": "existingDiskLink",
+                                "iconCls": "icon-add",
+                                "text": "Add Disk"
+                            },
+                            "designerId": "92cbdc0d-8526-40da-aef1-f80a87f38d63",
+                            "cn": [
+                                {
+                                    "type": "menu",
+                                    "reference": {
+                                        "name": "menu",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyMenu5",
+                                        "cls": "no-icon-menu",
+                                        "showSeparator": false
+                                    },
+                                    "designerId": "77619b3b-7dc7-4402-a6f0-eda6b2741de1",
+                                    "cn": [
+                                        {
+                                            "type": "menuitem",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "MyMenuItem12",
+                                                "id": "enabledrbd",
+                                                "padding": 0,
+                                                "text": "Add Drbd Disk"
+                                            },
+                                            "designerId": "689e4bb1-3c05-40c3-ba08-98381e90784b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton14",
+                                "id": "deleteDisk",
+                                "iconCls": "icon-delete",
+                                "text": "Remove Disk"
+                            },
+                            "designerId": "85d858ed-c67d-425d-9309-db4b819c9060"
+                        }
+                    ]
+                },
+                {
+                    "type": "checkboxselectionmodel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckboxSelectionModel2"
+                    },
+                    "designerId": "6d773690-c59b-43dc-b19e-c5a041ef47d8"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn16",
+                        "dataIndex": "id",
+                        "text": "Id"
+                    },
+                    "designerId": "d996acfa-a797-4cda-8112-6489c9565216"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn21",
+                        "dataIndex": "path",
+                        "flex": 1,
+                        "text": "Path"
+                    },
+                    "designerId": "680310a6-b528-4c79-befc-8d165d8428b1"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn22",
+                        "dataIndex": "storageName",
+                        "text": "Storage"
+                    },
+                    "designerId": "684de0fb-e8e0-411e-8477-3ba80f5c53a0"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn25",
+                        "dataIndex": "driverType",
+                        "text": "DriverType"
+                    },
+                    "designerId": "282b7f2a-b791-4587-bc67-dd20eef70a9c"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn26",
+                        "dataIndex": "diskDevice",
+                        "text": "DiskDevice"
+                    },
+                    "designerId": "da3c023e-b06c-4957-9cae-8f0e1c1bf4ec"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn31",
+                        "dataIndex": "capacity",
+                        "text": "Capacity in GB"
+                    },
+                    "designerId": "ac96cb37-cfc0-4a0e-b9e6-f6da4f84e991"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn30",
+                        "dataIndex": "allocation",
+                        "text": "Allocation in GB"
+                    },
+                    "designerId": "311cdff0-2747-44ca-905b-ec4ddff18b16"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onVmdiskgridItemContextMenu",
+                        "fn": "onVmdiskgridItemContextMenu",
+                        "implHandler": [
+                            "e.stopEvent(); ",
+                            "",
+                            "if (typeof menu !== 'undefined') {",
+                            "    menu.destroy(); ",
+                            "}",
+                            "",
+                            "if (record.get('entity') == 'DiskLogical') {",
+                            "",
+                            "    menu = Ext.widget('diskmenu');    ",
+                            "",
+                            "    menu.showAt(e.getXY()); ",
+                            "}",
+                            "",
+                            "if (record.get('entity') == 'DiskDrbd') {",
+                            "",
+                            "    menu = Ext.widget('diskmenudrbd');    ",
+                            "",
+                            "    menu.showAt(e.getXY()); ",
+                            "}",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "return false;",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "itemcontextmenu",
+                        "scope": "me"
+                    },
+                    "designerId": "0598c9ac-95e0-44a8-8823-1e183f32319b"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onVmdiskgridShow",
+                        "fn": "onVmdiskgridShow",
+                        "implHandler": [
+                            "",
+                            "",
+                            "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": abstractcomponent.getStore()});",
+                            "",
+                            "Mask.show();",
+                            "abstractcomponent.getStore().load();",
+                            "",
+                            "",
+                            "/*diskTask = ",
+                            "{",
+                            "run : function() ",
+                            "{",
+                            "abstractcomponent.getStore().reload();",
+                            "",
+                            "},",
+                            "interval: 4000 //(1 second = 1000)",
+                            "}*/",
+                            "",
+                            "//Ext.TaskManager.start(diskTask);"
+                        ],
+                        "name": "show",
+                        "scope": "me"
+                    },
+                    "designerId": "13be0025-e4ba-4f8c-9bd6-d4b9704a21eb"
+                },
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "rememberSelection",
+                        "fn": "rememberSelection",
+                        "implHandler": [
+                            "if (!this.rendered || Ext.isEmpty(this.el)) {",
+                            "    return;",
+                            "}",
+                            "",
+                            "this.selectedRecords = this.getSelectionModel().getSelection();",
+                            "this.getView().saveScrollState();"
+                        ]
+                    },
+                    "designerId": "617fc30d-b978-43d2-8369-1e91060d686f"
+                },
+                {
+                    "type": "basicfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "refreshSelection",
+                        "fn": "refreshSelection",
+                        "implHandler": [
+                            "if (0 >= this.selectedRecords.length) {",
+                            "    return;",
+                            "}",
+                            "",
+                            "var newRecordsToSelect = [];",
+                            "for (var i = 0; i < this.selectedRecords.length; i++) {",
+                            "    record = this.getStore().getById(this.selectedRecords[i].getId());",
+                            "    if (!Ext.isEmpty(record)) {",
+                            "        newRecordsToSelect.push(record);",
+                            "    }",
+                            "}",
+                            "",
+                            "this.getSelectionModel().select(newRecordsToSelect);"
+                        ]
+                    },
+                    "designerId": "076be08d-8c35-4c6c-b633-f3e37c39b909"
+                },
+                {
+                    "type": "tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "TabConfig3"
+                    },
+                    "designerId": "4623f77b-9c6e-459d-92f7-908402a4e9df"
+                }
+            ]
+        },
+        {
+            "type": "gridpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridPanel5",
+                "title": "Network",
+                "store": "Interface"
+            },
+            "designerId": "fd017613-4a8e-4d45-b21d-741a3edaae1e",
+            "cn": [
+                {
+                    "type": "gridview",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridView5",
+                        "id": "vmeditinterfacegrid"
+                    },
+                    "designerId": "e360326c-d336-4490-a844-3175eb2fdcc1"
+                },
+                {
+                    "type": "tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "TabConfig3",
+                        "id": "vmeditinterfacetab"
+                    },
+                    "designerId": "42123842-06a6-4e96-9d46-4236de8f438e"
+                },
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top",
+                        "designer|userClassName": "MyToolbar7"
+                    },
+                    "designerId": "09e03add-a439-4e73-9ab4-f48a485f12da",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton21",
+                                "iconCls": "icon-add",
+                                "text": "Add Interface"
+                            },
+                            "designerId": "cb27bd63-a150-4ad9-845b-e190119fffa9",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onButtonClick",
+                                        "fn": "onButtonClick",
+                                        "implHandler": [
+                                            "Ext.widget('interfaceadd');",
+                                            ""
+                                        ],
+                                        "name": "click",
+                                        "scope": "me"
+                                    },
+                                    "designerId": "bba9a4b3-da49-4333-a90a-a6567576f0dd"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton22",
+                                "id": "vmeditinterfacedelete",
+                                "iconCls": "icon-delete",
+                                "text": "Delete Interface"
+                            },
+                            "designerId": "95ddd5ff-2493-4b40-82c9-d4f1aa8d3d92"
+                        }
+                    ]
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn29",
+                        "dataIndex": "id",
+                        "text": "Id"
+                    },
+                    "designerId": "5ce2b481-bd98-4578-b97c-f3b32bd29e85"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn34",
+                        "dataIndex": "name",
+                        "text": "Network"
+                    },
+                    "designerId": "81a76e15-bac1-4510-b19c-601426bc2646"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn35",
+                        "dataIndex": "modelType",
+                        "text": "ModelType"
+                    },
+                    "designerId": "0a1dcede-1e40-4aeb-a514-09a3a4695da2"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn36",
+                        "dataIndex": "macAddress",
+                        "text": "MacAddress"
+                    },
+                    "designerId": "182e4a08-2765-4787-8035-32a1253a7b8a"
+                },
+                {
+                    "type": "checkboxselectionmodel",
+                    "reference": {
+                        "name": "selModel",
+                        "type": "object"
+                    },
+                    "codeClass": "Ext.selection.CheckboxModel",
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckboxSelectionModel6"
+                    },
+                    "designerId": "db48b431-e2e8-4233-82bb-dd4990590bef"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onGridpanelActivate",
+                        "fn": "onGridpanelActivate",
+                        "implHandler": [
+                            "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": abstractcomponent.getStore()});",
+                            "Mask.show();",
+                            "",
+                            ""
+                        ],
+                        "name": "activate",
+                        "scope": "me"
+                    },
+                    "designerId": "dc083f1b-e14d-4675-a05b-b14f90b6f575"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel4",
+                "id": "vnctab",
+                "layout": "fit",
+                "title": "VNC Console"
+            },
+            "designerId": "cf08ef15-0b44-4f11-9e9b-b7fceb825ab6",
+            "cn": [
+                {
+                    "type": "tab",
+                    "reference": {
+                        "name": "tabConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "TabConfig2"
+                    },
+                    "designerId": "a22c1b24-37c9-43eb-b39f-02219ec4767f"
+                },
+                {
+                    "type": "component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyComponent",
+                        "autoEl": [
+                            "{",
+                            "tag : \"iframe\",",
+                            "src : \"\",",
+                            "style: \"border:0px;\"",
+                            "}"
+                        ],
+                        "id": "vnciframe"
+                    },
+                    "designerId": "999e6375-eb07-41d0-9d8e-30335521b7af"
+                }
+            ]
+        }
+    ]
+}

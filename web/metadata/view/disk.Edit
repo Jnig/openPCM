@@ -1,0 +1,97 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
+        "designer|userClassName": "disk.Edit",
+        "designer|userAlias": "diskedit",
+        "autoShow": true,
+        "height": 132,
+        "width": 400,
+        "layout": "fit",
+        "title": "My Window"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen4684",
+    "designerId": "5702d59e-19ff-4a7e-8326-8a740d2673c0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm4",
+                "border": false,
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "ded097f4-d143-4aa7-9592-f728a31e618c",
+            "cn": [
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox12",
+                        "name": "driverType",
+                        "fieldLabel": "Driver Type",
+                        "displayField": "name",
+                        "store": "disk.driver.Type",
+                        "valueField": "name"
+                    },
+                    "designerId": "0be0fc0d-8786-4d6e-875b-21c61cbe1cb4"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox13",
+                        "name": "diskDevice",
+                        "fieldLabel": "Disk Device",
+                        "displayField": "name",
+                        "store": "disk.Device",
+                        "valueField": "name"
+                    },
+                    "designerId": "9e065f27-b3dc-4ee3-8876-207b959fdada"
+                }
+            ]
+        }
+    ]
+}

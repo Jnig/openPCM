@@ -1,0 +1,29 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Stonith",
+        "idProperty": "stonith"
+    },
+    "id": "ExtBox1-ext-gen3404",
+    "designerId": "69c809d4-55b7-4636-bc17-823d17194aac",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field99",
+                "name": "stonith"
+            },
+            "designerId": "e544828f-a913-40e1-8202-0b7b10de1e56"
+        }
+    ]
+}

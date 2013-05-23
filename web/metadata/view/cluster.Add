@@ -1,0 +1,157 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
+        "items": null,
+        "designer|userClassName": "cluster.Add",
+        "designer|userAlias": "clusteradd",
+        "autoShow": true,
+        "border": false,
+        "height": 203,
+        "padding": null,
+        "width": 465,
+        "layout": "fit",
+        "bodyPadding": null,
+        "title": "Cluster"
+    },
+    "configAlternates": {
+        "buttons": "object",
+        "items": "object"
+    },
+    "id": "ExtBox1-ext-gen8502",
+    "designerId": "98632c9e-7b64-404c-805f-5ed0066174c9",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "items",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "buttons": null,
+                "designer|userClassName": "MyForm12",
+                "designer|userAlias": "myform12",
+                "autoShow": true,
+                "layout": null,
+                "bodyPadding": 10,
+                "title": null
+            },
+            "configAlternates": {
+                "buttons": "object"
+            },
+            "designerId": "360c6b0e-80d3-4dd3-89a1-4f8d318499ae",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "buttons",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField23",
+                        "name": "name",
+                        "fieldLabel": "Name",
+                        "labelWidth": 130
+                    },
+                    "designerId": "108a3f6e-8980-4e10-a5cb-1f1fbd43e45d"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCheckbox",
+                        "name": "ha",
+                        "fieldLabel": "High Availability",
+                        "labelWidth": 130,
+                        "boxLabel": null,
+                        "inputValue": "true",
+                        "uncheckedValue": "false"
+                    },
+                    "designerId": "67db9241-da49-4f2e-bc58-49c404328986"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyComboBox3",
+                        "name": "storages",
+                        "fieldLabel": "Default Storage",
+                        "labelWidth": 130,
+                        "displayField": "name",
+                        "multiSelect": true,
+                        "store": "Storage",
+                        "valueField": "id"
+                    },
+                    "designerId": "aa73c10a-fd59-49d9-98ae-e192a0523dbf"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyComboBox12",
+                        "name": "networks",
+                        "value": null,
+                        "fieldLabel": "Default Network",
+                        "labelWidth": 130,
+                        "displayField": "name",
+                        "multiSelect": true,
+                        "store": "Network",
+                        "valueField": "id"
+                    },
+                    "designerId": "33038be7-3998-4911-ad0f-907bc1147fde"
+                }
+            ]
+        }
+    ]
+}

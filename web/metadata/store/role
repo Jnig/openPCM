@@ -1,0 +1,30 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "role",
+        "storeId": "MyArrayStore8",
+        "data": "[\n    {'name': 'ROLE_ADMIN'},\n    {'name': 'ROLE_USER'}\n]"
+    },
+    "id": "ExtBox1-ext-gen24350",
+    "designerId": "8dcc94cd-f19e-4ae7-a03f-ccfe18f02205",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field22",
+                "name": "name"
+            },
+            "designerId": "15977be1-a4e6-41b9-9621-7de40361b147"
+        }
+    ]
+}

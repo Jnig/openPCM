@@ -1,0 +1,44 @@
+security:
+    providers:
+            multiples:
+                chain:
+                    providers: [fos_userbundle, fr3d_ldapbundle]      
+
+            fos_userbundle:
+                id: fos_user.user_provider.username_email
+            fr3d_ldapbundle:
+                id: fr3d_ldap.security.user.provider
+ 
+
+    firewalls:
+        main:
+            pattern:    ^/
+            fr3d_ldap:  ~
+            form_login:
+                login_path:     /
+                use_forward:    false
+                check_path:     /login_check
+                failure_path:   /login_failed
+                always_use_default_target_path: true
+                default_target_path:            /login_ok          
+            logout:       true
+            anonymous:    true 
+            
+fr3d_ldap:
+    client:
+        host:         %ldap_host%
+        port:         %ldap_port%
+        version:        %ldap_version%
+        username:     %ldap_username%
+        password:     %ldap_password%
+        optReferrals: false  # Optional
+        useSsl:       false   # Enable SSL negotiation. Optional
+        useStartTls:  false   # Enable TLS negotiation. Optional
+    user:
+        baseDn: %ldap_baseDn%
+        filter: (&(ObjectClass=Person))
+        attributes:          # Specify ldap attributes mapping [ldap attribute, user object method]
+            - { ldap_attr: %ldap_attributeUsername%,  user_method: setUsername } # Default
+            - { ldap_attr: %ldap_attributeEmail%,   user_method: setEmail }     # Optional
+            - { ldap_attr: %ldap_attributeSecondname%,   user_method: setSecondName }     # Optional
+            - { ldap_attr: %ldap_attributeFirstname%,   user_method: setFirstName }     # Optional

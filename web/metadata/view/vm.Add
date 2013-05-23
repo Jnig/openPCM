@@ -1,0 +1,122 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
+        "designer|userClassName": "vm.Add",
+        "designer|userAlias": "vmadd",
+        "autoShow": true,
+        "border": false,
+        "frame": false,
+        "height": 196,
+        "width": 400,
+        "layout": "fit",
+        "suspendLayout": false,
+        "bodyBorder": false,
+        "bodyPadding": null,
+        "title": "Vm Add",
+        "titleCollapse": false
+    },
+    "configAlternates": {
+        "buttons": "array"
+    },
+    "id": "ExtBox1-ext-gen44328",
+    "designerId": "a4a6a656-5e3d-43bb-916d-fba4a3071127",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm1",
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "f84ec7c1-f890-4574-8bca-3127739334a7",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField",
+                        "name": "name",
+                        "fieldLabel": "Name"
+                    },
+                    "designerId": "dd67b84b-ba46-43a5-bb5c-23270b19b68f"
+                },
+                {
+                    "type": "numberfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyNumberField",
+                        "name": "vcpu",
+                        "fieldLabel": "CPU",
+                        "allowBlank": false,
+                        "maxValue": 16,
+                        "minValue": 1
+                    },
+                    "designerId": "22968edf-2dc5-4735-bfaa-baedf3301d6e"
+                },
+                {
+                    "type": "numberfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyNumberField1",
+                        "name": "memory",
+                        "fieldLabel": "Memory in MB",
+                        "allowBlank": false,
+                        "minValue": 1
+                    },
+                    "designerId": "c6eebd3c-98d6-4b8d-9726-130b55271266"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox2",
+                        "name": "node",
+                        "fieldLabel": "Node",
+                        "displayField": "name",
+                        "store": "Node",
+                        "valueField": "id"
+                    },
+                    "designerId": "e2d3fb6d-9bcb-4a8a-b539-70dc28fb2156"
+                }
+            ]
+        }
+    ]
+}

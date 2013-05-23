@@ -1,0 +1,321 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "node.List",
+        "designer|userAlias": "nodelist",
+        "height": 250,
+        "id": "",
+        "width": 970,
+        "iconCls": "icon-node",
+        "title": "Nodes",
+        "store": "Node"
+    },
+    "id": "ExtBox1-ext-gen20220",
+    "designerId": "8e5a7108-6f8f-4e8f-bf02-2dc6be85bb8f",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView4",
+                "id": "nodelistgrid"
+            },
+            "designerId": "65cb62b8-ffa4-4126-b7bd-b8f9123ea9d3"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar4"
+            },
+            "designerId": "84a03d17-4592-4795-9995-31b7ee958ddf",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton9",
+                        "iconCls": "icon-add",
+                        "text": "Add Node"
+                    },
+                    "designerId": "32ebf1df-0a7c-4484-9eec-4e1b11bfbb6e",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick",
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "var windows = Ext.widget('nodeadd');"
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "c7b10dc9-7441-46e9-a8f2-a91839d9fe58"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton16",
+                        "id": "nodedelete",
+                        "iconCls": "icon-delete",
+                        "text": "Delete"
+                    },
+                    "designerId": "7def029c-1f8e-4576-980c-7ead0412cefb"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton30",
+                        "iconCls": "icon-standby",
+                        "text": "Standby"
+                    },
+                    "designerId": "981182e5-c7c5-4e9d-84fc-9648f341dcc3",
+                    "cn": [
+                        {
+                            "type": "menu",
+                            "reference": {
+                                "name": "menu",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyMenu5"
+                            },
+                            "designerId": "067fcb03-3e94-4c25-a2d6-32e3fb589df9",
+                            "cn": [
+                                {
+                                    "type": "menuitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyMenuItem11",
+                                        "id": "button-standby-on",
+                                        "iconCls": "icon-standby-on",
+                                        "text": "on"
+                                    },
+                                    "designerId": "440517fa-cdb3-4c14-bab2-babb3de7a291"
+                                },
+                                {
+                                    "type": "menuitem",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyMenuItem12",
+                                        "id": "button-standby-off",
+                                        "iconCls": "icon-standby-off",
+                                        "text": "off"
+                                    },
+                                    "designerId": "1f03d965-e425-4297-8911-c37bed88b20a"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelAfterRender",
+                "fn": "onGridpanelAfterRender",
+                "implHandler": [
+                    "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",
+                    "Mask.show();",
+                    "this.getStore().load();",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "designerId": "bc36f1c5-db78-4f1d-b31e-c8cf553163cc"
+        },
+        {
+            "type": "checkboxselectionmodel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.CheckboxModel",
+            "userConfig": {
+                "designer|userClassName": "MyCheckboxSelectionModel3"
+            },
+            "designerId": "428cb683-2636-440c-8eca-602802ab8a66"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn66",
+                "dataIndex": "id",
+                "text": "Id"
+            },
+            "designerId": "ca119abc-3b45-443c-a2d5-b7b8b36296e5"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn67",
+                "dataIndex": "name",
+                "text": "Name"
+            },
+            "designerId": "9b694721-541e-4211-b914-36a3225f9e54"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn68",
+                "dataIndex": "hostname",
+                "text": "Hostname"
+            },
+            "designerId": "ef0cd001-36ef-493f-a097-efe6e8579e36"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn73",
+                "dataIndex": "clusterName",
+                "text": "ClusterName"
+            },
+            "designerId": "21c77088-e0cb-46ec-b00e-042be6b7e29b"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn74",
+                "dataIndex": "ha",
+                "text": "Ha"
+            },
+            "designerId": "8e539ec7-54ea-4afb-8909-775c9aa4776a"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn75",
+                "dataIndex": "corosyncIp1",
+                "text": "CorosyncIp1"
+            },
+            "designerId": "d0bd0fe9-b373-4a6a-a8f0-8ae8c4aa0062"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn76",
+                "dataIndex": "corosyncIp2",
+                "text": "CorosyncIp2"
+            },
+            "designerId": "64e312a3-c3fc-47fb-afac-2cc6d48f9cf5"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn77",
+                "dataIndex": "stonith",
+                "text": "Stonith"
+            },
+            "designerId": "669d249e-9be2-41a0-a329-9841e5d8b1e7"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn64",
+                "dataIndex": "standby",
+                "text": "Standby"
+            },
+            "designerId": "6c3b18a9-4a2c-4a77-b0fd-91f0be416bb2"
+        }
+    ]
+}

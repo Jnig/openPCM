@@ -1,0 +1,183 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "]"
+        ],
+        "designer|userClassName": "user.Add",
+        "designer|userAlias": "useradd",
+        "autoShow": true,
+        "height": 277,
+        "width": 400,
+        "layout": "fit",
+        "iconCls": "icon-user",
+        "title": "User"
+    },
+    "configAlternates": {
+        "buttons": "object"
+    },
+    "id": "ExtBox1-ext-gen31179",
+    "designerId": "0df0904e-5087-4659-93d3-c171810f3cc2",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm15",
+                "border": false,
+                "bodyPadding": 10,
+                "title": null
+            },
+            "designerId": "0f04436d-d5bb-40d6-9a1f-11247b2dfcb8",
+            "cn": [
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField26",
+                        "name": "firstName",
+                        "fieldLabel": "First Name",
+                        "allowBlank": false
+                    },
+                    "designerId": "efc4a581-c010-49f3-bc9d-c2408a5469e7"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField27",
+                        "name": "secondName",
+                        "fieldLabel": "Second Name",
+                        "allowBlank": false
+                    },
+                    "designerId": "5a92fecc-fd9a-45ef-8abc-7f8ffe35f0da"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField11",
+                        "name": "username",
+                        "fieldLabel": "Username",
+                        "allowBlank": false
+                    },
+                    "designerId": "e71b844d-8429-4dc8-8d83-ff20a328c8e0"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField28",
+                        "name": "email",
+                        "fieldLabel": "Email",
+                        "allowBlank": false
+                    },
+                    "designerId": "1d8e83ee-0d46-431f-bd7e-4155759987ad"
+                },
+                {
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyTextField29",
+                        "id": "useraddpassword",
+                        "inputType": "password",
+                        "name": "password",
+                        "fieldLabel": "Password",
+                        "allowBlank": false,
+                        "minLength": 6
+                    },
+                    "designerId": "82ee10ce-5fe0-4ad2-9fef-080796ed7d32"
+                },
+                {
+                    "type": "combobox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyComboBox24",
+                        "name": "roles",
+                        "fieldLabel": "Roles",
+                        "editable": false,
+                        "displayField": "name",
+                        "multiSelect": true,
+                        "store": "role",
+                        "valueField": "name"
+                    },
+                    "designerId": "31ddc129-8464-4e6c-9fa0-634bdddcd3ad"
+                },
+                {
+                    "type": "checkboxfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|anchor": "100%",
+                        "designer|userClassName": "MyCheckbox1",
+                        "name": "ldap",
+                        "fieldLabel": "Ldap",
+                        "boxLabel": null,
+                        "inputValue": "true",
+                        "uncheckedValue": "false"
+                    },
+                    "designerId": "df94418b-67b5-4a97-849f-bdc62ca37cfc"
+                }
+            ]
+        }
+    ]
+}

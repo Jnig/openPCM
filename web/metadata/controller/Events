@@ -1,0 +1,212 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Events",
+        "stores": [
+            "Events",
+            "Virtualmachine",
+            "Job",
+            "Disk",
+            "Node"
+        ]
+    },
+    "id": "ExtBox1-ext-gen10243",
+    "designerId": "c7e71b83-c271-455a-8a91-2e84e98e919c",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLaunch",
+                "fn": "onLaunch",
+                "implHandler": [
+                    "var store = this.getEventsStore();",
+                    "store.setLastEvent();",
+                    "",
+                    "lastEvent = 0;",
+                    "",
+                    "store.load({",
+                    "    scope: this,",
+                    "    callback: function(records, operation, success) {",
+                    "        lastEvent = records[0].get('id');",
+                    "        this.loadTask(lastEvent);",
+                    "",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "689c95b7-8740-4e74-ac55-be441f583a3f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "handleRecords",
+                "fn": "handleRecords",
+                "designer|params": [
+                    "records"
+                ],
+                "implHandler": [
+                    "Ext.each(records, function(record){",
+                    "",
+                    "    var store = this.getEntityStore(record.get('entity'));",
+                    "",
+                    "    if (typeof store != 'undefined') {",
+                    "",
+                    "        if (record.get('entity') == 'Disk') { // handle virtualmachine disk tab",
+                    "            if (record.get('data').virtualmachineId != this.getController('Virtualmachine').getId()) {",
+                    "                return 0;",
+                    "            }",
+                    "        }",
+                    "        ",
+                    "",
+                    "",
+                    "        var record2 = store.getById(record.get('entityId'));",
+                    "",
+                    "        if (record.get('action') == 'update') {",
+                    "",
+                    "            if (record2 !== null) {                ",
+                    "                record2.data = record.get('data');",
+                    "            }",
+                    "        } else if (record.get('action') == 'insert') {",
+                    "            if (record2 === null) {  ",
+                    "                store.add(record.get('data'));",
+                    "            }",
+                    "        } else if (record.get('action') == 'remove') {",
+                    "            if (record2 !== null) {  ",
+                    "                store.remove(record2);",
+                    "            }",
+                    "        }",
+                    "",
+                    "",
+                    "        lastEvent = record.get('id');",
+                    "",
+                    "        store.fireEvent('datachanged');",
+                    "        store.fireEvent('refresh');   ",
+                    "            ",
+                    "        if (record.get('entity') == 'Job') {",
+                    "            this.getJobStore().clearFilter();",
+                    "            this.getJobStore().sort([{ property: 'id',  direction: 'desc' }]);",
+                    "            if (userJobs) {",
+                    "                this.getJobStore().filter('userId', this.getController('User').getUserId());",
+                    "            }",
+                    "            ",
+                    "            ",
+                    "        }",
+                    "",
+                    "    }",
+                    "}, this);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "7cdafe7b-933d-4ea6-b662-47f2f0fd4de3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getEntityStore",
+                "fn": "getEntityStore",
+                "designer|params": [
+                    "entity"
+                ],
+                "implHandler": [
+                    "if (entity == 'VirtualMachine') {",
+                    "    return this.getVirtualmachineStore();",
+                    "}",
+                    "",
+                    "if (entity == 'Job') {",
+                    "    return this.getJobStore();",
+                    "}",
+                    "",
+                    "if (entity == 'Disk') {",
+                    "    return this.getDiskStore();",
+                    "}",
+                    "",
+                    "if (entity == 'Node') {",
+                    "    return this.getNodeStore();",
+                    "}"
+                ]
+            },
+            "designerId": "e94a848d-9187-4b74-bcf3-2d70543856d1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "loadTask",
+                "fn": "loadTask",
+                "designer|params": [
+                    "lastId"
+                ],
+                "implHandler": [
+                    "if (lastId) {",
+                    "",
+                    "    eventQueryRunning = 0;",
+                    "    lastEvent = lastId;",
+                    "    changedTask = ",
+                    "    {",
+                    "        run : function() ",
+                    "        {",
+                    "",
+                    "            var store = this.getEventsStore();",
+                    "",
+                    "            if (eventQueryRunning == 0) {",
+                    "",
+                    "                eventQueryRunning = 1;",
+                    "",
+                    "                store.setEvent(lastEvent);",
+                    "                store.load({",
+                    "                    scope: this,",
+                    "                    callback: function(records, operation, success) {",
+                    "                        eventQueryRunning = 0;",
+                    "                        if (success) {",
+                    "                            this.handleRecords(records);",
+                    "                        } ",
+                    "                    }",
+                    "                });",
+                    "            }",
+                    "",
+                    "",
+                    "        },",
+                    "        interval: 1000, //(1 second = 1000)",
+                    "        scope: this",
+                    "    }",
+                    "",
+                    "    Ext.TaskManager.start(changedTask);",
+                    "}"
+                ]
+            },
+            "designerId": "ff2f38fa-e52a-43ed-bc63-f4228886ad1f"
+        }
+    ]
+}

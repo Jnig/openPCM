@@ -1,0 +1,263 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Storage",
+        "stores": [
+            "Storage",
+            "Disk"
+        ]
+    },
+    "id": "ExtBox1-ext-gen13792",
+    "designerId": "e1105533-f0f4-4f11-b6f3-7ab17d75d302",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "this.save(button);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "storagedir button[action=save]"
+            },
+            "designerId": "abb3faec-49ed-4edd-8fa0-dfe2cb49edc8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "save",
+                "fn": "save",
+                "designer|params": [
+                    "button"
+                ],
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getStorageStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    button.up('window').close();",
+                    "} "
+                ]
+            },
+            "designerId": "97dfe6e9-b9e2-45b5-bc1c-2fc9509346e2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick1",
+                "fn": "onButtonClick1",
+                "implHandler": [
+                    "this.save(button);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "storagelogical button[action=save]"
+            },
+            "designerId": "dfd9b625-01be-4554-a5ca-13e6b0fcd2a2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelItemDblClick",
+                "fn": "onGridpanelItemDblClick",
+                "implHandler": [
+                    "",
+                    "var name = record.get('entity');",
+                    "",
+                    "if (name == 'StorageDir') {",
+                    "    var window = Ext.widget('storagedir');",
+                    "} else if (name == 'StorageIscsi') {",
+                    "    var window = Ext.widget('storageiscsi');    ",
+                    "} else if (name == 'StorageRbd') {",
+                    "    var window = Ext.widget('storagerbd');    ",
+                    "} else if (name == 'StorageNetfs') {",
+                    "    var window = Ext.widget('storagenetfs');    ",
+                    "} else if (name == 'StorageLogical') {",
+                    "    var window = Ext.widget('storagelogical');    ",
+                    "}",
+                    "",
+                    "var form = window.down('form');",
+                    "",
+                    "form.loadRecord(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "storagelist"
+            },
+            "designerId": "a39069b3-f73d-4b5e-9ac6-96cf804e4d14"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick2",
+                "fn": "onButtonClick2",
+                "implHandler": [
+                    "this.save(button);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "storageiscsi button[action=save]"
+            },
+            "designerId": "5d3c3d67-4a42-4b7b-8d6b-fabda7d857b4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick3",
+                "fn": "onButtonClick3",
+                "implHandler": [
+                    "this.save(button);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "storagerbd button[action=save]"
+            },
+            "designerId": "214bc790-3fb9-48e9-973d-074ac0d449c1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClick4",
+                "fn": "onButtonClick4",
+                "implHandler": [
+                    "this.save(button);"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "storagenetfs button[action=save]"
+            },
+            "designerId": "b3519862-eb6c-45f8-814e-cda80204ae2b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#storagelistgrid"
+            },
+            "designerId": "993125fb-5907-4aec-88fd-ee06dd18eed4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deletestorage",
+                "fn": "deletestorage",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Storage', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Storage. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getStorageStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#storagedelete"
+            },
+            "designerId": "fe595d89-4210-4bab-afc1-83f1bcb5582b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStorageDiskButtonClick",
+                "fn": "onStorageDiskButtonClick",
+                "implHandler": [
+                    "",
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "console.log(selected);",
+                    "this.getDiskStore().setStorageId(selected[0].get('id'));",
+                    "",
+                    "this.getController('Navigation').switchContent('storagedisklist');",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#storageDiskButton"
+            },
+            "designerId": "fd23a93d-390d-456f-898c-2dd66a62777b"
+        }
+    ]
+}

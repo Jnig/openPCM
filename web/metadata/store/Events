@@ -1,0 +1,83 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Events",
+        "autoLoad": false,
+        "autoSync": true,
+        "storeId": "MyJsonStore14",
+        "model": "Event"
+    },
+    "id": "ExtBox1-ext-gen10544",
+    "designerId": "8e3fe5d6-5d5b-4807-aab5-7f8ba7e83ee0",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy6",
+                "url": "/api/events"
+            },
+            "designerId": "656de7e3-2be2-4b5a-b08c-f7f6c3b3eb85",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader8"
+                    },
+                    "designerId": "496b9199-d807-485d-9bcb-ce9f132ad486"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setLastEvent",
+                "fn": "setLastEvent",
+                "implHandler": [
+                    "this.getProxy().url = '/api/events/last';",
+                    ""
+                ]
+            },
+            "designerId": "4f3df0ba-77db-4cad-9563-a82d90b87dbe"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setEvent",
+                "fn": "setEvent",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/events?id='+id;",
+                    ""
+                ]
+            },
+            "designerId": "6ae064f1-59f9-48f3-bbf1-9d47e8c5bd5c"
+        }
+    ]
+}

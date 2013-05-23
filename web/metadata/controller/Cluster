@@ -1,0 +1,147 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Cluster",
+        "stores": [
+            "Cluster",
+            "Network",
+            "Storage"
+        ]
+    },
+    "id": "ExtBox1-ext-gen4354",
+    "designerId": "220a5652-080a-4871-a02c-f76158558d8e",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "grid",
+                "ref": "grid",
+                "selector": "#clusterlistgrid"
+            },
+            "designerId": "a59d9ff8-cca2-4fc9-9f6b-fc616410a707"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridviewItemDblClick",
+                "fn": "onGridviewItemDblClick",
+                "implHandler": [
+                    "var window = Ext.widget('clusteradd');",
+                    "",
+                    "var form = window.down('form');",
+                    "",
+                    "form.loadRecord(record);"
+                ],
+                "name": "itemdblclick",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.View",
+                "designer|controlQuery": "#clusterlistgrid"
+            },
+            "designerId": "87b5fbf3-84f2-4cf2-adc1-bcc4df8d8994"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickSave",
+                "fn": "onButtonClickSave",
+                "implHandler": [
+                    "var form = button.up('window').down('form');",
+                    "",
+                    "var values = form.getValues();",
+                    "var store = this.getClusterStore();",
+                    "",
+                    "",
+                    "",
+                    "if (form.getForm().isValid()) {",
+                    "    var record = form.getRecord();",
+                    "",
+                    "    if (typeof(record) != 'object' ) {",
+                    "        store.add(values);      ",
+                    "    } else {",
+                    "",
+                    "        record.set(values);",
+                    "    }",
+                    "",
+                    "    button.up('window').close();",
+                    "} "
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "clusteradd button[action=save]"
+            },
+            "designerId": "6c539c66-4d32-482e-b66c-58f61cc1829f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onButtonClickDelete",
+                "fn": "onButtonClickDelete",
+                "implHandler": [
+                    "var selected = this.getGrid().getSelectionModel().getSelection();",
+                    "",
+                    "",
+                    "if (selected.length > 0 ) {",
+                    "    Ext.Msg.confirm('Remove Cluster', 'You are about to remove <span style=\"color:red;font-weight:bold;\">' + selected.length+ '</span> Clusters. Are you sure?', function (button) {",
+                    "        if (button == 'yes') {",
+                    "            this.getClusterStore().remove(selected);",
+                    "        }",
+                    "    }, this);",
+                    "",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#clusterlistdelete"
+            },
+            "designerId": "3f101e7f-ac9a-4214-bfbb-0832e1abb586"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelAfterRender",
+                "fn": "onGridpanelAfterRender",
+                "implHandler": [
+                    "this.getNetworkStore().load();",
+                    "this.getStorageStore().load();"
+                ],
+                "name": "afterrender",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "clusterlist"
+            },
+            "designerId": "a9a5ef0c-0884-4751-9de0-28ab02b1dfde"
+        }
+    ]
+}

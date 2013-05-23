@@ -1,0 +1,36 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "job.Detail",
+        "designer|userAlias": "jobdetail",
+        "autoShow": true,
+        "height": 372,
+        "width": 597,
+        "layout": "fit",
+        "title": "Job Output"
+    },
+    "id": "ExtBox1-ext-gen80322",
+    "designerId": "68949eee-a049-4388-b5ab-0035b87313ed",
+    "cn": [
+        {
+            "type": "component",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyComponent2",
+                "id": "jobdetailtext",
+                "padding": 10,
+                "overflowY": "auto"
+            },
+            "designerId": "c6abd375-7f49-4372-8e1b-633218b41a6b"
+        }
+    ]
+}

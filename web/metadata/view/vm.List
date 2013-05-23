@@ -1,0 +1,236 @@
+{
+    "type": "gridpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "vm.List",
+        "designer|userAlias": "vmlist",
+        "height": 272,
+        "id": "vmlist",
+        "width": 846,
+        "iconCls": "icon-vm",
+        "title": "Virtualmachine",
+        "store": "Virtualmachine"
+    },
+    "id": "ExtBox1-ext-gen43464",
+    "designerId": "156c4699-e25a-420c-a56b-5c1f778d6776",
+    "cn": [
+        {
+            "type": "gridview",
+            "reference": {
+                "name": "viewConfig",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGridView1",
+                "id": "vmlistgrid"
+            },
+            "designerId": "98928d1f-53e5-4ab3-9d16-63d61a32cf4e"
+        },
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar"
+            },
+            "designerId": "8ddb30ad-ac04-43a6-9142-3ffc9f66281e",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton",
+                        "iconCls": "icon-add",
+                        "text": "Create"
+                    },
+                    "designerId": "8ba43749-fffa-4bf6-9c02-dc30b05df92b",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButtonClick",
+                                "fn": "onButtonClick",
+                                "implHandler": [
+                                    "",
+                                    "var view = Ext.widget('vmadd');",
+                                    ""
+                                ],
+                                "name": "click",
+                                "scope": "me"
+                            },
+                            "designerId": "b34f656c-9841-41fb-9694-5e8fb07336e2"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton1",
+                        "designer|displayName": "",
+                        "id": "deletevm",
+                        "iconCls": "icon-delete",
+                        "text": "Delete"
+                    },
+                    "designerId": "87efe45c-71a3-43f7-b959-02ace309c612"
+                }
+            ]
+        },
+        {
+            "type": "checkboxselectionmodel",
+            "reference": {
+                "name": "selModel",
+                "type": "object"
+            },
+            "codeClass": "Ext.selection.CheckboxModel",
+            "userConfig": {
+                "designer|userClassName": "MyCheckboxSelectionModel",
+                "checkOnly": true
+            },
+            "designerId": "86ace5be-c103-4479-a326-630126363a6a"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn1",
+                "dataIndex": "id",
+                "text": "Id"
+            },
+            "designerId": "5f7bc125-8d39-48df-aaa1-c44b49613397"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn2",
+                "dataIndex": "name",
+                "text": "Name"
+            },
+            "designerId": "92670186-f90d-42a7-af51-d658059b56f7"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn3",
+                "dataIndex": "vcpu",
+                "text": "Vcpu"
+            },
+            "designerId": "995f5486-c47b-4c4f-9993-2613f52d5ef4"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn16",
+                "dataIndex": "memory",
+                "text": "Memory in mb"
+            },
+            "designerId": "b2c719b7-92cd-431b-bbcd-4ee100c1efb3"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn17",
+                "dataIndex": "nodeName",
+                "text": "Node"
+            },
+            "designerId": "bad25d16-b7f5-44b3-8506-55a4ec825b2c"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onVmlistAfterRender",
+                "fn": "onVmlistAfterRender",
+                "implHandler": [
+                    "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",
+                    "Mask.show();",
+                    "this.getStore().load();",
+                    ""
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "designerId": "70af64a0-0ca5-4ca3-bad0-fe84be6f7f17"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn62",
+                "dataIndex": "nodeDefaultName",
+                "text": "Default Node"
+            },
+            "designerId": "87576077-cc36-430d-a190-95e5c92d520d"
+        },
+        {
+            "type": "gridcolumn",
+            "reference": {
+                "name": "columns",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyColumn63",
+                "dataIndex": "state",
+                "text": "State"
+            },
+            "designerId": "aaa63016-8a5b-4025-8d4b-f24938a41d5a"
+        }
+    ]
+}

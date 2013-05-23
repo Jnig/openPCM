@@ -1,0 +1,4 @@
+image: /dev/main/vmdisk_48
+file format: raw
+virtual size: 1.0G (1073741824 bytes)
+disk size: 0

@@ -1,0 +1,63 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Volume",
+        "storeId": "MyJsonStore3",
+        "model": "Disk"
+    },
+    "id": "ExtBox1-ext-gen82140",
+    "designerId": "87e926fe-250b-4562-95c1-e265efdcab05",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy5"
+            },
+            "designerId": "b6cd0564-637c-4832-93da-62f06e1f39e4",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader7"
+                    },
+                    "designerId": "6aa31fc3-95c3-46c4-b06e-4b72080bb34d"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setStorageVirtualmachine",
+                "fn": "setStorageVirtualmachine",
+                "designer|params": [
+                    "storage",
+                    "virtualmachine"
+                ],
+                "implHandler": [
+                    "this.getProxy().url = '/api/storages/' + storage + '/volumes/' + virtualmachine;"
+                ]
+            },
+            "designerId": "495c1f51-7d4c-4ebe-8fef-bfcda7199ebb"
+        }
+    ]
+}
