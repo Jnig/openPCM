@@ -43,4 +43,10 @@ Installation
 
 6. Login with your admin user http://localhost/
 
-
+Screenshots
+------------
+![ScreenShot](http://jakobniggel.de/wp-content/uploads/2013/04/nodes.png)
+![ScreenShot](http://jakobniggel.de/wp-content/uploads/2013/04/vnc.png)
+![ScreenShot](http://jakobniggel.de/wp-content/uploads/2013/04/storage.png)
+![ScreenShot](http://jakobniggel.de/wp-content/uploads/2013/04/disk.png)
+![ScreenShot](http://jakobniggel.de/wp-content/uploads/2013/04/vms.png)
