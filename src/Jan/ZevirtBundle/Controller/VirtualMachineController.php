@@ -7,10 +7,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Jan\ZevirtBundle\Entity\VirtualMachine;
-use Jan\ZevirtBundle\Form\VirtualMachineType;
 use FOS\RestBundle\View\View;
 use FOS\RestBundle\Controller\Annotations as Rest;
+
+use Jan\ZevirtBundle\Entity\VirtualMachine;
+use Jan\ZevirtBundle\Form\VirtualMachineType;
+
 use Jan\ZevirtBundle\Entity\Job;
 use Jan\ZevirtBundle\Entity\Node;
 
