@@ -19,7 +19,7 @@
         "jms/security-extra-bundle": "dev-master",
         "jms/di-extra-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "dev-master",
-        "friendsofsymfony/rest-bundle": "dev-master",
+        "friendsofsymfony/rest-bundle": "0.11.*",
         "jms/job-queue-bundle": "dev-master",
         "pagerfanta/pagerfanta": "dev-master",
         "fr3d/ldap-bundle": "1.6.*@dev",
