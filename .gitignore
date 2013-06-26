@@ -10,3 +10,4 @@
 *~
 .architect
 deploy.rb
+.rsync_cache
