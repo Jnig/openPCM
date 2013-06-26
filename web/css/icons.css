@@ -1,51 +1,51 @@
 .icon-vnc {
-    background-image: url("/icons/silk/application_osx_terminal.png") !important;
+    background-image: url("/images/silk/application_osx_terminal.png") !important;
     width:20px;
     height:20px;    
 }
 
 .icon-vm {
-    background-image: url("/icons/silk/server.png") !important;
+    background-image: url("/images/silk/server.png") !important;
 }
 
 .icon-cluster {
-    background-image: url("/icons/fugue/servers-network.png") !important; 
+    background-image: url("/images/fugue/servers-network.png") !important; 
 }
 
 .icon-node {
-    background-image: url("/icons/fugue/server.png") !important;     
+    background-image: url("/images/fugue/server.png") !important;     
 }
 
 .icon-user {
-    background-image: url("/icons/silk/user.png") !important;
+    background-image: url("/images/silk/user.png") !important;
 }
 
 .icon-drive {
-    background-image: url("/icons/silk/drive.png") !important;
+    background-image: url("/images/silk/drive.png") !important;
 }
 
 .icon-network {
-    background-image: url("/icons/misc/network_ip.png") !important;
+    background-image: url("/images/misc/network_ip.png") !important;
 }
 
 .icon-add {
-    background-image: url("/icons/silk/add.png") !important;
+    background-image: url("/images/silk/add.png") !important;
 }
 
 .icon-delete {
-    background-image: url("/icons/silk/delete.png") !important;
+    background-image: url("/images/silk/delete.png") !important;
 }
 
 .icon-folder {
-    background-image: url("/icons/silk/folder.png") !important;
+    background-image: url("/images/silk/folder.png") !important;
 }
 
 .icon-finished {
-     background-image: url("/icons/silk/accept.png") !important;   
+     background-image: url("/images/silk/accept.png") !important;   
 }
 
 .icon-failed {
-     background-image: url("/icons/silk/cancel.png") !important;   
+     background-image: url("/images/silk/cancel.png") !important;   
 }
 
 .pull-right {
@@ -54,13 +54,13 @@
 }
 
 .icon-standby {
-     background-image: url("/icons/fugue/clock.png") !important;  
+     background-image: url("/images/fugue/clock.png") !important;  
 }
 
 .icon-standby-on {
-     background-image: url("/icons/fugue/clock--plus.png") !important;  
+     background-image: url("/images/fugue/clock--plus.png") !important;  
 }
 
 .icon-standby-off {
-     background-image: url("/icons/fugue/clock--minus.png") !important;  
+     background-image: url("/images/fugue/clock--minus.png") !important;  
 }
