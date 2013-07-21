@@ -1,17 +1,16 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Interface",
         "stores": [
             "Interface"
-        ]
+        ],
+        "designer|userClassName": "Interface"
     },
-    "id": "ExtBox1-ext-gen42804",
     "designerId": "3abe9e82-e085-4d20-b618-526266868421",
     "cn": [
         {
@@ -21,9 +20,6 @@
                 "type": "array"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyFunction14"
-            },
             "designerId": "115fdd26-44d4-452b-a850-641e3366303c"
         },
         {
@@ -34,7 +30,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTabpanelActivate",
                 "fn": "onTabpanelActivate",
                 "implHandler": [
                     "var store = this.getInterfaceStore();",
@@ -60,7 +55,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickSave",
                 "fn": "onButtonClickSave",
                 "implHandler": [
                     "var form = button.up('window').down('form');",
@@ -99,7 +93,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('interfaceadd');",
@@ -122,7 +115,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#vmeditinterfacegrid"
             },
@@ -136,7 +128,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickDelete",
                 "fn": "onButtonClickDelete",
                 "implHandler": [
                     "",

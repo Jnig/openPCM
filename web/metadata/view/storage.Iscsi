@@ -1,25 +1,36 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
-        "designer|userClassName": "storage.Iscsi",
-        "designer|userAlias": "storageiscsi",
+        "buttons": [
+            "[   ",
+            "            {",
+            "                text: 'Save',",
+            "                action: 'save'",
+            "            },",
+            "            {",
+            "                text: 'Cancel',",
+            "                scope: this,",
+            "                handler: this.close",
+            "            }",
+            "]"
+        ],
         "autoShow": true,
         "border": false,
         "height": 168,
         "width": 380,
+        "designer|userClassName": "storage.Iscsi",
+        "designer|userAlias": "storageiscsi",
         "layout": "fit",
         "title": "Storage ISCSI"
     },
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen25303",
     "designerId": "5e3688d0-136e-4090-b802-bb8b74d5e1b5",
     "customConfigs": [
         {
@@ -30,21 +41,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm6",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "34c079b2-de91-49de-8678-0ef9ae788535",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,14 +62,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField4",
-                        "name": "name",
-                        "fieldLabel": "Name"
+                        "fieldLabel": "Name",
+                        "name": "name"
                     },
                     "designerId": "2b5f98b0-69de-4456-888d-d48790f11207"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -67,14 +76,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField18",
-                        "name": "hostname",
-                        "fieldLabel": "Hostname"
+                        "fieldLabel": "Hostname",
+                        "name": "hostname"
                     },
                     "designerId": "128736a7-4a81-4d93-be5d-25644d5a43f7"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -82,14 +90,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField19",
-                        "name": "devicePath",
-                        "fieldLabel": "Identifier"
+                        "fieldLabel": "Identifier",
+                        "name": "devicePath"
                     },
                     "designerId": "cf9579e2-450d-4d11-9bd8-637b97f394c3"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -97,12 +104,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField2",
+                        "fieldLabel": "Label",
                         "name": "entity",
                         "value": [
                             "StorageIscsi"
-                        ],
-                        "fieldLabel": "Label"
+                        ]
                     },
                     "designerId": "1125ceac-06b3-4ef9-9722-36cc2242abd3"
                 }

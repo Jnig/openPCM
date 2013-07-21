@@ -6,36 +6,29 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "JobOutput",
-        "designer|userAlias": "",
+        "model": "jobOutput",
         "storeId": "JobOutput",
-        "model": "jobOutput"
+        "designer|userClassName": "JobOutput",
+        "designer|userAlias": ""
     },
-    "id": "ExtBox1-ext-gen6143",
     "designerId": "7b1fba77-c844-42c4-8e71-cd57cd9a0ea8",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyRestProxy5"
-            },
             "designerId": "5e80e68e-383a-4f3d-abfc-4791d6be9bca",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader7"
-                    },
                     "designerId": "ac6c1cc5-8751-4f60-81a3-ea0c99240a1b"
                 }
             ]
@@ -48,7 +41,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setJobId",
                 "fn": "setJobId",
                 "designer|params": [
                     "jobId"

@@ -6,37 +6,32 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "IpA",
         "autoLoad": false,
+        "model": "Ip",
         "storeId": "MyArrayStore5",
-        "model": "Ip"
+        "designer|userClassName": "IpA"
     },
-    "id": "ExtBox1-ext-gen84743",
     "designerId": "2cb9c9c3-2149-4918-b8d6-5174b4c149fa",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy10",
                 "url": "/api/nodes/7/interfaces"
             },
             "designerId": "e528dcb6-acf9-4994-a2e0-c38e6f4634d7",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader10"
-                    },
                     "designerId": "177dfe84-be6c-4fa6-a369-38b3e22a8f50"
                 }
             ]
@@ -49,7 +44,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "loadByNode",
                 "fn": "loadByNode",
                 "designer|params": [
                     "vm"

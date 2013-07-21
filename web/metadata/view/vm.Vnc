@@ -1,31 +1,29 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "vm.Vnc",
-        "designer|userAlias": "vmvnc",
         "height": null,
         "width": 1024,
+        "designer|userClassName": "vm.Vnc",
+        "designer|userAlias": "vmvnc",
         "layout": "fit",
         "title": "VNC",
         "constrain": true
     },
-    "id": "ExtBox1-ext-gen4069",
     "designerId": "f9cc52dd-0fd5-4180-83af-149505423318",
     "cn": [
         {
-            "type": "component",
+            "type": "Ext.Component",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyComponent",
                 "autoEl": [
                     "{",
                     "tag : \"iframe\",",

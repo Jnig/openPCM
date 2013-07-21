@@ -6,35 +6,28 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Stonith",
+        "model": "Stonith",
         "storeId": "MyJsonStore12",
-        "model": "Stonith"
+        "designer|userClassName": "Stonith"
     },
-    "id": "ExtBox1-ext-gen5359",
     "designerId": "223b2438-17d5-4e4b-bf7c-10df485067cf",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyRestProxy16"
-            },
             "designerId": "fe976061-8361-42e5-ad8f-1590c19b8e4f",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader16"
-                    },
                     "designerId": "b59f1871-e0b0-4c9a-a3c6-6e55ffb8c2f4"
                 }
             ]
@@ -47,7 +40,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "loadByNode",
                 "fn": "loadByNode",
                 "designer|params": [
                     "nodeId"

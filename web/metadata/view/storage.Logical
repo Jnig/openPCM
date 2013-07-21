@@ -1,25 +1,36 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
-        "designer|userClassName": "storage.Logical",
-        "designer|userAlias": "storagelogical",
+        "buttons": [
+            "[   ",
+            "            {",
+            "                text: 'Save',",
+            "                action: 'save'",
+            "            },",
+            "            {",
+            "                text: 'Cancel',",
+            "                scope: this,",
+            "                handler: this.close",
+            "            }",
+            "]"
+        ],
         "autoShow": true,
         "border": false,
         "height": 150,
         "width": 348,
+        "designer|userClassName": "storage.Logical",
+        "designer|userAlias": "storagelogical",
         "layout": "fit",
         "title": "Storage LVM"
     },
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen26664",
     "designerId": "4eea6c76-1f34-4a36-a934-6de81e362ffd",
     "customConfigs": [
         {
@@ -30,21 +41,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm9",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "821fa997-7c71-4dfc-b82d-3a74a8f3c022",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,14 +62,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField7",
-                        "name": "name",
-                        "fieldLabel": "Name"
+                        "fieldLabel": "Name",
+                        "name": "name"
                     },
                     "designerId": "4611a942-4aa5-46d2-9807-2a71a08d5d5e"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -67,14 +76,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField14",
-                        "name": "volumeGroup",
-                        "fieldLabel": "Volume Group"
+                        "fieldLabel": "Volume Group",
+                        "name": "volumeGroup"
                     },
                     "designerId": "8079601f-018a-4c3b-b19d-e190280422b4"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -82,12 +90,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField1",
+                        "fieldLabel": "Label",
                         "name": "entity",
                         "value": [
                             "StorageLogical"
-                        ],
-                        "fieldLabel": "Label"
+                        ]
                     },
                     "designerId": "759ab2ba-e398-4dea-a924-e02077797a78"
                 }

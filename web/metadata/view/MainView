@@ -1,5 +1,5 @@
 {
-    "type": "viewport",
+    "type": "Ext.container.Viewport",
     "reference": {
         "name": "items",
         "type": "array"
@@ -11,11 +11,10 @@
         "designer|initialView": true,
         "layout": "border"
     },
-    "id": "ExtBox1-ext-gen2208",
     "designerId": "f534e962-3207-492f-88c6-ca66f65aa59a",
     "cn": [
         {
-            "type": "panel",
+            "type": "Ext.panel.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -26,7 +25,6 @@
                 "layout|region": "center",
                 "layout|split": false,
                 "designer|snapToGrid": 10,
-                "designer|userClassName": "MyPanel",
                 "id": "",
                 "minWidth": 200,
                 "layout": "absolute",
@@ -35,7 +33,7 @@
             "designerId": "cb083f31-eee6-4e73-9b83-c27edc4e23a9"
         },
         {
-            "type": "container",
+            "type": "Ext.container.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -44,7 +42,6 @@
             "userConfig": {
                 "layout|region": "north",
                 "designer|snapToGrid": 10,
-                "designer|userClassName": "MyContainer1",
                 "height": 36,
                 "html": [
                     "<div id=\"app-header\">openPCM</div>"
@@ -55,27 +52,25 @@
             "designerId": "45aa16c4-2b8d-486d-8852-4866b60bc335",
             "cn": [
                 {
-                    "type": "container",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyContainer",
                         "height": 30
                     },
                     "designerId": "a9d7b653-c36b-4f3d-829c-6651f5bfe989",
                     "cn": [
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton24",
                                 "cls": "pull-right",
                                 "margin": "10 0 0 0",
                                 "text": "Logout"
@@ -90,7 +85,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onButtonClick",
                                         "fn": "onButtonClick",
                                         "implHandler": [
                                             "window.location = '/logout';"
@@ -103,14 +97,13 @@
                             ]
                         },
                         {
-                            "type": "label",
+                            "type": "Ext.form.Label",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyLabel",
                                 "cls": "pull-right",
                                 "id": "profiletext",
                                 "margin": "15 10 0 0",
@@ -124,7 +117,7 @@
             ]
         },
         {
-            "type": "treepanel",
+            "type": "Ext.tree.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -133,7 +126,6 @@
             "userConfig": {
                 "layout|region": "west",
                 "layout|split": true,
-                "designer|userClassName": "MyTreePanel",
                 "width": 150,
                 "title": "Navigation",
                 "store": "Navigation",
@@ -142,27 +134,25 @@
             "designerId": "ab767704-af7e-4e13-ac90-76a8b74a96ed",
             "cn": [
                 {
-                    "type": "treeview",
+                    "type": "Ext.tree.View",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTreeView",
                         "id": "Navigation"
                     },
                     "designerId": "69601ffc-793e-46ee-bb00-64db2293da77",
                     "cn": [
                         {
-                            "type": "treedragdropplugin",
+                            "type": "Ext.tree.plugin.TreeViewDragDrop",
                             "reference": {
                                 "name": "plugins",
                                 "type": "array"
                             },
                             "codeClass": "Ext.tree.plugin.TreeViewDragDrop",
                             "userConfig": {
-                                "designer|userClassName": "MyTreeDragDropPlugin",
                                 "allowContainerDrops": true
                             },
                             "designerId": "a805e0b6-471a-4dad-97a7-50bbe108de02",
@@ -175,7 +165,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onTreedragdroppluginBeforeDrop",
                                         "fn": "onTreedragdroppluginBeforeDrop",
                                         "implHandler": [
                                             "",
@@ -196,7 +185,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onTreedragdroppluginDrop",
                                         "fn": "onTreedragdroppluginDrop",
                                         "implHandler": [
                                             "var vmId = data.records[0].get('vmId');",
@@ -222,7 +210,7 @@
             ]
         },
         {
-            "type": "gridpanel",
+            "type": "Ext.grid.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -233,24 +221,21 @@
                 "layout|region": "south",
                 "layout|split": true,
                 "layout|weight": -150,
-                "designer|userClassName": "MyGridPanel",
                 "height": 150,
                 "id": "jobgrid",
-                "collapsible": false,
                 "title": "Log",
                 "store": "Job"
             },
             "designerId": "c3e7a80e-0c4a-447e-9e61-ba80e0ffd88d",
             "cn": [
                 {
-                    "type": "gridview",
+                    "type": "Ext.grid.View",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyGridView",
                         "loadMask": false
                     },
                     "configAlternates": {
@@ -259,28 +244,26 @@
                     "designerId": "b16b42ba-6846-4107-a243-830824a0a7b0"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn38",
                         "dataIndex": "id",
                         "text": "Id"
                     },
                     "designerId": "f6f74079-324e-494b-9459-934f39e5cfa7"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn39",
                         "dataIndex": "state",
                         "text": "State"
                     },
@@ -294,7 +277,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "renderer",
                                 "fn": "renderer",
                                 "designer|params": [
                                     "value",
@@ -324,62 +306,58 @@
                     ]
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn47",
                         "dataIndex": "name",
-                        "flex": 1,
-                        "text": "Name"
+                        "text": "Name",
+                        "flex": 1
                     },
                     "designerId": "581c021a-fd7f-4c17-b1cd-fda071a6f8fa"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn41",
                         "weight": 200,
                         "dataIndex": "createdAt",
-                        "flex": 1,
-                        "text": "CreatedAt"
+                        "text": "CreatedAt",
+                        "flex": 1
                     },
                     "designerId": "7ea4a6bc-dce5-4d79-9743-ae8444287109"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn46",
                         "dataIndex": "owner",
                         "text": "Owner"
                     },
                     "designerId": "1ab8b5ec-59c5-443e-aa45-3d47b9892558"
                 },
                 {
-                    "type": "gridcolumn",
+                    "type": "Ext.grid.column.Column",
                     "reference": {
                         "name": "columns",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyColumn40",
                         "dataIndex": "command",
-                        "flex": 0.5,
-                        "text": "Command"
+                        "text": "Command",
+                        "flex": 0.5
                     },
                     "designerId": "84651ddf-bfa6-45be-bdc0-5794dcb294c3"
                 },
@@ -391,12 +369,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onJobgridAfterRender",
                         "fn": "onJobgridAfterRender",
                         "implHandler": [
                             "",
                             "",
-                            "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": abstractcomponent.getStore()});",
+                            "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": component.getStore()});",
                             "",
                             "Mask.show();",
                             "",
@@ -408,7 +385,7 @@
                     "designerId": "5d246466-44e8-43d6-af6e-ad179adbb714"
                 },
                 {
-                    "type": "toolbar",
+                    "type": "Ext.toolbar.Toolbar",
                     "reference": {
                         "name": "dockedItems",
                         "type": "array"
@@ -416,13 +393,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "dock": "top",
-                        "designer|userClassName": "MyToolbar11",
                         "height": null
                     },
                     "designerId": "d90b893a-6e57-4658-83ed-fc9cb407fb1c",
                     "cn": [
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -430,7 +406,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "layout|flex": null,
-                                "designer|userClassName": "MyButton1",
                                 "height": null,
                                 "id": "userJobs",
                                 "text": "User"
@@ -438,7 +413,7 @@
                             "designerId": "58a08415-30a8-4315-bcce-e18f160b1706"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.button.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -446,7 +421,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "layout|flex": null,
-                                "designer|userClassName": "MyButton28",
                                 "id": "systemJobs",
                                 "text": "System"
                             },

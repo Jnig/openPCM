@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Virtualmachine",
         "stores": [
             "Virtualmachine",
             "Storage"
-        ]
+        ],
+        "designer|userClassName": "Virtualmachine"
     },
-    "id": "ExtBox1-ext-gen67192",
     "designerId": "5575ae5e-5e20-434a-9ec5-60f4ae08b4ed",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -53,7 +51,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#vmlistgrid"
             },
@@ -67,7 +64,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick1",
                 "fn": "onButtonClick1",
                 "implHandler": [
                     "var win = button.up('window'),",
@@ -93,7 +89,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "this.switchVmEdit(record);"
@@ -113,7 +108,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -132,7 +126,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmedit",
                 "ref": "vmedit",
                 "selector": "vmedit"
             },
@@ -146,7 +139,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick2",
                 "fn": "onButtonClick2",
                 "implHandler": [
                     "var form = button.up('form');",
@@ -169,7 +161,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "save",
                 "fn": "save",
                 "designer|params": [
                     "form"
@@ -204,7 +195,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmstart",
                 "fn": "vmstart",
                 "implHandler": [
                     "this.vmaction('start');"
@@ -224,7 +214,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmshutdown",
                 "fn": "vmshutdown",
                 "implHandler": [
                     "this.vmaction('shutdown');"
@@ -244,7 +233,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmreset",
                 "fn": "vmreset",
                 "implHandler": [
                     "this.vmaction('reset');"
@@ -264,7 +252,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmaction",
                 "fn": "vmaction",
                 "designer|params": [
                     "action"
@@ -285,7 +272,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vmdestroy",
                 "fn": "vmdestroy",
                 "implHandler": [
                     "this.vmaction('destroy');"
@@ -305,7 +291,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "vnc",
                 "fn": "vnc",
                 "implHandler": [
                     "",
@@ -337,14 +322,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTabpanelShow",
                 "fn": "onTabpanelShow",
                 "implHandler": [
-                    "console.log(abstractcomponent);",
+                    "console.log(component);",
                     "",
-                    "abstractcomponent.removeAll();",
+                    "component.removeAll();",
                     "",
-                    "abstractcomponent.add({",
+                    "component.add({",
                     "    xtype: 'component',",
                     "    autoEl: {",
                     "        tag: 'iframe',",
@@ -354,7 +338,7 @@
                     "    id: 'vnciframe'",
                     "});",
                     "",
-                    "var iframe = abstractcomponent.down('#vnciframe');",
+                    "var iframe = component.down('#vnciframe');",
                     "",
                     "iframe.autoEl.src = '/vnc/' + currentVm.get('id');",
                     "",
@@ -375,7 +359,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "pathField",
                 "ref": "pathField",
                 "selector": "#pathField"
             },
@@ -389,7 +372,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getId",
                 "fn": "getId",
                 "implHandler": [
                     "return currentVm.get('id');"
@@ -405,7 +387,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getVm",
                 "fn": "getVm",
                 "implHandler": [
                     "return currentVm;"
@@ -421,7 +402,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "switchVmEdit",
                 "fn": "switchVmEdit",
                 "designer|params": [
                     "record"

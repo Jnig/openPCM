@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -70,7 +70,6 @@
             "vm.edit.disk.List"
         ],
         "autoCreateViewport": true,
-        "name": "MyApp",
         "controllers": [
             "Navigation",
             "Virtualmachine",
@@ -84,9 +83,9 @@
             "Job",
             "User",
             "Events"
-        ]
+        ],
+        "name": "MyApp"
     },
-    "id": "ExtBox1-ext-gen1780",
     "designerId": "application",
     "cn": [
         {
@@ -97,7 +96,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "Ext.Ajax.on('requestexception', function (conn, response, options) {",

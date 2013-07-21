@@ -1,19 +1,18 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Cluster",
         "stores": [
             "Cluster",
             "Network",
             "Storage"
-        ]
+        ],
+        "designer|userClassName": "Cluster"
     },
-    "id": "ExtBox1-ext-gen4354",
     "designerId": "220a5652-080a-4871-a02c-f76158558d8e",
     "cn": [
         {
@@ -24,7 +23,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#clusterlistgrid"
             },
@@ -38,7 +36,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridviewItemDblClick",
                 "fn": "onGridviewItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('clusteradd');",
@@ -62,7 +59,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickSave",
                 "fn": "onButtonClickSave",
                 "implHandler": [
                     "var form = button.up('window').down('form');",
@@ -100,7 +96,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickDelete",
                 "fn": "onButtonClickDelete",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -130,7 +125,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "this.getNetworkStore().load();",

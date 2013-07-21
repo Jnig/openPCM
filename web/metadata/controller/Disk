@@ -1,19 +1,18 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Disk",
         "stores": [
             "Disk",
             "Volume",
             "DiskAdd"
-        ]
+        ],
+        "designer|userClassName": "Disk"
     },
-    "id": "ExtBox1-ext-gen66363",
     "designerId": "67813e30-db82-46e9-8d02-b5e34f68228f",
     "cn": [
         {
@@ -24,7 +23,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "save",
                 "fn": "save",
                 "designer|params": [
                     "form"
@@ -62,7 +60,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDiskaddSave",
                 "fn": "onDiskaddSave",
                 "implHandler": [
                     "var win = button.up('window'),",
@@ -87,7 +84,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "openExistingDisk",
                 "fn": "openExistingDisk",
                 "implHandler": [
                     "var window = Ext.widget('diskadd');",
@@ -111,7 +107,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "explorerOpen",
                 "fn": "explorerOpen",
                 "implHandler": [
                     "var window = Ext.widget('explorer');",
@@ -135,7 +130,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTreeviewItemClick",
                 "fn": "onTreeviewItemClick",
                 "implHandler": [
                     "",
@@ -159,7 +153,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTabpanelBeforeShow",
                 "fn": "onTabpanelBeforeShow",
                 "implHandler": [
                     "var store = this.getDiskStore();",
@@ -181,7 +174,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#vmdiskgrid"
             },
@@ -195,7 +187,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deleteDisk",
                 "fn": "deleteDisk",
                 "implHandler": [
                     "",
@@ -234,7 +225,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onDiskExistingButtonClick",
                 "fn": "onDiskExistingButtonClick",
                 "implHandler": [
                     "button.up('window').close();",
@@ -255,7 +245,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "pathField",
                 "ref": "pathField",
                 "selector": "#pathField"
             },
@@ -269,7 +258,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "explorer",
                 "ref": "explorer",
                 "selector": "explorer"
             },
@@ -283,7 +271,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickOther",
                 "fn": "onButtonClickOther",
                 "implHandler": [
                     "var win = button.up('window');",
@@ -308,7 +295,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('diskedit');",
@@ -330,7 +316,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "var win = button.up('window');",
@@ -355,7 +340,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onComboboxSelect",
                 "fn": "onComboboxSelect",
                 "implHandler": [
                     "",

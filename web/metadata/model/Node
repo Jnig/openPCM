@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,18 +8,16 @@
     "userConfig": {
         "designer|userClassName": "Node"
     },
-    "id": "ExtBox1-ext-gen27829",
     "designerId": "07b3dbad-d4ae-4c89-9562-aae78740e9c9",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field15",
                 "name": "id",
                 "type": null,
                 "useNull": null
@@ -27,170 +25,157 @@
             "designerId": "2465dd98-6af9-4ce2-9f08-f41f3f642ca3"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field16",
                 "name": "name"
             },
             "designerId": "f9079617-3918-4cfb-9162-2762c14523f2"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field17",
                 "name": "hostname"
             },
             "designerId": "8f54c747-1c28-42a2-8952-5a9f109ec616"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field18",
                 "name": "password"
             },
             "designerId": "9ee8e315-9628-489c-8388-09b9313dbf4a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field20",
                 "name": "storages"
             },
             "designerId": "be0cf4c2-98f4-4b84-a8d4-fdd3b33e423b"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field52",
                 "name": "networks"
             },
             "designerId": "f3826449-3e1d-4701-9535-3d216d3a9b06"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field53",
                 "name": "cluster"
             },
             "designerId": "58a89faf-b9ce-403d-a8cd-c7a7ce19faba"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field54",
                 "name": "clusterName"
             },
             "designerId": "cf4bf024-93c9-4145-9edb-c2a7357ea785"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field63",
                 "name": "ha"
             },
             "designerId": "a1561716-697c-4f17-862c-661ef85d32aa"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field66",
                 "name": "corosyncIp1"
             },
             "designerId": "f1a3ad9a-e221-4a01-8907-bc12818f9a66"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field67",
                 "name": "corosyncIp2"
             },
             "designerId": "6e7ad3b1-7974-4e71-a570-6edd668eb745"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field94",
                 "name": "stonith"
             },
             "designerId": "0eab473a-442d-4b46-8461-9b5f16d0dd94"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field95",
                 "name": "stonithParameters"
             },
             "designerId": "b4320681-d7bf-47f4-a2d5-1bbe4977980b"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field111",
                 "name": "standby"
             },
             "designerId": "a861c561-337b-431c-ba50-d5f2fdf9fc07"

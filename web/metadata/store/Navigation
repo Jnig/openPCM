@@ -1,43 +1,38 @@
 {
-    "type": "treestore",
+    "type": "Ext.data.TreeStore",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Navigation",
         "autoLoad": false,
-        "storeId": "MyJsonTreeStore",
         "model": "Navigation",
+        "storeId": "MyJsonTreeStore",
+        "designer|userClassName": "Navigation",
         "root": null
     },
-    "id": "ExtBox1-ext-gen15855",
     "designerId": "9d04e922-d450-4616-aaec-c7c22fd4dcdc",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy",
                 "url": "/api/menus"
             },
             "designerId": "d015d149-0d6c-4247-9892-52e9b9c86f54",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader1"
-                    },
                     "designerId": "610445e5-3500-4849-9718-64fe8b506810"
                 }
             ]

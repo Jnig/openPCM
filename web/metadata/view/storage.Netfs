@@ -1,25 +1,36 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
-        "designer|userClassName": "storage.Netfs",
-        "designer|userAlias": "storagenetfs",
+        "buttons": [
+            "[   ",
+            "            {",
+            "                text: 'Save',",
+            "                action: 'save'",
+            "            },",
+            "            {",
+            "                text: 'Cancel',",
+            "                scope: this,",
+            "                handler: this.close",
+            "            }",
+            "]"
+        ],
         "autoShow": true,
         "border": false,
         "height": 200,
         "width": 344,
+        "designer|userClassName": "storage.Netfs",
+        "designer|userAlias": "storagenetfs",
         "layout": "fit",
         "title": "Storage NFS"
     },
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen25933",
     "designerId": "98cae7b4-db62-4b55-8f9a-d3c6a167146f",
     "customConfigs": [
         {
@@ -30,21 +41,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm7",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "94ef2608-7799-409b-b823-0a47935f1160",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,14 +62,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField5",
-                        "name": "name",
-                        "fieldLabel": "Name"
+                        "fieldLabel": "Name",
+                        "name": "name"
                     },
                     "designerId": "a7cf4f07-34ae-42c9-94de-4d815ecedef7"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -67,14 +76,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField9",
-                        "name": "hostname",
-                        "fieldLabel": "Hostname"
+                        "fieldLabel": "Hostname",
+                        "name": "hostname"
                     },
                     "designerId": "6deabedf-594a-4c4a-b172-114991adad7d"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -82,14 +90,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField10",
-                        "name": "exportPath",
-                        "fieldLabel": "Export Path"
+                        "fieldLabel": "Export Path",
+                        "name": "exportPath"
                     },
                     "designerId": "cb3e7695-2c8d-46ba-a884-e45088e0dda9"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -97,14 +104,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField11",
-                        "name": "path",
-                        "fieldLabel": "Mount Path"
+                        "fieldLabel": "Mount Path",
+                        "name": "path"
                     },
                     "designerId": "68300fda-2d7b-4fab-b584-9fdbf07b4f2e"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -112,13 +118,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField3",
+                        "fieldLabel": "Label",
                         "name": "entity",
                         "value": [
                             "StorageNetfs",
                             ""
-                        ],
-                        "fieldLabel": "Label"
+                        ]
                     },
                     "designerId": "08d8af86-e4fb-4465-87b5-7e3938b56926"
                 }

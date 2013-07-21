@@ -1,103 +1,94 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "template.List",
-        "designer|userAlias": "templatelist",
         "height": 250,
         "width": 400,
+        "designer|userClassName": "template.List",
+        "designer|userAlias": "templatelist",
         "title": "My Grid Panel"
     },
-    "id": "ExtBox1-ext-gen10541",
     "designerId": "7cae8efc-0d85-400f-aaf3-7c7b53ed948d",
     "cn": [
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn45",
                 "dataIndex": "string",
                 "text": "String"
             },
             "designerId": "fef1a55f-cfd0-4469-ba77-b2f5f1c33f67"
         },
         {
-            "type": "numbercolumn",
+            "type": "Ext.grid.column.Number",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyNumberColumn",
                 "dataIndex": "number",
                 "text": "Number"
             },
             "designerId": "fa5de28a-98b9-4c7e-99df-7b92ea21a81b"
         },
         {
-            "type": "datecolumn",
+            "type": "Ext.grid.column.Date",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyDateColumn",
                 "dataIndex": "date",
                 "text": "Date"
             },
             "designerId": "1892c3d2-8141-4d89-a82f-c66c03bdda18"
         },
         {
-            "type": "booleancolumn",
+            "type": "Ext.grid.column.Boolean",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyBooleanColumn",
                 "dataIndex": "bool",
                 "text": "Boolean"
             },
             "designerId": "7de9ae37-02fc-4e8b-8aef-25e4f88c71e3"
         },
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGridView10"
-            },
             "designerId": "62d62f6d-5c0f-4556-9c35-f1024aa42e47"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top",
-                "designer|userClassName": "MyToolbar9"
+                "dock": "top"
             },
             "designerId": "501ea9aa-0840-467d-aae2-c88fe42d23ce",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -105,14 +96,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton25",
                         "iconCls": "icon-add",
                         "text": "MyButton"
                     },
                     "designerId": "03bf7b3a-079b-4194-b124-15ab409721b8"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -120,7 +110,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton26",
                         "iconCls": "icon-delete",
                         "text": "MyButton"
                     },

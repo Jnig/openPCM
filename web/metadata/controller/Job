@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Job",
         "stores": [
             "Job",
             "JobOutput"
-        ]
+        ],
+        "designer|userClassName": "Job"
     },
-    "id": "ExtBox1-ext-gen77522",
     "designerId": "501ffb02-1613-4ba0-9d54-43fd4084ac21",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#jobgrid"
             },
@@ -37,7 +35,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLaunch",
                 "fn": "onLaunch",
                 "implHandler": [
                     "var t = this;",
@@ -64,7 +61,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('jobdetail');",
@@ -77,7 +73,7 @@
                     "    if (detailQuery== 0) {",
                     "        detailQuery = 1;    ",
                     "        var store = t.getJobOutputStore();",
-                    "        store.load(function(r, options, success) {",
+                    "        store.load(function(r, eOpts, success) {",
                     "            t.getTextarea().update('<pre>'+r[0].get('output')+'</pre>');",
                     "",
                     "            if (r[0].get('state') != 'running' && r[0].get('state') != 'pending') {",
@@ -108,7 +104,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "textarea",
                 "ref": "textarea",
                 "selector": "#jobdetailtext"
             },
@@ -122,7 +117,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onWindowDestroy",
                 "fn": "onWindowDestroy",
                 "implHandler": [
                     "if (typeof refreshIntervalId !== 'undefined') {",
@@ -145,7 +139,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onUserjobsClick",
                 "fn": "onUserjobsClick",
                 "implHandler": [
                     "userJobs = true;",
@@ -167,7 +160,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onSystemjobsClick",
                 "fn": "onSystemjobsClick",
                 "implHandler": [
                     "userJobs = false;",

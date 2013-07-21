@@ -1,20 +1,19 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Drbd",
         "stores": [
             "Disk",
             "Node",
             "IpA",
             "IpB"
-        ]
+        ],
+        "designer|userClassName": "Drbd"
     },
-    "id": "ExtBox1-ext-gen79677",
     "designerId": "c4ea1d95-e6c7-475d-9c26-729485e993a6",
     "cn": [
         {
@@ -25,7 +24,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#vmdiskgrid"
             },
@@ -39,7 +37,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onMenuitemClickEnableDrbd",
                 "fn": "onMenuitemClickEnableDrbd",
                 "implHandler": [
                     "var window = Ext.widget('diskdrbd');",
@@ -71,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "nodeB",
                 "ref": "nodeB",
                 "selector": "#diskDrbdNodeB"
             },
@@ -85,7 +81,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onComboboxBeforeQueryNodeA",
                 "fn": "onComboboxBeforeQueryNodeA",
                 "implHandler": [
                     "",
@@ -110,7 +105,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "nodeA",
                 "ref": "nodeA",
                 "selector": "#diskDrbdNodeA"
             },
@@ -124,7 +118,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onComboboxBeforeQueryNodeB",
                 "fn": "onComboboxBeforeQueryNodeB",
                 "implHandler": [
                     "var nodeB = this.getNodeB().getValue();",
@@ -149,7 +142,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickSave",
                 "fn": "onButtonClickSave",
                 "implHandler": [
                     "var form = button.up('window').down('form');",

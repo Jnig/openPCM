@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "User",
         "stores": [
             "User",
             "Profile"
-        ]
+        ],
+        "designer|userClassName": "User"
     },
-    "id": "ExtBox1-ext-gen21904",
     "designerId": "462fdb6d-9a90-48a8-a546-38f3131e17dc",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#userlistgrid"
             },
@@ -37,7 +35,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "var form = button.up('window').down('form');",
@@ -75,7 +72,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickDelete",
                 "fn": "onButtonClickDelete",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -105,7 +101,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "",
@@ -134,7 +129,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "userfield",
                 "ref": "userfield",
                 "selector": "#useraddpassword"
             },
@@ -148,7 +142,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLaunch",
                 "fn": "onLaunch",
                 "implHandler": [
                     "var t = this; // for scope in interval function",
@@ -175,7 +168,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "label",
                 "ref": "label",
                 "selector": "#profiletext"
             },
@@ -189,7 +181,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getUserId",
                 "fn": "getUserId",
                 "implHandler": [
                     "return userId;"

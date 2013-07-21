@@ -1,25 +1,36 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
-        "designer|userClassName": "storage.Rbd",
-        "designer|userAlias": "storagerbd",
+        "buttons": [
+            "[   ",
+            "            {",
+            "                text: 'Save',",
+            "                action: 'save'",
+            "            },",
+            "            {",
+            "                text: 'Cancel',",
+            "                scope: this,",
+            "                handler: this.close",
+            "            }",
+            "]"
+        ],
         "autoShow": true,
         "border": false,
         "height": 255,
         "width": 404,
+        "designer|userClassName": "storage.Rbd",
+        "designer|userAlias": "storagerbd",
         "layout": "fit",
         "title": "Storage Ceph RBD"
     },
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen26456",
     "designerId": "929331f6-e608-43af-984d-3423f38e76e5",
     "customConfigs": [
         {
@@ -30,21 +41,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm8",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "d94a56ba-ea66-40b5-b794-07aab069b821",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,14 +62,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField6",
-                        "name": "name",
-                        "fieldLabel": "Name"
+                        "fieldLabel": "Name",
+                        "name": "name"
                     },
                     "designerId": "1e5f071e-6680-4436-8e4b-d88ac8f66fbb"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -67,29 +76,27 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField31",
                         "designer|displayName": null,
-                        "name": "pool",
-                        "fieldLabel": "Pool Name"
+                        "fieldLabel": "Pool Name",
+                        "name": "pool"
                     },
                     "designerId": "961f5d8c-3339-47b9-85be-958dcdd24dd6"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTextField12",
-                        "name": "username",
-                        "fieldLabel": "Username"
+                        "fieldLabel": "Username",
+                        "name": "username"
                     },
                     "designerId": "d029983a-833d-4ae2-a1c3-bb1e93835d69"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -97,14 +104,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField13",
-                        "name": "secret",
-                        "fieldLabel": "Secret"
+                        "fieldLabel": "Secret",
+                        "name": "secret"
                     },
                     "designerId": "c6a7a53f-2bb4-49db-90a2-45df0cd265c3"
                 },
                 {
-                    "type": "textareafield",
+                    "type": "Ext.form.field.TextArea",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -112,14 +118,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextArea",
-                        "name": "hosts",
-                        "fieldLabel": "Hosts"
+                        "fieldLabel": "Hosts",
+                        "name": "hosts"
                     },
                     "designerId": "56f4cbe2-464a-4529-ab0d-e91ae06379ef"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -127,12 +132,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField4",
+                        "fieldLabel": "Label",
                         "name": "entity",
                         "value": [
                             "StorageRbd"
-                        ],
-                        "fieldLabel": "Label"
+                        ]
                     },
                     "designerId": "c07ef100-bc06-4b43-b40a-060988925329"
                 }

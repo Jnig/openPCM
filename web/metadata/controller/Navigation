@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Navigation",
         "stores": [
             "Navigation",
             "Virtualmachine"
-        ]
+        ],
+        "designer|userClassName": "Navigation"
     },
-    "id": "ExtBox1-ext-gen16669",
     "designerId": "adce50fe-2f8a-467f-b69b-56c1785db4b5",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "switchContent",
                 "fn": "switchContent",
                 "designer|params": [
                     "name"
@@ -48,7 +46,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTreeviewItemClick",
                 "fn": "onTreeviewItemClick",
                 "implHandler": [
                     "if (record.get('action') != '') {",
@@ -75,7 +72,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "viewport",
                 "ref": "viewport",
                 "selector": "viewport"
             },
@@ -89,7 +85,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLaunch",
                 "fn": "onLaunch",
                 "implHandler": [
                     "this.switchContent('vmlist');"

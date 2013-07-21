@@ -6,37 +6,32 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Interface",
         "autoSync": true,
+        "model": "Interface",
         "storeId": "MyJsonStore7",
-        "model": "Interface"
+        "designer|userClassName": "Interface"
     },
-    "id": "ExtBox1-ext-gen40217",
     "designerId": "463cf8d8-8852-407c-92f9-e2ace2e12b4b",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy9",
                 "url": "/api/vms/1/interfaces"
             },
             "designerId": "be372ba8-d3ed-4016-a63e-44c898f8e98f",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader10"
-                    },
                     "designerId": "1f02a0fa-3f07-4095-9fae-bcc5307ccd0c"
                 }
             ]
@@ -49,7 +44,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setVirtualmachineId",
                 "fn": "setVirtualmachineId",
                 "designer|params": [
                     "vm"

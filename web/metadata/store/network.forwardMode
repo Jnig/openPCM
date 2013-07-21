@@ -6,22 +6,30 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "network.forwardMode",
         "storeId": "MyArrayStore3",
-        "data": "[\n                {\n                    name: 'bridge'\n                },\n                {\n                    name: 'nat'\n                },\n                \n            ]"
+        "designer|userClassName": "network.forwardMode",
+        "data": [
+            "[",
+            "                {",
+            "                    name: 'bridge'",
+            "                },",
+            "                {",
+            "                    name: 'nat'",
+            "                },",
+            "                ",
+            "            ]"
+        ]
     },
-    "id": "ExtBox1-ext-gen22066",
     "designerId": "e22c4b96-ae48-45f0-9c9f-9012a25a22fb",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field23",
                 "name": "name"
             },
             "designerId": "fe2e4083-b29a-417e-b49e-e29272a5a568"

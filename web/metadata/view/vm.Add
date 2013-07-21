@@ -1,30 +1,38 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[   \n            {\n                text: 'Save',\n                action: 'save'\n            },\n            {\n                text: 'Cancel',\n                scope: this,\n                handler: this.close\n            }\n]",
-        "designer|userClassName": "vm.Add",
-        "designer|userAlias": "vmadd",
+        "buttons": [
+            "[   ",
+            "            {",
+            "                text: 'Save',",
+            "                action: 'save'",
+            "            },",
+            "            {",
+            "                text: 'Cancel',",
+            "                scope: this,",
+            "                handler: this.close",
+            "            }",
+            "]"
+        ],
         "autoShow": true,
         "border": false,
-        "frame": false,
         "height": 196,
         "width": 400,
+        "designer|userClassName": "vm.Add",
+        "designer|userAlias": "vmadd",
         "layout": "fit",
-        "suspendLayout": false,
         "bodyBorder": false,
         "bodyPadding": null,
-        "title": "Vm Add",
-        "titleCollapse": false
+        "title": "Vm Add"
     },
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen44328",
     "designerId": "a4a6a656-5e3d-43bb-916d-fba4a3071127",
     "customConfigs": [
         {
@@ -35,21 +43,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm1",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "f84ec7c1-f890-4574-8bca-3127739334a7",
             "cn": [
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -57,14 +64,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField",
-                        "name": "name",
-                        "fieldLabel": "Name"
+                        "fieldLabel": "Name",
+                        "name": "name"
                     },
                     "designerId": "dd67b84b-ba46-43a5-bb5c-23270b19b68f"
                 },
                 {
-                    "type": "numberfield",
+                    "type": "Ext.form.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -72,9 +78,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyNumberField",
-                        "name": "vcpu",
                         "fieldLabel": "CPU",
+                        "name": "vcpu",
                         "allowBlank": false,
                         "maxValue": 16,
                         "minValue": 1
@@ -82,7 +87,7 @@
                     "designerId": "22968edf-2dc5-4735-bfaa-baedf3301d6e"
                 },
                 {
-                    "type": "numberfield",
+                    "type": "Ext.form.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -90,16 +95,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyNumberField1",
-                        "name": "memory",
                         "fieldLabel": "Memory in MB",
+                        "name": "memory",
                         "allowBlank": false,
                         "minValue": 1
                     },
                     "designerId": "c6eebd3c-98d6-4b8d-9726-130b55271266"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -107,9 +111,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox2",
-                        "name": "node",
                         "fieldLabel": "Node",
+                        "name": "node",
                         "displayField": "name",
                         "store": "Node",
                         "valueField": "id"

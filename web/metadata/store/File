@@ -1,41 +1,36 @@
 {
-    "type": "treestore",
+    "type": "Ext.data.TreeStore",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "storeId": "MyJsonTreeStore1",
         "designer|userClassName": "File",
-        "designer|userAlias": "fileStore",
-        "storeId": "MyJsonTreeStore1"
+        "designer|userAlias": "fileStore"
     },
-    "id": "ExtBox1-ext-gen7100",
     "designerId": "53676ae3-2d62-4cb8-916a-a16d8d9a8d17",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy4",
                 "url": "/api/nodes/7/files/"
             },
             "designerId": "5c1f4c7f-5215-428e-b3e7-eacb2960f89e",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader4"
-                    },
                     "designerId": "c9e276ab-6aa6-4ec3-bb41-3c993cd18ec4"
                 }
             ]

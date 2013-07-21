@@ -1,47 +1,42 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "vmdiskgrid",
         "designer|userClassName": "vm.edit.disk.List",
         "designer|userAlias": "mygridpanel3",
-        "id": "vmdiskgrid",
         "title": "Disks",
         "store": "Disk"
     },
-    "id": "ExtBox1-ext-gen2531",
     "designerId": "95fea58b-2bb0-49bb-bfbd-d35199d6b692",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGridView3"
-            },
             "designerId": "75c35881-d94b-4957-9c9e-6a2a5a833db1"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top",
-                "designer|userClassName": "MyToolbar3"
+                "dock": "top"
             },
             "designerId": "a63c76e5-49d5-4126-a2c4-f99fe3dbc70e",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -49,16 +44,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton10",
-                        "designer|displayName": "",
                         "id": "existingDiskLink",
+                        "designer|displayName": "",
                         "iconCls": "icon-add",
                         "text": "Add Disk"
                     },
                     "designerId": "519457ef-78c7-4219-b1b3-156c2dd3efa1"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -66,7 +60,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton14",
                         "id": "deleteDisk",
                         "iconCls": "icon-delete",
                         "text": "Remove Disk"
@@ -76,111 +69,101 @@
             ]
         },
         {
-            "type": "checkboxselectionmodel",
+            "type": "Ext.selection.CheckboxModel",
             "reference": {
                 "name": "selModel",
                 "type": "object"
             },
             "codeClass": "Ext.selection.CheckboxModel",
-            "userConfig": {
-                "designer|userClassName": "MyCheckboxSelectionModel2"
-            },
             "designerId": "e3424439-944c-472f-b1f3-f50598b98814"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn16",
                 "dataIndex": "id",
                 "text": "Id"
             },
             "designerId": "e127324c-04d5-44b3-9730-e88ed1a6622f"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn21",
                 "dataIndex": "path",
-                "flex": 1,
-                "text": "Path"
+                "text": "Path",
+                "flex": 1
             },
             "designerId": "2778c2c6-b554-4fd1-bd82-877880ee6154"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn22",
                 "dataIndex": "storage",
                 "text": "Storage"
             },
             "designerId": "10bbb6ac-fae6-4a42-ba8b-a1aa27986493"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn25",
                 "dataIndex": "driverType",
                 "text": "DriverType"
             },
             "designerId": "3286d6b6-8b59-4472-a914-cb1045a0d3e5"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn26",
                 "dataIndex": "diskDevice",
                 "text": "DiskDevice"
             },
             "designerId": "1d23e812-2746-4fb7-9765-6340628e2ec2"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn31",
                 "dataIndex": "capacity",
                 "text": "Capacity in GB"
             },
             "designerId": "0c62cb9c-b01a-400b-a72f-1942a14b9d3f"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn30",
                 "dataIndex": "allocation",
                 "text": "Allocation in GB"
             },
@@ -194,7 +177,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onVmdiskgridItemContextMenu",
                 "fn": "onVmdiskgridItemContextMenu",
                 "implHandler": [
                     "e.stopEvent(); ",
@@ -239,12 +221,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onVmdiskgridShow",
                 "fn": "onVmdiskgridShow",
                 "implHandler": [
                     "",
                     "",
-                    "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": abstractcomponent.getStore()});",
+                    "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": component.getStore()});",
                     "",
                     "Mask.show();",
                     "",
@@ -252,7 +233,7 @@
                     "{",
                     "    run : function() ",
                     "    {",
-                    "        abstractcomponent.getStore().load();",
+                    "        component.getStore().load();",
                     "    },",
                     "    interval: 3000 //(1 second = 1000)",
                     "}",
@@ -272,7 +253,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onVmdiskgridHide",
                 "fn": "onVmdiskgridHide",
                 "implHandler": [
                     "Ext.TaskManager.stop(diskTask);"
@@ -290,7 +270,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "rememberSelection",
                 "fn": "rememberSelection",
                 "implHandler": [
                     "if (!this.rendered || Ext.isEmpty(this.el)) {",
@@ -311,7 +290,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "refreshSelection",
                 "fn": "refreshSelection",
                 "implHandler": [
                     "      if (0 >= this.selectedRecords.length) {",
@@ -339,11 +317,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onVmdiskgridBeforeShow",
                 "fn": "onVmdiskgridBeforeShow",
                 "implHandler": [
-                    "        abstractcomponent.getStore().on('beforeload', abstractcomponent.rememberSelection, abstractcomponent);",
-                    "        abstractcomponent.getView().on('refresh', abstractcomponent.refreshSelection, abstractcomponent);"
+                    "        component.getStore().on('beforeload', component.rememberSelection, component);",
+                    "        component.getView().on('refresh', component.refreshSelection, component);"
                 ],
                 "name": "beforeshow",
                 "scope": "me"

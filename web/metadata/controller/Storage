@@ -1,18 +1,17 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Storage",
         "stores": [
             "Storage",
             "Disk"
-        ]
+        ],
+        "designer|userClassName": "Storage"
     },
-    "id": "ExtBox1-ext-gen13792",
     "designerId": "e1105533-f0f4-4f11-b6f3-7ab17d75d302",
     "cn": [
         {
@@ -23,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "this.save(button);"
@@ -43,7 +41,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "save",
                 "fn": "save",
                 "designer|params": [
                     "button"
@@ -80,7 +77,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick1",
                 "fn": "onButtonClick1",
                 "implHandler": [
                     "this.save(button);"
@@ -100,7 +96,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "",
@@ -137,7 +132,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick2",
                 "fn": "onButtonClick2",
                 "implHandler": [
                     "this.save(button);"
@@ -157,7 +151,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick3",
                 "fn": "onButtonClick3",
                 "implHandler": [
                     "this.save(button);"
@@ -177,7 +170,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick4",
                 "fn": "onButtonClick4",
                 "implHandler": [
                     "this.save(button);"
@@ -197,7 +189,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#storagelistgrid"
             },
@@ -211,7 +202,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deletestorage",
                 "fn": "deletestorage",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -241,7 +231,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStorageDiskButtonClick",
                 "fn": "onStorageDiskButtonClick",
                 "implHandler": [
                     "",

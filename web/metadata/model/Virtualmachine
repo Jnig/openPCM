@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,126 +8,116 @@
     "userConfig": {
         "designer|userClassName": "Virtualmachine"
     },
-    "id": "ExtBox1-ext-gen64599",
     "designerId": "f2898548-3f6e-490c-b311-516839f1ae6b",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field",
                 "name": "id"
             },
             "designerId": "eedf6cd5-bbf8-485a-baf3-e7be610d8953"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field1",
                 "name": "name"
             },
             "designerId": "22cb73c4-d0ca-422a-9416-005bc4b417cb"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field2",
                 "name": "vcpu"
             },
             "designerId": "cf8b3891-cf0d-4f47-9422-c897cf6791ff"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field3",
                 "name": "memory"
             },
             "designerId": "1bc19551-35d0-4e44-a1c8-e82db618ccb6"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field19",
                 "name": "node"
             },
             "designerId": "3bea8184-dc5b-43c2-bf27-4482babb2938"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field69",
-                "name": "bootDev",
                 "defaultValue": [
                     "hd",
                     ""
-                ]
+                ],
+                "name": "bootDev"
             },
             "designerId": "919ba576-2af1-40a4-8e00-67bc3a1bae28"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field97",
                 "name": "nodeName"
             },
             "designerId": "739db66b-9dbb-4b19-bafe-aad0fbc3f4ae"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field101",
                 "name": "state"
             },
             "designerId": "ef4d7be6-0c3d-44ba-bda1-88dbe4da3934"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field102",
                 "name": "nodeDefaultName"
             },
             "designerId": "7c51279c-933d-4d7f-955f-bb098e0e56b0"

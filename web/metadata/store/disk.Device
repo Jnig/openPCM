@@ -1,27 +1,38 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "disk.Device",
         "storeId": "MyStore",
-        "data": "[\n                {\n                    name: 'disk'\n                },\n                {\n                    name: 'cdrom'\n                },\n                    {\n                    name: 'lun'\n                },\n                \n            ]"
+        "designer|userClassName": "disk.Device",
+        "data": [
+            "[",
+            "                {",
+            "                    name: 'disk'",
+            "                },",
+            "                {",
+            "                    name: 'cdrom'",
+            "                },",
+            "                    {",
+            "                    name: 'lun'",
+            "                },",
+            "                ",
+            "            ]"
+        ]
     },
-    "id": "ExtBox1-ext-gen4617",
     "designerId": "019abeb7-7e0f-481d-ba01-052a5691393b",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field24",
                 "name": "name"
             },
             "designerId": "d1dbf109-077f-4caa-89b4-1ce417e36865"

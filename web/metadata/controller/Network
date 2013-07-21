@@ -1,17 +1,16 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Network",
         "stores": [
             "Network"
-        ]
+        ],
+        "designer|userClassName": "Network"
     },
-    "id": "ExtBox1-ext-gen12418",
     "designerId": "4373652d-b49d-4cb6-b0d3-1f29001d1aa4",
     "cn": [
         {
@@ -22,7 +21,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "var form = button.up('window').down('form');",
@@ -60,7 +58,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#networklistgrid"
             },
@@ -74,7 +71,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('networkadd');",
@@ -97,7 +93,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClickDelete",
                 "fn": "onButtonClickDelete",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",

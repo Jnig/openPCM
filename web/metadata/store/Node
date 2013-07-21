@@ -6,38 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Node",
         "autoLoad": false,
         "autoSync": true,
+        "model": "Node",
         "storeId": "MyJsonStore2",
-        "model": "Node"
+        "designer|userClassName": "Node"
     },
-    "id": "ExtBox1-ext-gen19271",
     "designerId": "244f55ac-d211-4b77-a2b8-acf85a91c400",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy3",
                 "url": "/api/nodes"
             },
             "designerId": "4185d7f1-9943-475c-b589-351999a45fe4",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader3"
-                    },
                     "designerId": "ebaf35af-6e1b-436c-83bc-8c8622df35a1"
                 }
             ]
@@ -50,7 +45,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "loadDrbdNodes",
                 "fn": "loadDrbdNodes",
                 "designer|params": [
                     "vmId"

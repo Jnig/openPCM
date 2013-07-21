@@ -1,32 +1,30 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "user.List",
-        "designer|userAlias": "userlist",
         "height": 250,
         "id": "",
         "width": 671,
+        "designer|userClassName": "user.List",
+        "designer|userAlias": "userlist",
         "iconCls": "icon-user",
         "title": "User",
         "store": "User"
     },
-    "id": "ExtBox1-ext-gen22163",
     "designerId": "c7f68a09-7a0e-4cc1-8268-e5375f3a64c1",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyGridView9",
                 "id": "userlistgrid"
             },
             "designerId": "da1617d4-ce98-43fb-be66-bdc8e188217d"
@@ -39,7 +37,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",
@@ -52,20 +49,19 @@
             "designerId": "9d33382f-7289-4ee4-b1f7-0d51a984f6b1"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top",
-                "designer|userClassName": "MyToolbar8"
+                "dock": "top"
             },
             "designerId": "1d4e105e-b5c9-4021-b386-3bfcf3479894",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -73,7 +69,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton21",
                         "iconCls": "icon-add",
                         "text": "Add"
                     },
@@ -87,7 +82,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onButtonClick",
                                 "fn": "onButtonClick",
                                 "implHandler": [
                                     "var window = Ext.widget('useradd');"
@@ -100,7 +94,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -108,7 +102,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton22",
                         "id": "userlistdelete",
                         "iconCls": "icon-delete",
                         "text": "Delete"
@@ -118,113 +111,103 @@
             ]
         },
         {
-            "type": "checkboxselectionmodel",
+            "type": "Ext.selection.CheckboxModel",
             "reference": {
                 "name": "selModel",
                 "type": "object"
             },
             "codeClass": "Ext.selection.CheckboxModel",
-            "userConfig": {
-                "designer|userClassName": "MyCheckboxSelectionModel7"
-            },
             "designerId": "1dc6be34-61d9-41e2-bab9-0a1e0db1aa3a"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn48",
                 "dataIndex": "id",
-                "flex": 0.5,
-                "text": "Id"
+                "text": "Id",
+                "flex": 0.5
             },
             "designerId": "cffe8510-9bfa-4cf3-ae77-a23928a421f6"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn49",
                 "dataIndex": "firstName",
                 "text": "FirstName"
             },
             "designerId": "d4bac18d-4aae-4cb4-b62c-797e8f0e4350"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn50",
                 "dataIndex": "secondName",
                 "text": "SecondName"
             },
             "designerId": "c98bc932-8ef0-4ead-a940-aaf60c16da53"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn29",
                 "dataIndex": "username",
                 "text": "Username"
             },
             "designerId": "a389087b-8735-4422-a447-616ea5ca7843"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn51",
                 "dataIndex": "email",
-                "flex": 2,
-                "text": "Email"
+                "text": "Email",
+                "flex": 2
             },
             "designerId": "7f757d82-d8fb-4b48-a196-510a83003efb"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn53",
                 "dataIndex": "roles",
-                "flex": 2,
-                "text": "Roles"
+                "text": "Roles",
+                "flex": 2
             },
             "designerId": "638b3dce-f7c9-41b0-9f88-198af87cafdc"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn28",
                 "dataIndex": "ldap",
                 "text": "Ldap"
             },

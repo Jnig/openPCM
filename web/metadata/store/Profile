@@ -6,37 +6,32 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Profile",
         "autoLoad": false,
+        "model": "User",
         "storeId": "MyJsonStore11",
-        "model": "User"
+        "designer|userClassName": "Profile"
     },
-    "id": "ExtBox1-ext-gen6518",
     "designerId": "da0e1160-c422-476d-8316-547af58e4962",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy15",
                 "url": "/profile"
             },
             "designerId": "876454f9-5e45-4200-98b2-52013be30486",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader15"
-                    },
                     "designerId": "7dbdd49b-67cb-40ef-9c5d-6f7ffe5bd85e"
                 }
             ]

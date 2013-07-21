@@ -1,15 +1,14 @@
 {
-    "type": "menu",
+    "type": "Ext.menu.Menu",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "width": 120,
         "designer|userClassName": "disk.Menu",
-        "designer|userAlias": "diskmenu",
-        "width": 120
+        "designer|userAlias": "diskmenu"
     },
-    "id": "ExtBox1-ext-gen73548",
     "designerId": "e5292b7d-c74d-4755-8fba-cbc4182114ad"
 }

@@ -6,38 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Storage",
         "autoLoad": false,
         "autoSync": true,
+        "model": "Storage",
         "storeId": "MyJsonStore1",
-        "model": "Storage"
+        "designer|userClassName": "Storage"
     },
-    "id": "ExtBox1-ext-gen15407",
     "designerId": "0d115e77-353f-4d38-b9bb-7ce193c3c298",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy2",
                 "url": "/api/storages"
             },
             "designerId": "06059a3f-9a0f-425f-8a7b-b946421ce273",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader2"
-                    },
                     "designerId": "25bc77a2-1f02-4a4c-9465-c9a909ba5ac3"
                 }
             ]
@@ -50,7 +45,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setVirtualmachineId",
                 "fn": "setVirtualmachineId",
                 "designer|params": [
                     "id"

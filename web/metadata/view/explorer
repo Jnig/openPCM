@@ -1,24 +1,23 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "explorer",
-        "designer|userAlias": "explorer",
         "autoShow": true,
         "height": 250,
         "width": 400,
+        "designer|userClassName": "explorer",
+        "designer|userAlias": "explorer",
         "autoScroll": true,
         "title": "Explorer"
     },
-    "id": "ExtBox1-ext-gen9701",
     "designerId": "3a54eec9-37bd-4625-bf5e-9257410a72f1",
     "cn": [
         {
-            "type": "treepanel",
+            "type": "Ext.tree.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -26,7 +25,6 @@
             "codeClass": null,
             "userConfig": {
                 "dock": null,
-                "designer|userClassName": "MyTreePanel1",
                 "border": false,
                 "height": null,
                 "minHeight": 100,
@@ -37,14 +35,13 @@
             "designerId": "ec3d4e5c-955e-47d8-83fc-671eb7010513",
             "cn": [
                 {
-                    "type": "treeview",
+                    "type": "Ext.tree.View",
                     "reference": {
                         "name": "viewConfig",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTreeView2",
                         "loadingText": null
                     },
                     "designerId": "09e06379-ef93-4069-89ad-8e0237ee02b2"

@@ -6,37 +6,32 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Network",
         "autoSync": true,
+        "model": "Network",
         "storeId": "MyJsonStore6",
-        "model": "Network"
+        "designer|userClassName": "Network"
     },
-    "id": "ExtBox1-ext-gen16499",
     "designerId": "4aaa9b73-aaaa-4e0a-9777-ea647e36b056",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy8",
                 "url": "/api/networks"
             },
             "designerId": "199c446e-2579-4508-8b80-e39f97b5e854",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader8"
-                    },
                     "designerId": "299866de-d4a1-48c1-a576-c5a8478cfeab"
                 }
             ]

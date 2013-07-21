@@ -6,38 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Events",
         "autoLoad": false,
         "autoSync": true,
+        "model": "Event",
         "storeId": "MyJsonStore14",
-        "model": "Event"
+        "designer|userClassName": "Events"
     },
-    "id": "ExtBox1-ext-gen10544",
     "designerId": "8e3fe5d6-5d5b-4807-aab5-7f8ba7e83ee0",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy6",
                 "url": "/api/events"
             },
             "designerId": "656de7e3-2be2-4b5a-b08c-f7f6c3b3eb85",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader8"
-                    },
                     "designerId": "496b9199-d807-485d-9bcb-ce9f132ad486"
                 }
             ]
@@ -50,7 +45,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setLastEvent",
                 "fn": "setLastEvent",
                 "implHandler": [
                     "this.getProxy().url = '/api/events/last';",
@@ -67,7 +61,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setEvent",
                 "fn": "setEvent",
                 "designer|params": [
                     "id"

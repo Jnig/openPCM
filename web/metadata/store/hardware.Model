@@ -6,22 +6,27 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "hardware.Model",
         "storeId": "MyArrayStore",
-        "data": "[\n        {\"model\":\"e1000\"},\n        {\"model\":\"virtio\"},\n\n\n]"
+        "designer|userClassName": "hardware.Model",
+        "data": [
+            "[",
+            "        {\"model\":\"e1000\"},",
+            "        {\"model\":\"virtio\"},",
+            "",
+            "",
+            "]"
+        ]
     },
-    "id": "ExtBox1-ext-gen11581",
     "designerId": "784cb9e3-ae06-462a-81e7-e6ddf2c99146",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field4",
                 "name": "model"
             },
             "designerId": "0c2c2a91-59dd-4e34-b6f1-f028be63ae99"

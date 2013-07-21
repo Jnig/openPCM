@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,71 +8,65 @@
     "userConfig": {
         "designer|userClassName": "Cluster"
     },
-    "id": "ExtBox1-ext-gen14343",
     "designerId": "dc06a445-cb0d-4ab4-8518-a3e4a07eb5c9",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field39",
                 "name": "id"
             },
             "designerId": "b35d9676-f0f3-4cad-bd5c-789b70cc581e"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field40",
                 "name": "name"
             },
             "designerId": "6d8c60c0-4537-4b70-9233-968f1c5de014"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field62",
                 "name": "ha",
                 "type": "boolean"
             },
             "designerId": "b061d107-751f-4584-b403-dd94a56a5029"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field64",
                 "name": "storages"
             },
             "designerId": "15c56675-9a9c-4822-a44a-14efcca9baec"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field65",
                 "name": "networks"
             },
             "designerId": "6d537602-6505-405b-a9f7-edac6c1f791b"

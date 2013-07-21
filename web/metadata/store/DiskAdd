@@ -6,37 +6,30 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "DiskAdd",
         "autoLoad": false,
         "autoSync": true,
+        "model": "Disk",
         "storeId": "MyJsonStore15",
-        "model": "Disk"
+        "designer|userClassName": "DiskAdd"
     },
-    "id": "ExtBox1-ext-gen6641",
     "designerId": "8e26f477-d6b6-453c-9f4d-a781863c1f4d",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyRestProxy6"
-            },
             "designerId": "d76b89d5-fdba-49cf-8135-a5c36bf2d967",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader8"
-                    },
                     "designerId": "34d8565e-0482-4519-b4c6-5ff8a14f9f56"
                 }
             ]
@@ -49,7 +42,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setStorageId",
                 "fn": "setStorageId",
                 "designer|params": [
                     "id"

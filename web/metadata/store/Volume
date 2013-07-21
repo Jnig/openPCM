@@ -6,35 +6,28 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Volume",
+        "model": "Disk",
         "storeId": "MyJsonStore3",
-        "model": "Disk"
+        "designer|userClassName": "Volume"
     },
-    "id": "ExtBox1-ext-gen82140",
     "designerId": "87e926fe-250b-4562-95c1-e265efdcab05",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyRestProxy5"
-            },
             "designerId": "b6cd0564-637c-4832-93da-62f06e1f39e4",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader7"
-                    },
                     "designerId": "6aa31fc3-95c3-46c4-b06e-4b72080bb34d"
                 }
             ]
@@ -47,7 +40,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setStorageVirtualmachine",
                 "fn": "setStorageVirtualmachine",
                 "designer|params": [
                     "storage",

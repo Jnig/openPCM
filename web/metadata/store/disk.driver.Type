@@ -6,22 +6,30 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "disk.driver.Type",
         "storeId": "MyArrayStore2",
-        "data": "[\n                {\n                    name: 'raw'\n                },\n                {\n                    name: 'qcow2'\n                },\n                \n            ]"
+        "designer|userClassName": "disk.driver.Type",
+        "data": [
+            "[",
+            "                {",
+            "                    name: 'raw'",
+            "                },",
+            "                {",
+            "                    name: 'qcow2'",
+            "                },",
+            "                ",
+            "            ]"
+        ]
     },
-    "id": "ExtBox1-ext-gen29352",
     "designerId": "4891b1ae-2a0c-4efa-aa21-53d451a03802",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field23",
                 "name": "name"
             },
             "designerId": "4bb38d1e-3d13-43c3-95b4-ac4ac641753f"

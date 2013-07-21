@@ -1,50 +1,47 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "network.List",
-        "designer|userAlias": "networklist",
         "height": 250,
         "width": 400,
+        "designer|userClassName": "network.List",
+        "designer|userAlias": "networklist",
         "iconCls": "icon-network",
         "title": "Network",
         "store": "Network"
     },
-    "id": "ExtBox1-ext-gen13646",
     "designerId": "1319ad54-04cb-4f5f-868d-7c8b373c9283",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyGridView8",
                 "id": "networklistgrid"
             },
             "designerId": "68f7307c-e430-4f72-aff3-88e4d5210e75"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top",
-                "designer|userClassName": "MyToolbar6"
+                "dock": "top"
             },
             "designerId": "8ef92ca8-9531-4ddf-ad5a-70cab7135f9e",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,7 +49,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton19",
                         "iconCls": "icon-add",
                         "text": "Add"
                     },
@@ -66,7 +62,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onButtonClick",
                                 "fn": "onButtonClick",
                                 "implHandler": [
                                     "Ext.widget('networkadd');"
@@ -79,7 +74,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -87,7 +82,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton20",
                         "id": "networklistdelete",
                         "iconCls": "icon-delete",
                         "text": "Delete"
@@ -104,7 +98,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",
@@ -117,71 +110,64 @@
             "designerId": "dd0be53a-3f2c-4f38-bbb4-0599b6d5cd18"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn30",
                 "dataIndex": "id",
                 "text": "Id"
             },
             "designerId": "34a238c4-0046-49a4-8c48-f6195e46575c"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn31",
                 "dataIndex": "name",
                 "text": "Name"
             },
             "designerId": "60cd9306-824c-4ae3-b2c8-3ead000d3631"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn32",
                 "dataIndex": "forwardMode",
                 "text": "ForwardMode"
             },
             "designerId": "0d49f451-ef1d-42c0-b951-7930c3bb10f4"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn33",
                 "dataIndex": "bridgeName",
                 "text": "BridgeName"
             },
             "designerId": "715475ed-7d36-4842-b6aa-eb52222f3c87"
         },
         {
-            "type": "checkboxselectionmodel",
+            "type": "Ext.selection.CheckboxModel",
             "reference": {
                 "name": "selModel",
                 "type": "object"
             },
             "codeClass": "Ext.selection.CheckboxModel",
-            "userConfig": {
-                "designer|userClassName": "MyCheckboxSelectionModel5"
-            },
             "designerId": "ff291268-bad5-4543-acf5-92254e448c27"
         }
     ]

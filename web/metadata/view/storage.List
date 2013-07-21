@@ -1,50 +1,47 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "storage.List",
-        "designer|userAlias": "storagelist",
         "height": 250,
         "width": 400,
+        "designer|userClassName": "storage.List",
+        "designer|userAlias": "storagelist",
         "iconCls": "icon-drive",
         "title": "Storage",
         "store": "Storage"
     },
-    "id": "ExtBox1-ext-gen19453",
     "designerId": "034662c4-d27c-4403-b8cc-b7ebdc38d1e2",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyGridView4",
                 "id": "storagelistgrid"
             },
             "designerId": "91dbd807-b0d4-44c7-868e-77365357bf43"
         },
         {
-            "type": "toolbar",
+            "type": "Ext.toolbar.Toolbar",
             "reference": {
                 "name": "dockedItems",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "dock": "top",
-                "designer|userClassName": "MyToolbar3"
+                "dock": "top"
             },
             "designerId": "ffc9e538-b68d-4d31-aee1-bb62b4fb2fcb",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -52,34 +49,31 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton8",
                         "iconCls": "icon-add",
                         "text": "Add Storage"
                     },
                     "designerId": "b059f87d-c727-451a-a9dc-90795b4ab265",
                     "cn": [
                         {
-                            "type": "menu",
+                            "type": "Ext.menu.Menu",
                             "reference": {
                                 "name": "menu",
                                 "type": "object"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyMenu2",
                                 "width": 120
                             },
                             "designerId": "2fc4e119-ac02-49a6-8345-df0d2d57280b",
                             "cn": [
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem6",
                                         "iconCls": "icon-folder",
                                         "text": "Directory"
                                     },
@@ -93,7 +87,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onDirectoryClick",
                                                 "fn": "onDirectoryClick",
                                                 "implHandler": [
                                                     "Ext.widget('storagedir');"
@@ -106,14 +99,13 @@
                                     ]
                                 },
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem7",
                                         "text": "LVM"
                                     },
                                     "designerId": "9190d009-eebd-4568-82d4-3a3c65fceb93",
@@ -126,7 +118,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onMenuitemClick",
                                                 "fn": "onMenuitemClick",
                                                 "implHandler": [
                                                     "Ext.widget('storagelogical');"
@@ -139,14 +130,13 @@
                                     ]
                                 },
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem2",
                                         "text": "NFS"
                                     },
                                     "designerId": "522de0d6-eb22-4943-b17e-f4d5629597f9",
@@ -159,7 +149,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onMenuitemClick1",
                                                 "fn": "onMenuitemClick1",
                                                 "implHandler": [
                                                     "Ext.widget('storagenetfs');"
@@ -172,14 +161,13 @@
                                     ]
                                 },
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem9",
                                         "text": "ISCSI"
                                     },
                                     "designerId": "3ad7495c-1deb-4b9a-b63d-49f6c8e00d07",
@@ -192,7 +180,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onMenuitemClick2",
                                                 "fn": "onMenuitemClick2",
                                                 "implHandler": [
                                                     "Ext.widget('storageiscsi');"
@@ -205,14 +192,13 @@
                                     ]
                                 },
                                 {
-                                    "type": "menuitem",
+                                    "type": "Ext.menu.Item",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyMenuItem10",
                                         "text": "Ceph RBD"
                                     },
                                     "designerId": "3373361e-ca88-4169-a045-5b5eadec4df7",
@@ -225,7 +211,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onMenuitemClick3",
                                                 "fn": "onMenuitemClick3",
                                                 "implHandler": [
                                                     "Ext.widget('storagerbd');"
@@ -242,7 +227,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -250,7 +235,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton11",
                         "cls": null,
                         "id": "storagedelete",
                         "width": null,
@@ -260,7 +244,7 @@
                     "designerId": "cf0160d9-2195-4cd0-8182-1125d28407df"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.button.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -268,7 +252,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|flex": null,
-                        "designer|userClassName": "MyButton27",
                         "id": "storageDiskButton",
                         "text": "Show Disks"
                     },
@@ -277,71 +260,64 @@
             ]
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn8",
                 "dataIndex": "id",
                 "text": "Id"
             },
             "designerId": "3ba91ef8-60cc-42cd-9705-e1163a03a9eb"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn9",
                 "dataIndex": "name",
                 "text": "Name"
             },
             "designerId": "90f49a45-c1c8-4814-b6aa-7009b11304dc"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn10",
                 "dataIndex": "path",
                 "text": "Path"
             },
             "designerId": "ee30b3c1-6de3-4f37-bfca-dd337b18fadd"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn11",
                 "dataIndex": "entity",
                 "text": "Entity"
             },
             "designerId": "9c75e6b3-c7db-4253-9638-de05642749c5"
         },
         {
-            "type": "checkboxselectionmodel",
+            "type": "Ext.selection.CheckboxModel",
             "reference": {
                 "name": "selModel",
                 "type": "object"
             },
             "codeClass": "Ext.selection.CheckboxModel",
-            "userConfig": {
-                "designer|userClassName": "MyCheckboxSelectionModel1"
-            },
             "designerId": "e2632610-5436-4b73-ab9b-083e086d19cf"
         },
         {
@@ -352,7 +328,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",

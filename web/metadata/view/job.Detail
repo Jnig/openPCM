@@ -1,31 +1,29 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "job.Detail",
-        "designer|userAlias": "jobdetail",
         "autoShow": true,
         "height": 372,
         "width": 597,
+        "designer|userClassName": "job.Detail",
+        "designer|userAlias": "jobdetail",
         "layout": "fit",
         "title": "Job Output"
     },
-    "id": "ExtBox1-ext-gen80322",
     "designerId": "68949eee-a049-4388-b5ab-0035b87313ed",
     "cn": [
         {
-            "type": "component",
+            "type": "Ext.Component",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyComponent2",
                 "id": "jobdetailtext",
                 "padding": 10,
                 "overflowY": "auto"

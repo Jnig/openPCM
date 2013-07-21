@@ -1,31 +1,27 @@
 {
-    "type": "gridpanel",
+    "type": "Ext.grid.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "storage.disk.List",
-        "designer|userAlias": "storagedisklist",
         "height": 250,
         "width": 400,
+        "designer|userClassName": "storage.disk.List",
+        "designer|userAlias": "storagedisklist",
         "title": "My Grid Panel",
         "store": "Disk"
     },
-    "id": "ExtBox1-ext-gen43621",
     "designerId": "aad29cd1-ba39-4f59-86c8-db0da9e64b11",
     "cn": [
         {
-            "type": "gridview",
+            "type": "Ext.grid.View",
             "reference": {
                 "name": "viewConfig",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGridView6"
-            },
             "designerId": "738de568-3df4-4e92-9866-a25dc182a57a"
         },
         {
@@ -36,7 +32,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "var Mask = new Ext.LoadMask(this.getEl(), {\"msg\":\"Please wait..\", \"store\": this.getStore()});",
@@ -50,28 +45,26 @@
             "designerId": "83835159-9dd3-45ee-ba30-a984e34d0494"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn17",
                 "dataIndex": "id",
                 "text": "Id"
             },
             "designerId": "8090d03f-0c77-4dc1-8327-a2d26b3dcff2"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn20",
                 "defaultWidth": 300,
                 "dataIndex": "path",
                 "text": "Path"
@@ -79,56 +72,52 @@
             "designerId": "7550cd41-ba91-4070-ac87-8586eaa37948"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn23",
                 "dataIndex": "driverType",
                 "text": "DriverType"
             },
             "designerId": "0063b54e-bdd5-4b03-aa54-32a15e0dd8e5"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn40",
                 "dataIndex": "allocation",
                 "text": "Allocation"
             },
             "designerId": "2e23be3c-9662-42b8-9592-0b2975106d24"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn41",
                 "dataIndex": "capacity",
                 "text": "Capacity"
             },
             "designerId": "65dd80e3-9f85-47c9-82a0-26c9550f9b10"
         },
         {
-            "type": "gridcolumn",
+            "type": "Ext.grid.column.Column",
             "reference": {
                 "name": "columns",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyColumn42",
                 "dataIndex": "node",
                 "text": "Node"
             },

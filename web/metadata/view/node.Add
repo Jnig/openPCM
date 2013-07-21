@@ -1,18 +1,30 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "buttons": "[\n                {\n                    text: 'Save',\n                    action: 'save'\n                },\n                {\n                    text: 'Cancel',\n                    scope: this,\n                    handler: this.close\n                }\n            ]",
-        "designer|userClassName": "node.Add",
-        "designer|userAlias": "nodeadd",
+        "buttons": [
+            "[",
+            "                {",
+            "                    text: 'Save',",
+            "                    action: 'save'",
+            "                },",
+            "                {",
+            "                    text: 'Cancel',",
+            "                    scope: this,",
+            "                    handler: this.close",
+            "                }",
+            "            ]"
+        ],
         "autoShow": true,
         "border": false,
         "height": 496,
         "width": 503,
+        "designer|userClassName": "node.Add",
+        "designer|userAlias": "nodeadd",
         "layout": "fit",
         "bodyPadding": "",
         "title": "Node"
@@ -20,7 +32,6 @@
     "configAlternates": {
         "buttons": "array"
     },
-    "id": "ExtBox1-ext-gen22262",
     "designerId": "8334967b-2f8a-417d-a347-335a9ed1a7af",
     "customConfigs": [
         {
@@ -36,14 +47,13 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm10",
                 "border": false,
                 "bodyPadding": null,
                 "title": null
@@ -51,14 +61,13 @@
             "designerId": "75956cc3-740a-4830-b042-ac0aa506ab13",
             "cn": [
                 {
-                    "type": "tabpanel",
+                    "type": "Ext.tab.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyTabPanel1",
                         "border": "",
                         "bodyBorder": false,
                         "activeTab": 0
@@ -66,14 +75,13 @@
                     "designerId": "45b89aad-a813-4648-bff1-4d538ac8e160",
                     "cn": [
                         {
-                            "type": "panel",
+                            "type": "Ext.panel.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyPanel3",
                                 "border": false,
                                 "height": 410,
                                 "bodyPadding": 5,
@@ -82,28 +90,24 @@
                             "designerId": "dcbb1802-9415-43d2-ad39-f5a57087dc34",
                             "cn": [
                                 {
-                                    "type": "tab",
+                                    "type": "Ext.tab.Tab",
                                     "reference": {
                                         "name": "tabConfig",
                                         "type": "object"
                                     },
                                     "codeClass": null,
-                                    "userConfig": {
-                                        "designer|userClassName": "TabConfig4"
-                                    },
                                     "designerId": "b2add8a2-66be-41dd-8206-d39750b83ff0"
                                 },
                                 {
-                                    "type": "combobox",
+                                    "type": "Ext.form.field.ComboBox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyComboBox13",
-                                        "name": "cluster",
                                         "fieldLabel": "Cluster",
+                                        "name": "cluster",
                                         "allowBlank": false,
                                         "displayField": "name",
                                         "store": "Cluster",
@@ -112,61 +116,57 @@
                                     "designerId": "a29de03e-ba09-4957-b63b-a66e2952b537"
                                 },
                                 {
-                                    "type": "textfield",
+                                    "type": "Ext.form.field.Text",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyTextField15",
-                                        "name": "name",
                                         "fieldLabel": "Name",
+                                        "name": "name",
                                         "allowBlank": false
                                     },
                                     "designerId": "e9539be8-9aa1-4ac9-9a84-f99bef3ee9f1"
                                 },
                                 {
-                                    "type": "textfield",
+                                    "type": "Ext.form.field.Text",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyTextField16",
-                                        "name": "hostname",
                                         "fieldLabel": "Hostname",
+                                        "name": "hostname",
                                         "allowBlank": false
                                     },
                                     "designerId": "5dfd0858-16b1-4647-8b50-d7a8e2adf305"
                                 },
                                 {
-                                    "type": "textfield",
+                                    "type": "Ext.form.field.Text",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyTextField17",
-                                        "inputType": "password",
+                                        "fieldLabel": "Password",
                                         "name": "password",
-                                        "fieldLabel": "Password"
+                                        "inputType": "password"
                                     },
                                     "designerId": "50a47b84-8045-4e3c-984a-7e3e90d0164c"
                                 },
                                 {
-                                    "type": "combobox",
+                                    "type": "Ext.form.field.ComboBox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyComboBox3",
-                                        "name": "storages",
                                         "fieldLabel": "Storage",
+                                        "name": "storages",
                                         "displayField": "name",
                                         "multiSelect": true,
                                         "store": "Storage",
@@ -175,19 +175,18 @@
                                     "designerId": "903c19bc-d4b0-44e7-8325-16a9b46c08b0"
                                 },
                                 {
-                                    "type": "combobox",
+                                    "type": "Ext.form.field.ComboBox",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyComboBox12",
+                                        "fieldLabel": "Network:",
                                         "name": "networks",
                                         "value": [
                                             "[]"
                                         ],
-                                        "fieldLabel": "Network:",
                                         "displayField": "name",
                                         "multiSelect": true,
                                         "store": "Network",
@@ -198,16 +197,14 @@
                             ]
                         },
                         {
-                            "type": "panel",
+                            "type": "Ext.panel.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyPanel4",
                                 "border": false,
-                                "disabled": false,
                                 "height": 409,
                                 "bodyPadding": 5,
                                 "title": "HA"
@@ -215,14 +212,13 @@
                             "designerId": "b50e8a3a-2f4b-43f3-91a5-4c4bcf71d23d",
                             "cn": [
                                 {
-                                    "type": "tab",
+                                    "type": "Ext.tab.Tab",
                                     "reference": {
                                         "name": "tabConfig",
                                         "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "TabConfig5",
                                         "border": null,
                                         "disabled": true,
                                         "hidden": null,
@@ -231,20 +227,19 @@
                                     "designerId": "68e39764-8057-455d-a992-bd6fbc713899"
                                 },
                                 {
-                                    "type": "fieldset",
+                                    "type": "Ext.form.FieldSet",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyFieldSet1",
                                         "title": "Corosync Interfaces"
                                     },
                                     "designerId": "506c4eb5-9f2d-4701-adb1-ae03adf56827",
                                     "cn": [
                                         {
-                                            "type": "combobox",
+                                            "type": "Ext.form.field.ComboBox",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -258,11 +253,10 @@
                                                     "<tpl for=\".\"><div class=\"x-boundlist-item\">{interfaceName} - {ip}</div></tpl>"
                                                 ],
                                                 "layout|anchor": "100%",
-                                                "designer|userClassName": "MyComboBox18",
                                                 "id": null,
-                                                "name": "corosyncIp1",
                                                 "fieldLabel": "Corosync Ip",
                                                 "labelWidth": 150,
+                                                "name": "corosyncIp1",
                                                 "displayField": "interfaceName",
                                                 "queryMode": "local",
                                                 "store": "IpA",
@@ -288,7 +282,7 @@
                                             ]
                                         },
                                         {
-                                            "type": "combobox",
+                                            "type": "Ext.form.field.ComboBox",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -302,11 +296,10 @@
                                                     "<tpl for=\".\"><div class=\"x-boundlist-item\">{interfaceName} - {ip}</div></tpl>"
                                                 ],
                                                 "layout|anchor": "100%",
-                                                "designer|userClassName": "MyComboBox18",
                                                 "id": null,
-                                                "name": "corosyncIp2",
                                                 "fieldLabel": "Corosync Ip",
                                                 "labelWidth": 150,
+                                                "name": "corosyncIp2",
                                                 "emptyText": "none",
                                                 "displayField": "interfaceName",
                                                 "queryMode": "local",
@@ -335,21 +328,20 @@
                                     ]
                                 },
                                 {
-                                    "type": "fieldset",
+                                    "type": "Ext.form.FieldSet",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyFieldSet2",
                                         "height": 299,
                                         "title": "IPMI/ Fencing"
                                     },
                                     "designerId": "7facb41b-d2b9-4a8c-ad88-d8e049640fac",
                                     "cn": [
                                         {
-                                            "type": "combobox",
+                                            "type": "Ext.form.field.ComboBox",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -357,10 +349,9 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "layout|anchor": "100%",
-                                                "designer|userClassName": "MyComboBox27",
                                                 "id": "stonith",
-                                                "name": "stonith",
                                                 "fieldLabel": "Stonith",
+                                                "name": "stonith",
                                                 "displayField": "stonith",
                                                 "queryMode": "local",
                                                 "store": "Stonith",
@@ -369,7 +360,7 @@
                                             "designerId": "3ab95b53-c65b-4df0-93a7-eea97e940017"
                                         },
                                         {
-                                            "type": "textareafield",
+                                            "type": "Ext.form.field.TextArea",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -377,16 +368,15 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "layout|anchor": "100%",
-                                                "designer|userClassName": "MyTextArea2",
                                                 "height": 97,
                                                 "id": "stonithParameters",
-                                                "name": "stonithParameters",
-                                                "fieldLabel": "Parameters"
+                                                "fieldLabel": "Parameters",
+                                                "name": "stonithParameters"
                                             },
                                             "designerId": "89e23412-f935-4855-8c42-a69ecae0e6e7"
                                         },
                                         {
-                                            "type": "textareafield",
+                                            "type": "Ext.form.field.TextArea",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
@@ -394,13 +384,12 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "layout|anchor": "100%",
-                                                "designer|userClassName": "MyTextArea3",
                                                 "height": 126,
                                                 "id": "stonithHelp",
+                                                "fieldLabel": "Help",
                                                 "name": "",
-                                                "readOnly": true,
                                                 "submitValue": false,
-                                                "fieldLabel": "Help"
+                                                "readOnly": true
                                             },
                                             "designerId": "58379f6e-0903-47d9-a701-9557c2dbdc0a"
                                         }

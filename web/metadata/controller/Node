@@ -1,12 +1,11 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Node",
         "stores": [
             "Node",
             "IpA",
@@ -15,9 +14,9 @@
             "Network",
             "Stonith",
             "StonithMeta"
-        ]
+        ],
+        "designer|userClassName": "Node"
     },
-    "id": "ExtBox1-ext-gen28682",
     "designerId": "ea3003f4-c5a5-4443-8369-62c66f8e6c93",
     "cn": [
         {
@@ -28,7 +27,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonClick",
                 "fn": "onButtonClick",
                 "implHandler": [
                     "var window = button.up('window');",
@@ -68,7 +66,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onNodeDelete",
                 "fn": "onNodeDelete",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -98,7 +95,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "grid",
                 "ref": "grid",
                 "selector": "#nodelistgrid"
             },
@@ -112,7 +108,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelItemDblClick",
                 "fn": "onGridpanelItemDblClick",
                 "implHandler": [
                     "var window = Ext.widget('nodeadd');",
@@ -144,7 +139,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tab",
                 "ref": "tab",
                 "selector": "#nodeaddhatab"
             },
@@ -158,7 +152,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onGridpanelAfterRender",
                 "fn": "onGridpanelAfterRender",
                 "implHandler": [
                     "this.getClusterStore().load();",
@@ -180,7 +173,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onComboboxSelect",
                 "fn": "onComboboxSelect",
                 "implHandler": [
                     "",
@@ -219,7 +211,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "stonithParameters",
                 "ref": "stonithParameters",
                 "selector": "#stonithParameters"
             },
@@ -233,7 +224,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "stonithHelp",
                 "ref": "stonithHelp",
                 "selector": "#stonithHelp"
             },
@@ -247,7 +237,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonStandbyOffClick",
                 "fn": "onButtonStandbyOffClick",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -280,7 +269,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onButtonStandbyOnClick",
                 "fn": "onButtonStandbyOnClick",
                 "implHandler": [
                     "var selected = this.getGrid().getSelectionModel().getSelection();",
@@ -313,7 +301,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "nodeAction",
                 "fn": "nodeAction",
                 "designer|params": [
                     "nodeId",

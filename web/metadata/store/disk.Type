@@ -6,22 +6,26 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "disk.Type",
         "storeId": "MyArrayStore1",
-        "data": "[\n    {'name': 'file'},\n    {'name': 'block'},\n    {'name': 'network'},\n]"
+        "designer|userClassName": "disk.Type",
+        "data": [
+            "[",
+            "    {'name': 'file'},",
+            "    {'name': 'block'},",
+            "    {'name': 'network'},",
+            "]"
+        ]
     },
-    "id": "ExtBox1-ext-gen26997",
     "designerId": "ca72b012-caf7-49ac-808d-1d0440d116c0",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field22",
                 "name": "name"
             },
             "designerId": "0e5f0997-fd14-44df-9245-5090900e042b"

@@ -6,38 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Job",
         "autoLoad": true,
         "autoSync": true,
+        "model": "Job",
         "storeId": "MyJsonStore8",
-        "model": "Job"
+        "designer|userClassName": "Job"
     },
-    "id": "ExtBox1-ext-gen74418",
     "designerId": "2a8efe31-f3dc-444a-9333-adf57a9c7247",
     "cn": [
         {
-            "type": "restproxy",
+            "type": "Ext.data.proxy.Rest",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyRestProxy3",
                 "url": "/api/jobs/user"
             },
             "designerId": "aeb1efa0-f907-4834-b240-e3604b331081",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyJsonReader3"
-                    },
                     "designerId": "e377ea64-956d-4fe7-90a0-2301135b6e6e"
                 }
             ]
@@ -50,7 +45,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "userJobs",
                 "fn": "userJobs",
                 "implHandler": [
                     "this.getProxy().url = '/api/jobs/user';"
@@ -66,7 +60,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "systemJobs",
                 "fn": "systemJobs",
                 "implHandler": [
                     "this.getProxy().url = '/api/jobs/system';"

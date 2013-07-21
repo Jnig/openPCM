@@ -1,5 +1,5 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
@@ -23,12 +23,12 @@
             "                }",
             "            ]"
         ],
-        "designer|userClassName": "disk.Add",
-        "designer|userAlias": "diskadd",
         "autoShow": true,
         "border": false,
         "height": 217,
         "width": 400,
+        "designer|userClassName": "disk.Add",
+        "designer|userAlias": "diskadd",
         "layout": "fit",
         "bodyPadding": null,
         "title": "My Window"
@@ -36,7 +36,6 @@
     "configAlternates": {
         "buttons": "object"
     },
-    "id": "ExtBox1-ext-gen27411",
     "designerId": "7aef43e5-aec8-4b78-82e2-2aba59d9c484",
     "customConfigs": [
         {
@@ -47,44 +46,41 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm11",
                 "bodyPadding": 5,
                 "title": null
             },
             "designerId": "4932e827-5163-4cde-b3e7-4429b265844a",
             "cn": [
                 {
-                    "type": "radiogroup",
+                    "type": "Ext.form.RadioGroup",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyRadioGroup",
                         "width": 400,
                         "fieldLabel": "Use"
                     },
                     "designerId": "66e01e05-90bf-45f8-8f36-9a6e98fcda6e",
                     "cn": [
                         {
-                            "type": "radiofield",
+                            "type": "Ext.form.field.Radio",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyRadio",
-                                "name": "action",
                                 "fieldLabel": null,
+                                "name": "action",
                                 "boxLabel": "Existing Disk",
                                 "checked": true,
                                 "inputValue": "existing"
@@ -99,7 +95,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onRadiofieldChange",
                                         "fn": "onRadiofieldChange",
                                         "implHandler": [
                                             "Ext.getCmp('diskaddsize').show();",
@@ -113,16 +108,15 @@
                             ]
                         },
                         {
-                            "type": "radiofield",
+                            "type": "Ext.form.field.Radio",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyRadio1",
-                                "name": "action",
                                 "fieldLabel": null,
+                                "name": "action",
                                 "boxLabel": "Create New Disk",
                                 "inputValue": "create"
                             },
@@ -136,7 +130,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onRadiofieldChange1",
                                         "fn": "onRadiofieldChange1",
                                         "implHandler": [
                                             "",
@@ -155,7 +148,7 @@
                     ]
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -163,10 +156,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox8",
                         "id": "diskaddstorage",
-                        "name": "storage",
                         "fieldLabel": "Storage",
+                        "name": "storage",
                         "displayField": "name",
                         "store": "Storage",
                         "valueField": "id"
@@ -181,7 +173,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onDiskaddstorageChange",
                                 "fn": "onDiskaddstorageChange",
                                 "implHandler": [
                                     "Ext.getCmp('diskaddvolume').reset();"
@@ -194,7 +185,7 @@
                     ]
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -202,16 +193,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField22",
                         "hidden": true,
                         "id": "diskaddsize",
-                        "name": "capacity",
-                        "fieldLabel": "Size in GB"
+                        "fieldLabel": "Size in GB",
+                        "name": "capacity"
                     },
                     "designerId": "8593096f-a635-4800-8977-9b8396d451c5"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -219,10 +209,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox9",
                         "id": "diskaddvolume",
-                        "name": "volume",
                         "fieldLabel": "Volume",
+                        "name": "volume",
                         "displayField": "path",
                         "store": "DiskAdd",
                         "valueField": "id"
@@ -230,7 +219,7 @@
                     "designerId": "cff28d5f-c55b-4f55-b013-b21aa938cc09"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -238,9 +227,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox11",
-                        "name": "diskDevice",
                         "fieldLabel": "Disk Device",
+                        "name": "diskDevice",
                         "displayField": "name",
                         "store": "disk.Device",
                         "valueField": "name"

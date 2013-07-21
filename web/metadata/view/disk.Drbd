@@ -1,5 +1,5 @@
 {
-    "type": "window",
+    "type": "Ext.window.Window",
     "reference": {
         "name": "items",
         "type": "array"
@@ -19,12 +19,12 @@
             "                }",
             "            ]"
         ],
-        "designer|userClassName": "disk.Drbd",
-        "designer|userAlias": "diskdrbd",
         "autoShow": true,
         "border": false,
         "height": 282,
         "width": 410,
+        "designer|userClassName": "disk.Drbd",
+        "designer|userAlias": "diskdrbd",
         "layout": "fit",
         "bodyPadding": 0,
         "title": "Drbd"
@@ -32,7 +32,6 @@
     "configAlternates": {
         "buttons": "object"
     },
-    "id": "ExtBox1-ext-gen69506",
     "designerId": "058fb1f2-2455-4df2-9924-dc20e06ca6c3",
     "customConfigs": [
         {
@@ -43,21 +42,20 @@
     ],
     "cn": [
         {
-            "type": "form",
+            "type": "Ext.form.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyForm15",
                 "bodyPadding": 10,
                 "title": null
             },
             "designerId": "6ea4bb91-0336-4631-b9d3-701847e4bacf",
             "cn": [
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -65,12 +63,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox15",
                         "id": "diskDrbdNodeA",
-                        "name": "nodeA",
-                        "readOnly": true,
                         "fieldLabel": "Node A",
                         "labelWidth": 150,
+                        "name": "nodeA",
+                        "readOnly": true,
                         "displayField": "name",
                         "queryMode": "local",
                         "store": "Node",
@@ -79,7 +76,7 @@
                     "designerId": "a45daa37-a70e-45f1-9820-068e5e4910f3"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -93,11 +90,10 @@
                             "<tpl for=\".\"><div class=\"x-boundlist-item\">{interfaceName} - {ip}</div></tpl>"
                         ],
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox18",
                         "id": "diskDrbdIpA",
-                        "name": "ipA",
                         "fieldLabel": "Node A Interface",
                         "labelWidth": 150,
+                        "name": "ipA",
                         "displayField": "interfaceName",
                         "queryMode": "local",
                         "store": "IpA",
@@ -123,7 +119,7 @@
                     ]
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -131,11 +127,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox16",
                         "id": "diskDrbdNodeB",
-                        "name": "nodeB",
                         "fieldLabel": "Node B",
                         "labelWidth": 150,
+                        "name": "nodeB",
                         "displayField": "name",
                         "queryMode": "local",
                         "store": "Node",
@@ -147,7 +142,7 @@
                     "designerId": "e018b02a-931f-4b2a-ad66-6605059dcca8"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -161,11 +156,10 @@
                             "<tpl for=\".\"><div class=\"x-boundlist-item\">{interfaceName} - {ip}</div></tpl>"
                         ],
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox18",
                         "id": "diskDrbdIpB",
-                        "name": "ipB",
                         "fieldLabel": "Node B Interface",
                         "labelWidth": 150,
+                        "name": "ipB",
                         "displayField": "interfaceName",
                         "queryMode": "local",
                         "store": "IpB",
@@ -191,7 +185,7 @@
                     ]
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -199,11 +193,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox8",
                         "id": "",
-                        "name": "storage",
                         "fieldLabel": "Storage",
                         "labelWidth": 150,
+                        "name": "storage",
                         "displayField": "name",
                         "store": "Storage",
                         "valueField": "id"
@@ -211,7 +204,7 @@
                     "designerId": "bc28f9a7-7f0d-4b6b-8fa7-ed6beae679f8"
                 },
                 {
-                    "type": "textfield",
+                    "type": "Ext.form.field.Text",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -219,17 +212,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyTextField22",
-                        "hidden": false,
                         "id": "diskaddsize",
-                        "name": "capacity",
                         "fieldLabel": "Size in GB",
-                        "labelWidth": 150
+                        "labelWidth": 150,
+                        "name": "capacity"
                     },
                     "designerId": "634bf53d-e0d5-4c66-b7ba-bf0653feb6b1"
                 },
                 {
-                    "type": "combobox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -237,10 +228,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyComboBox11",
-                        "name": "diskDevice",
                         "fieldLabel": "Disk Device",
                         "labelWidth": 150,
+                        "name": "diskDevice",
                         "displayField": "name",
                         "store": "disk.Device",
                         "valueField": "name"
@@ -248,7 +238,7 @@
                     "designerId": "eb865cef-ea03-4698-a272-cfa3b0369f72"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -256,18 +246,17 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField6",
+                        "fieldLabel": "Label",
                         "name": "action",
                         "value": [
                             "drbd",
                             ""
-                        ],
-                        "fieldLabel": "Label"
+                        ]
                     },
                     "designerId": "7bc63b51-1400-4735-b068-7827e5d10888"
                 },
                 {
-                    "type": "hiddenfield",
+                    "type": "Ext.form.field.Hidden",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -275,10 +264,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "layout|anchor": "100%",
-                        "designer|userClassName": "MyHiddenField7",
                         "id": "diskDrbdDiskA",
-                        "name": "diskA",
-                        "fieldLabel": "Label"
+                        "fieldLabel": "Label",
+                        "name": "diskA"
                     },
                     "designerId": "0713b736-a89a-49da-941d-377fb9b9c974"
                 }

@@ -6,22 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "interface.modelType",
         "storeId": "MyArrayStore4",
-        "data": "[\n                {\n                    name: 'e1000'\n                },\n                {\n                    name: 'virtio'\n                },\n                {\n                    name: 'rtl8139'\n                },    \n                \n            ]"
+        "designer|userClassName": "interface.modelType",
+        "data": [
+            "[",
+            "                {",
+            "                    name: 'e1000'",
+            "                },",
+            "                {",
+            "                    name: 'virtio'",
+            "                },",
+            "                {",
+            "                    name: 'rtl8139'",
+            "                },    ",
+            "                ",
+            "            ]"
+        ]
     },
-    "id": "ExtBox1-ext-gen38859",
     "designerId": "ba7c0815-09a2-466f-a3c9-6898a766464d",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field23",
                 "name": "name"
             },
             "designerId": "1b33d061-fede-4222-b4d4-80c2c3fb6afd"

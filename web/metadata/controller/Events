@@ -1,21 +1,20 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Events",
         "stores": [
             "Events",
             "Virtualmachine",
             "Job",
             "Disk",
             "Node"
-        ]
+        ],
+        "designer|userClassName": "Events"
     },
-    "id": "ExtBox1-ext-gen10243",
     "designerId": "c7e71b83-c271-455a-8a91-2e84e98e919c",
     "cn": [
         {
@@ -26,7 +25,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLaunch",
                 "fn": "onLaunch",
                 "implHandler": [
                     "var store = this.getEventsStore();",
@@ -58,7 +56,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleRecords",
                 "fn": "handleRecords",
                 "designer|params": [
                     "records"
@@ -130,7 +127,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getEntityStore",
                 "fn": "getEntityStore",
                 "designer|params": [
                     "entity"
@@ -163,7 +159,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "loadTask",
                 "fn": "loadTask",
                 "designer|params": [
                     "lastId"
